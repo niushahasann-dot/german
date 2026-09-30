@@ -8,12 +8,15 @@ import {
   HelpCircle, 
   Database, 
   Menu, 
-  X,
-  Star,
-  BookMarked,
-  Headphones
+  X, 
+  Star, 
+  BookMarked, 
+  Headphones,
+  Sun,
+  Moon
 } from 'lucide-react';
 import { useVocabulary } from '../context/VocabularyContext';
+import { useTheme } from '../context/ThemeContext';
 import { LESSONS_DATA } from '../data/lessons';
 
 interface HeaderProps {
@@ -40,12 +43,13 @@ export const Header: React.FC<HeaderProps> = ({
   onOpenHoertexte,
 }) => {
   const { getGlobalStats } = useVocabulary();
+  const { theme, toggleTheme } = useTheme();
   const stats = getGlobalStats();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [lessonDropdownOpen, setLessonDropdownOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs">
+    <header className="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800/80 shadow-xs transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-18">
           
@@ -56,7 +60,7 @@ export const Header: React.FC<HeaderProps> = ({
                 setCurrentView('dashboard');
                 setMobileMenuOpen(false);
               }}
-              className="flex items-center gap-3 text-right group transition-all"
+              className="flex items-center gap-3 text-right group transition-all cursor-pointer"
             >
               <div className="w-10 h-10 rounded-xl bg-linear-to-br from-amber-500 via-rose-500 to-indigo-600 p-0.5 shadow-md group-hover:shadow-lg transition-all">
                 <div className="w-full h-full bg-slate-900 rounded-[10px] flex items-center justify-center text-white font-bold text-base font-de">
@@ -65,14 +69,14 @@ export const Header: React.FC<HeaderProps> = ({
               </div>
               <div>
                 <div className="flex items-center gap-2">
-                  <span className="font-extrabold text-slate-900 text-lg tracking-tight font-de">
+                  <span className="font-extrabold text-slate-900 dark:text-white text-lg tracking-tight font-de">
                     Aspekte neu B1+
                   </span>
-                  <span className="text-[11px] font-semibold bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full border border-amber-200">
+                  <span className="text-[11px] font-semibold bg-amber-100 dark:bg-amber-950/80 text-amber-800 dark:text-amber-300 px-2 py-0.5 rounded-full border border-amber-200 dark:border-amber-800/60">
                     واژه‌نامه هوشمند
                   </span>
                 </div>
-                <p className="text-xs text-slate-500 hidden sm:block">
+                <p className="text-xs text-slate-500 dark:text-slate-400 hidden sm:block">
                   آموزش جامع لغات و اصطلاحات کتاب اصلی و متن‌های شنیداری
                 </p>
               </div>
@@ -85,13 +89,13 @@ export const Header: React.FC<HeaderProps> = ({
             <div className="relative">
               <button
                 onClick={() => setLessonDropdownOpen(!lessonDropdownOpen)}
-                className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-medium transition-all ${
+                className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-medium transition-all cursor-pointer ${
                   currentView === 'lesson'
-                    ? 'bg-indigo-50 text-indigo-700 font-semibold'
-                    : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                    ? 'bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 font-semibold'
+                    : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white'
                 }`}
               >
-                <BookOpen className="w-4 h-4 text-indigo-600" />
+                <BookOpen className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
                 <span>درس‌ها (۱ تا ۱۰)</span>
                 {currentView === 'lesson' && (
                   <span className="text-xs bg-indigo-600 text-white px-2 py-0.2 rounded-full font-de">
@@ -106,8 +110,8 @@ export const Header: React.FC<HeaderProps> = ({
                     className="fixed inset-0 z-20"
                     onClick={() => setLessonDropdownOpen(false)}
                   />
-                  <div className="absolute top-full right-0 mt-2 w-72 bg-white rounded-2xl shadow-xl border border-slate-200/80 p-2 z-30 grid grid-cols-1 gap-1 max-h-96 overflow-y-auto">
-                    <div className="px-3 py-2 text-xs font-semibold text-slate-400 border-b border-slate-100 flex items-center justify-between">
+                  <div className="absolute top-full right-0 mt-2 w-72 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-200/80 dark:border-slate-800 p-2 z-30 grid grid-cols-1 gap-1 max-h-96 overflow-y-auto">
+                    <div className="px-3 py-2 text-xs font-semibold text-slate-400 dark:text-slate-500 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between">
                       <span>انتخاب درس</span>
                       <span className="font-de text-[11px]">Lektionen 1 - 10</span>
                     </div>
@@ -119,21 +123,21 @@ export const Header: React.FC<HeaderProps> = ({
                           setCurrentView('lesson');
                           setLessonDropdownOpen(false);
                         }}
-                        className={`flex items-center justify-between px-3 py-2.5 rounded-xl text-right transition-all ${
+                        className={`flex items-center justify-between px-3 py-2.5 rounded-xl text-right transition-all cursor-pointer ${
                           selectedLesson === lesson.number && currentView === 'lesson'
-                            ? 'bg-indigo-50 text-indigo-700 font-semibold'
-                            : 'hover:bg-slate-50 text-slate-700'
+                            ? 'bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 font-semibold'
+                            : 'hover:bg-slate-50 dark:hover:bg-slate-800/80 text-slate-700 dark:text-slate-300'
                         }`}
                       >
                         <div className="flex items-center gap-2.5">
-                          <span className="w-6 h-6 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center text-xs font-bold font-de">
+                          <span className="w-6 h-6 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center text-xs font-bold font-de">
                             {lesson.number}
                           </span>
                           <div>
-                            <div className="text-xs font-bold text-slate-800 font-de">
+                            <div className="text-xs font-bold text-slate-800 dark:text-slate-200 font-de">
                               Lektion {lesson.number}: {lesson.germanTitle}
                             </div>
-                            <div className="text-[11px] text-slate-500">
+                            <div className="text-[11px] text-slate-500 dark:text-slate-400">
                               {lesson.persianTitle}
                             </div>
                           </div>
@@ -148,11 +152,11 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Quick Search Button */}
             <button
               onClick={onOpenSearch}
-              className="flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-all"
+              className="flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white transition-all cursor-pointer"
             >
-              <Search className="w-4 h-4 text-slate-500" />
+              <Search className="w-4 h-4 text-slate-500 dark:text-slate-400" />
               <span>جستجوی پیشرفته</span>
-              <kbd className="hidden lg:inline-block px-1.5 py-0.5 text-[10px] font-mono bg-slate-100 text-slate-500 rounded border border-slate-200">
+              <kbd className="hidden lg:inline-block px-1.5 py-0.5 text-[10px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 rounded border border-slate-200 dark:border-slate-700">
                 ⌘K
               </kbd>
             </button>
@@ -161,20 +165,20 @@ export const Header: React.FC<HeaderProps> = ({
             {onOpenHoertexte && (
               <button
                 onClick={onOpenHoertexte}
-                className="flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-medium text-purple-700 bg-purple-50 hover:bg-purple-100 hover:text-purple-900 transition-all font-semibold"
+                className="flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-medium text-purple-700 dark:text-purple-300 bg-purple-50 dark:bg-purple-950/50 hover:bg-purple-100 dark:hover:bg-purple-900/50 transition-all font-semibold cursor-pointer border border-purple-200/60 dark:border-purple-800/40"
               >
-                <Headphones className="w-4 h-4 text-purple-600" />
-                <span>متن‌های شنیداری (Hörtexte)</span>
+                <Headphones className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+                <span>متن‌های شنیداری</span>
               </button>
             )}
 
             {/* Flashcards */}
             <button
               onClick={onOpenFlashcards}
-              className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-medium transition-all ${
+              className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-medium transition-all cursor-pointer ${
                 currentView === 'flashcards'
-                  ? 'bg-amber-50 text-amber-700 font-semibold'
-                  : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                  ? 'bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 font-semibold'
+                  : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
               <Layers className="w-4 h-4 text-amber-500" />
@@ -184,56 +188,73 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Quiz */}
             <button
               onClick={onOpenQuiz}
-              className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-medium transition-all ${
+              className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-medium transition-all cursor-pointer ${
                 currentView === 'quiz'
-                  ? 'bg-rose-50 text-rose-700 font-semibold'
-                  : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                  ? 'bg-rose-50 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300 font-semibold'
+                  : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
               <Sparkles className="w-4 h-4 text-rose-500" />
-              <span>آزمون ۴ گزینه‌ای</span>
+              <span>آزمون تستی</span>
             </button>
 
             {/* PDF & Database Manager */}
             <button
               onClick={onOpenDatabase}
-              className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-medium transition-all ${
+              className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-medium transition-all cursor-pointer ${
                 currentView === 'database'
-                  ? 'bg-emerald-50 text-emerald-700 font-semibold'
-                  : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                  ? 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 font-semibold'
+                  : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
-              <Database className="w-4 h-4 text-emerald-600" />
-              <span>پایگاه داده و PDF</span>
+              <Database className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <span>پایگاه داده</span>
             </button>
           </nav>
 
-          {/* User Progress Pill on Top Right */}
-          <div className="hidden lg:flex items-center gap-3">
-            <div className="flex items-center gap-2 bg-slate-100/90 px-3 py-1.5 rounded-xl border border-slate-200/60 text-xs">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-              <span className="text-slate-600">پیشرفت کل:</span>
-              <span className="font-bold text-slate-900 font-de">{stats.completionPercentage}%</span>
-              <span className="text-slate-400">({stats.learnedWords}/{stats.totalWords} واژه)</span>
+          {/* Right Controls: Progress Pill + Dark Mode Toggle */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            
+            {/* User Progress Pill */}
+            <div className="hidden lg:flex items-center gap-2 bg-slate-100/90 dark:bg-slate-800/80 px-3 py-1.5 rounded-xl border border-slate-200/60 dark:border-slate-700/60 text-xs">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <span className="text-slate-600 dark:text-slate-400">پیشرفت:</span>
+              <span className="font-bold text-slate-900 dark:text-white font-de">{stats.completionPercentage}%</span>
+              <span className="text-slate-400 dark:text-slate-500">({stats.learnedWords}/{stats.totalWords})</span>
             </div>
-          </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex md:hidden items-center gap-2">
+            {/* Dark Mode Toggle Button */}
             <button
-              onClick={onOpenSearch}
-              className="p-2 rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200"
-              aria-label="Search"
+              onClick={toggleTheme}
+              className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-amber-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all cursor-pointer border border-slate-200/60 dark:border-slate-700"
+              title={theme === 'dark' ? 'تغییر به تم روشن (Light)' : 'تغییر به تم تاریک (Dark)'}
+              aria-label="Toggle Theme"
             >
-              <Search className="w-5 h-5" />
+              {theme === 'dark' ? (
+                <Sun className="w-4 h-4 animate-in spin-in-180 duration-300" />
+              ) : (
+                <Moon className="w-4 h-4 animate-in spin-in-180 duration-300" />
+              )}
             </button>
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200"
-              aria-label="Open Menu"
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+
+            {/* Mobile Menu Button */}
+            <div className="flex md:hidden items-center gap-1.5">
+              <button
+                onClick={onOpenSearch}
+                className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700"
+                aria-label="Search"
+              >
+                <Search className="w-5 h-5" />
+              </button>
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700"
+                aria-label="Open Menu"
+              >
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
+
           </div>
 
         </div>
@@ -241,13 +262,13 @@ export const Header: React.FC<HeaderProps> = ({
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3 shadow-2xl">
-          <div className="flex items-center justify-between p-3 bg-slate-50 rounded-xl text-xs">
+        <div className="md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-3 pb-6 space-y-3 shadow-2xl">
+          <div className="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-xl text-xs">
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-              <span className="text-slate-700 font-medium">میزان یادگیری کل:</span>
+              <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <span className="text-slate-700 dark:text-slate-300 font-medium">میزان یادگیری کل:</span>
             </div>
-            <span className="font-bold text-slate-900 font-de">{stats.completionPercentage}% ({stats.learnedWords}/{stats.totalWords})</span>
+            <span className="font-bold text-slate-900 dark:text-white font-de">{stats.completionPercentage}% ({stats.learnedWords}/{stats.totalWords})</span>
           </div>
 
           <div className="grid grid-cols-2 gap-2">
@@ -256,20 +277,33 @@ export const Header: React.FC<HeaderProps> = ({
                 setCurrentView('dashboard');
                 setMobileMenuOpen(false);
               }}
-              className="flex items-center gap-2 p-3 rounded-xl bg-slate-100 text-slate-800 text-sm font-medium"
+              className="flex items-center gap-2 p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-sm font-medium"
             >
-              <BookMarked className="w-4 h-4 text-indigo-600" />
+              <BookMarked className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
               <span>داشبورد درس‌ها</span>
             </button>
+
+            {onOpenHoertexte && (
+              <button
+                onClick={() => {
+                  onOpenHoertexte();
+                  setMobileMenuOpen(false);
+                }}
+                className="flex items-center gap-2 p-3 rounded-xl bg-purple-50 dark:bg-purple-950/60 text-purple-800 dark:text-purple-300 text-sm font-medium border border-purple-200/60 dark:border-purple-800"
+              >
+                <Headphones className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+                <span>متن‌های شنیداری</span>
+              </button>
+            )}
 
             <button
               onClick={() => {
                 onOpenFlashcards();
                 setMobileMenuOpen(false);
               }}
-              className="flex items-center gap-2 p-3 rounded-xl bg-amber-50 text-amber-800 text-sm font-medium"
+              className="flex items-center gap-2 p-3 rounded-xl bg-amber-50 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 text-sm font-medium"
             >
-              <Layers className="w-4 h-4 text-amber-600" />
+              <Layers className="w-4 h-4 text-amber-600 dark:text-amber-400" />
               <span>فلش‌کارت‌ها</span>
             </button>
 
@@ -278,9 +312,9 @@ export const Header: React.FC<HeaderProps> = ({
                 onOpenQuiz();
                 setMobileMenuOpen(false);
               }}
-              className="flex items-center gap-2 p-3 rounded-xl bg-rose-50 text-rose-800 text-sm font-medium"
+              className="flex items-center gap-2 p-3 rounded-xl bg-rose-50 dark:bg-rose-950/60 text-rose-800 dark:text-rose-300 text-sm font-medium"
             >
-              <Sparkles className="w-4 h-4 text-rose-600" />
+              <Sparkles className="w-4 h-4 text-rose-600 dark:text-rose-400" />
               <span>آزمون تستی</span>
             </button>
 
@@ -289,15 +323,15 @@ export const Header: React.FC<HeaderProps> = ({
                 onOpenDatabase();
                 setMobileMenuOpen(false);
               }}
-              className="flex items-center gap-2 p-3 rounded-xl bg-emerald-50 text-emerald-800 text-sm font-medium"
+              className="col-span-2 flex items-center justify-center gap-2 p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 text-sm font-medium"
             >
-              <Database className="w-4 h-4 text-emerald-600" />
-              <span>دیتابیس و PDF</span>
+              <Database className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <span>دیتابیس و مدیریت PDF</span>
             </button>
           </div>
 
-          <div className="pt-2 border-t border-slate-100">
-            <div className="text-xs font-bold text-slate-400 mb-2">انتخاب سریع درس:</div>
+          <div className="pt-2 border-t border-slate-100 dark:border-slate-800">
+            <div className="text-xs font-bold text-slate-400 dark:text-slate-500 mb-2">انتخاب سریع درس:</div>
             <div className="grid grid-cols-5 gap-1.5">
               {LESSONS_DATA.map((l) => (
                 <button
@@ -310,7 +344,7 @@ export const Header: React.FC<HeaderProps> = ({
                   className={`p-2 rounded-xl text-center font-de text-xs font-bold transition-all ${
                     selectedLesson === l.number && currentView === 'lesson'
                       ? 'bg-indigo-600 text-white shadow-sm'
-                      : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                      : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
                   }`}
                 >
                   L{l.number}

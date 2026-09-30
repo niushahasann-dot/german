@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { VocabularyProvider } from './context/VocabularyContext';
+import { ThemeProvider } from './context/ThemeContext';
 import { Header } from './components/Header';
 import { Dashboard } from './components/Dashboard';
 import { LessonView } from './components/LessonView';
@@ -9,9 +10,8 @@ import { AdvancedSearchModal } from './components/AdvancedSearchModal';
 import { PdfPipelineManager } from './components/PdfPipelineManager';
 import { HoertexteViewerModal } from './components/HoertexteViewerModal';
 import { CategoryType, SourceType } from './types/vocabulary';
-import { BookOpen, Heart, Globe, Sparkles, Layers, Search, Database, Headphones } from 'lucide-react';
 
-export default function App() {
+function AppContent() {
   const [currentView, setCurrentView] = useState<'dashboard' | 'lesson' | 'flashcards' | 'quiz' | 'search' | 'database'>('dashboard');
   const [selectedLesson, setSelectedLesson] = useState<number>(1);
   
@@ -71,108 +71,116 @@ export default function App() {
   };
 
   return (
-    <VocabularyProvider>
-      <div className="min-h-screen bg-slate-50 flex flex-col font-sans text-slate-800 antialiased selection:bg-amber-200 selection:text-amber-900">
-        
-        {/* Navigation Header */}
-        <Header
-          currentView={currentView}
-          setCurrentView={setCurrentView}
-          selectedLesson={selectedLesson}
-          setSelectedLesson={handleSelectLesson}
-          onOpenSearch={() => setIsSearchOpen(true)}
-          onOpenFlashcards={() => handleOpenFlashcards()}
-          onOpenQuiz={() => handleOpenQuiz()}
-          onOpenDatabase={() => setIsDatabaseOpen(true)}
-          onOpenHoertexte={() => handleOpenHoertexte()}
-        />
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex flex-col font-sans text-slate-800 dark:text-slate-100 antialiased selection:bg-amber-200 selection:text-amber-900 transition-colors duration-200">
+      
+      {/* Navigation Header */}
+      <Header
+        currentView={currentView}
+        setCurrentView={setCurrentView}
+        selectedLesson={selectedLesson}
+        setSelectedLesson={handleSelectLesson}
+        onOpenSearch={() => setIsSearchOpen(true)}
+        onOpenFlashcards={() => handleOpenFlashcards()}
+        onOpenQuiz={() => handleOpenQuiz()}
+        onOpenDatabase={() => setIsDatabaseOpen(true)}
+        onOpenHoertexte={() => handleOpenHoertexte()}
+      />
 
-        {/* Main Content Area */}
-        <main className="flex-1">
-          {currentView === 'dashboard' && (
-            <Dashboard
-              onSelectLesson={handleSelectLesson}
-              onOpenFlashcards={handleOpenFlashcards}
-              onOpenQuiz={handleOpenQuiz}
-              onOpenSearch={() => setIsSearchOpen(true)}
-              onOpenDatabase={() => setIsDatabaseOpen(true)}
-            />
-          )}
+      {/* Main Content Area */}
+      <main className="flex-1">
+        {currentView === 'dashboard' && (
+          <Dashboard
+            onSelectLesson={handleSelectLesson}
+            onOpenFlashcards={handleOpenFlashcards}
+            onOpenQuiz={handleOpenQuiz}
+            onOpenSearch={() => setIsSearchOpen(true)}
+            onOpenDatabase={() => setIsDatabaseOpen(true)}
+          />
+        )}
 
-          {currentView === 'lesson' && (
-            <LessonView
-              lessonNumber={selectedLesson}
-              onSelectLesson={handleSelectLesson}
-              onBackToDashboard={() => setCurrentView('dashboard')}
-              onStartFlashcards={(lNum, cat, src) => handleOpenFlashcards(lNum, cat, src)}
-              onStartQuiz={(lNum) => handleOpenQuiz(lNum)}
-              onOpenHoertexte={(lNum) => handleOpenHoertexte(lNum)}
-            />
-          )}
-        </main>
+        {currentView === 'lesson' && (
+          <LessonView
+            lessonNumber={selectedLesson}
+            onSelectLesson={handleSelectLesson}
+            onBackToDashboard={() => setCurrentView('dashboard')}
+            onStartFlashcards={(lNum, cat, src) => handleOpenFlashcards(lNum, cat, src)}
+            onStartQuiz={(lNum) => handleOpenQuiz(lNum)}
+            onOpenHoertexte={(lNum) => handleOpenHoertexte(lNum)}
+          />
+        )}
+      </main>
 
-        {/* Global Footer */}
-        <footer className="border-t border-slate-200 bg-white py-8 mt-12 text-xs text-slate-500">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-right">
-            
-            <div className="flex items-center gap-2">
-              <span className="font-extrabold text-slate-900 font-de">Aspekte neu B1+</span>
-              <span>• واژه‌نامه هوشمند Lehrbuch و Hörtexte</span>
-            </div>
-
-            <div className="flex items-center gap-4 text-slate-400">
-              <span>درس‌های ۱ تا ۱۰</span>
-              <span>•</span>
-              <span>پشتیبانی از تلفظ صوتی (de-DE)</span>
-              <span>•</span>
-              <span>سازگار با کلودفلر و اجرا در مرورگر</span>
-            </div>
-
+      {/* Global Footer */}
+      <footer className="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-8 mt-12 text-xs text-slate-500 dark:text-slate-400 transition-colors">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-right">
+          
+          <div className="flex items-center gap-2">
+            <span className="font-extrabold text-slate-900 dark:text-white font-de">Aspekte neu B1+</span>
+            <span>• واژه‌نامه هوشمند Lehrbuch و Hörtexte</span>
           </div>
-        </footer>
 
-        {/* Modals */}
-        {isSearchOpen && (
-          <AdvancedSearchModal
-            onClose={() => setIsSearchOpen(false)}
-            onSelectWordLesson={(lNum) => {
-              setSelectedLesson(lNum);
-              setCurrentView('lesson');
-              setIsSearchOpen(false);
-            }}
-          />
-        )}
+          <div className="flex items-center gap-4 text-slate-400 dark:text-slate-500">
+            <span>درس‌های ۱ تا ۱۰</span>
+            <span>•</span>
+            <span>پشتیبانی از تلفظ صوتی (de-DE)</span>
+            <span>•</span>
+            <span>تم تاریک و روشن (Dark Mode)</span>
+          </div>
 
-        {isFlashcardsOpen && (
-          <FlashcardsModal
-            initialLesson={flashcardFilters.lesson}
-            initialCategory={flashcardFilters.category}
-            initialSource={flashcardFilters.source}
-            onClose={() => setIsFlashcardsOpen(false)}
-          />
-        )}
+        </div>
+      </footer>
 
-        {isQuizOpen && (
-          <QuizModal
-            initialLesson={quizLesson}
-            onClose={() => setIsQuizOpen(false)}
-          />
-        )}
+      {/* Modals */}
+      {isSearchOpen && (
+        <AdvancedSearchModal
+          onClose={() => setIsSearchOpen(false)}
+          onSelectWordLesson={(lNum) => {
+            setSelectedLesson(lNum);
+            setCurrentView('lesson');
+            setIsSearchOpen(false);
+          }}
+        />
+      )}
 
-        {isDatabaseOpen && (
-          <PdfPipelineManager
-            onClose={() => setIsDatabaseOpen(false)}
-          />
-        )}
+      {isFlashcardsOpen && (
+        <FlashcardsModal
+          initialLesson={flashcardFilters.lesson}
+          initialCategory={flashcardFilters.category}
+          initialSource={flashcardFilters.source}
+          onClose={() => setIsFlashcardsOpen(false)}
+        />
+      )}
 
-        {isHoertexteOpen && (
-          <HoertexteViewerModal
-            initialLesson={hoertexteLesson}
-            onClose={() => setIsHoertexteOpen(false)}
-          />
-        )}
+      {isQuizOpen && (
+        <QuizModal
+          initialLesson={quizLesson}
+          onClose={() => setIsQuizOpen(false)}
+        />
+      )}
 
-      </div>
-    </VocabularyProvider>
+      {isDatabaseOpen && (
+        <PdfPipelineManager
+          onClose={() => setIsDatabaseOpen(false)}
+        />
+      )}
+
+      {isHoertexteOpen && (
+        <HoertexteViewerModal
+          initialLesson={hoertexteLesson}
+          onClose={() => setIsHoertexteOpen(false)}
+        />
+      )}
+
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <ThemeProvider>
+      <VocabularyProvider>
+        <AppContent />
+      </VocabularyProvider>
+    </ThemeProvider>
   );
 }
