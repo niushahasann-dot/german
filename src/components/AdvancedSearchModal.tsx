@@ -85,20 +85,20 @@ export const AdvancedSearchModal: React.FC<AdvancedSearchModalProps> = ({
   const hasActiveFilters = selectedLesson !== 'all' || selectedSource !== 'all' || selectedCategory !== 'all' || selectedStatus !== 'all' || query !== '';
 
   return (
-    <div className="fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
       
-      <div className="bg-white rounded-3xl w-full max-w-4xl shadow-2xl flex flex-col max-h-[92vh] overflow-hidden border border-slate-200">
+      <div className="bg-white dark:bg-slate-900 rounded-3xl w-full max-w-4xl shadow-2xl flex flex-col max-h-[92vh] overflow-hidden border border-slate-200 dark:border-slate-800">
         
         {/* Header */}
-        <div className="p-4 sm:p-6 border-b border-slate-100 flex items-center justify-between gap-4">
+        <div className="p-4 sm:p-6 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between gap-4">
           
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-2xl bg-indigo-50 dark:bg-indigo-950/80 text-indigo-600 dark:text-indigo-400 flex items-center justify-center border border-indigo-100 dark:border-indigo-800/60">
               <Search className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-lg font-bold text-slate-900">جستجوی پیشرفته در تمام منابع</h3>
-              <p className="text-xs text-slate-500">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white">جستجوی پیشرفته در تمام منابع</h3>
+              <p className="text-xs text-slate-500 dark:text-slate-400">
                 جستجو در کل واژگان کتاب اصلی (Lehrbuch) و متن‌های شنیداری (Hörtexte) دروس ۱ تا ۱۰
               </p>
             </div>
@@ -106,7 +106,7 @@ export const AdvancedSearchModal: React.FC<AdvancedSearchModalProps> = ({
 
           <button
             onClick={onClose}
-            className="p-2 rounded-xl bg-slate-100 text-slate-500 hover:text-slate-900 hover:bg-slate-200 transition-colors"
+            className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
@@ -114,7 +114,7 @@ export const AdvancedSearchModal: React.FC<AdvancedSearchModalProps> = ({
         </div>
 
         {/* Search Input and Multi-Filter Controls */}
-        <div className="p-4 sm:p-6 bg-slate-50/70 border-b border-slate-200 space-y-4">
+        <div className="p-4 sm:p-6 bg-slate-50/70 dark:bg-slate-850/80 border-b border-slate-200 dark:border-slate-800 space-y-4">
           
           {/* Main Search Bar */}
           <div className="relative">
@@ -124,13 +124,13 @@ export const AdvancedSearchModal: React.FC<AdvancedSearchModalProps> = ({
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="جستجوی لغت آلمانی، معنی فارسی، مثال یا اصطلاح..."
-              className="w-full pr-11 pl-4 py-3.5 bg-white border border-slate-300 rounded-2xl text-sm sm:text-base focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-hidden shadow-xs transition-all"
+              className="w-full pr-11 pl-4 py-3.5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-2xl text-sm sm:text-base text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-hidden shadow-xs transition-all"
             />
-            <Search className="w-5 h-5 text-slate-400 absolute right-4 top-4" />
+            <Search className="w-5 h-5 text-slate-400 dark:text-slate-500 absolute right-4 top-4" />
             {query && (
               <button
                 onClick={() => setQuery('')}
-                className="absolute left-4 top-4 text-xs font-semibold text-slate-400 hover:text-slate-600"
+                className="absolute left-4 top-4 text-xs font-semibold text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 cursor-pointer"
               >
                 پاک کردن
               </button>
@@ -142,11 +142,11 @@ export const AdvancedSearchModal: React.FC<AdvancedSearchModalProps> = ({
             
             {/* Lesson Filter */}
             <div className="space-y-1">
-              <label className="text-slate-500 font-semibold block text-[11px]">درس (Lektion):</label>
+              <label className="text-slate-600 dark:text-slate-400 font-semibold block text-[11px]">درس (Lektion):</label>
               <select
                 value={selectedLesson}
                 onChange={(e) => setSelectedLesson(e.target.value === 'all' ? 'all' : Number(e.target.value))}
-                className="w-full bg-white border border-slate-300 rounded-xl p-2.5 font-medium text-slate-800 outline-hidden focus:border-indigo-500"
+                className="w-full bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl p-2.5 font-medium text-slate-800 dark:text-slate-100 outline-hidden focus:border-indigo-500 cursor-pointer"
               >
                 <option value="all">همه درس‌ها (۱ تا ۱۰)</option>
                 {LESSONS_DATA.map((l) => (
@@ -159,11 +159,11 @@ export const AdvancedSearchModal: React.FC<AdvancedSearchModalProps> = ({
 
             {/* Source Filter */}
             <div className="space-y-1">
-              <label className="text-slate-500 font-semibold block text-[11px]">منبع (Quelle):</label>
+              <label className="text-slate-600 dark:text-slate-400 font-semibold block text-[11px]">منبع (Quelle):</label>
               <select
                 value={selectedSource}
                 onChange={(e) => setSelectedSource(e.target.value as any)}
-                className="w-full bg-white border border-slate-300 rounded-xl p-2.5 font-medium text-slate-800 outline-hidden focus:border-indigo-500"
+                className="w-full bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl p-2.5 font-medium text-slate-800 dark:text-slate-100 outline-hidden focus:border-indigo-500 cursor-pointer"
               >
                 <option value="all">همه منابع</option>
                 <option value="Lehrbuch">📘 Lehrbuch (کتاب اصلی)</option>
@@ -173,11 +173,11 @@ export const AdvancedSearchModal: React.FC<AdvancedSearchModalProps> = ({
 
             {/* Category Filter */}
             <div className="space-y-1">
-              <label className="text-slate-500 font-semibold block text-[11px]">دسته‌بندی دستوری:</label>
+              <label className="text-slate-600 dark:text-slate-400 font-semibold block text-[11px]">دسته‌بندی دستوری:</label>
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value as any)}
-                className="w-full bg-white border border-slate-300 rounded-xl p-2.5 font-medium text-slate-800 outline-hidden focus:border-indigo-500"
+                className="w-full bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl p-2.5 font-medium text-slate-800 dark:text-slate-100 outline-hidden focus:border-indigo-500 cursor-pointer"
               >
                 <option value="all">همه دسته‌ها</option>
                 <option value="Nomen">اسم‌ها (Nomen)</option>
@@ -190,11 +190,11 @@ export const AdvancedSearchModal: React.FC<AdvancedSearchModalProps> = ({
 
             {/* Status Filter */}
             <div className="space-y-1">
-              <label className="text-slate-500 font-semibold block text-[11px]">وضعیت مطالعه:</label>
+              <label className="text-slate-600 dark:text-slate-400 font-semibold block text-[11px]">وضعیت مطالعه:</label>
               <select
                 value={selectedStatus}
                 onChange={(e) => setSelectedStatus(e.target.value as any)}
-                className="w-full bg-white border border-slate-300 rounded-xl p-2.5 font-medium text-slate-800 outline-hidden focus:border-indigo-500"
+                className="w-full bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl p-2.5 font-medium text-slate-800 dark:text-slate-100 outline-hidden focus:border-indigo-500 cursor-pointer"
               >
                 <option value="all">همه موارد</option>
                 <option value="unseen">⚪ جدید / یاد نگرفته</option>
@@ -208,14 +208,14 @@ export const AdvancedSearchModal: React.FC<AdvancedSearchModalProps> = ({
 
           {/* Quick Active Filter Badges & Results count */}
           <div className="flex items-center justify-between text-xs pt-1">
-            <span className="text-slate-600">
-              یافت شد: <b className="text-indigo-600 font-de text-sm">{filteredResults.length}</b> واژه
+            <span className="text-slate-600 dark:text-slate-300">
+              یافت شد: <b className="text-indigo-600 dark:text-indigo-400 font-de text-sm">{filteredResults.length}</b> واژه
             </span>
 
             {hasActiveFilters && (
               <button
                 onClick={resetFilters}
-                className="text-xs text-rose-600 hover:text-rose-700 font-semibold"
+                className="text-xs text-rose-600 dark:text-rose-400 hover:text-rose-700 font-semibold cursor-pointer"
               >
                 پاک کردن تمام فیلترها
               </button>
@@ -228,11 +228,11 @@ export const AdvancedSearchModal: React.FC<AdvancedSearchModalProps> = ({
         <div className="p-4 sm:p-6 overflow-y-auto flex-1 space-y-4">
           {filteredResults.length === 0 ? (
             <div className="text-center py-12 space-y-3">
-              <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mx-auto text-slate-400">
+              <div className="w-12 h-12 bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center mx-auto text-slate-400 dark:text-slate-500">
                 <Search className="w-6 h-6" />
               </div>
-              <h4 className="font-bold text-slate-700 text-sm">هیچ نتیجه‌ای یافت نشد</h4>
-              <p className="text-xs text-slate-400">
+              <h4 className="font-bold text-slate-800 dark:text-slate-200 text-sm">هیچ نتیجه‌ای یافت نشد</h4>
+              <p className="text-xs text-slate-400 dark:text-slate-500">
                 کلمه دیگری را جستجو کنید یا فیلترهای درس و منبع را تغییر دهید.
               </p>
             </div>
@@ -246,11 +246,11 @@ export const AdvancedSearchModal: React.FC<AdvancedSearchModalProps> = ({
         </div>
 
         {/* Footer */}
-        <div className="p-4 bg-slate-50 border-t border-slate-200 text-xs text-slate-500 flex items-center justify-between">
+        <div className="p-4 bg-slate-50 dark:bg-slate-850/90 border-t border-slate-200 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400 flex items-center justify-between">
           <span>پلتفرم واژه‌نامه تخصصی Aspekte neu B1+</span>
           <button
             onClick={onClose}
-            className="px-4 py-2 bg-slate-900 text-white rounded-xl font-bold hover:bg-slate-800 transition-all text-xs"
+            className="px-4 py-2 bg-slate-900 dark:bg-indigo-600 text-white rounded-xl font-bold hover:bg-slate-800 dark:hover:bg-indigo-700 transition-all text-xs cursor-pointer"
           >
             بستن
           </button>

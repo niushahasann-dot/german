@@ -184,17 +184,17 @@ export const PdfPipelineManager: React.FC<PdfPipelineManagerProps> = ({ onClose 
   return (
     <div className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
       
-      <div className="bg-white rounded-3xl w-full max-w-4xl shadow-2xl flex flex-col max-h-[92vh] overflow-hidden border border-slate-200">
+      <div className="bg-white dark:bg-slate-900 rounded-3xl w-full max-w-4xl shadow-2xl flex flex-col max-h-[92vh] overflow-hidden border border-slate-200 dark:border-slate-800">
         
         {/* Header */}
-        <div className="p-4 sm:p-6 border-b border-slate-100 flex items-center justify-between gap-4">
+        <div className="p-4 sm:p-6 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-2xl bg-emerald-50 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center border border-emerald-100 dark:border-emerald-800/60">
               <Database className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-lg font-bold text-slate-900">معماری استخراج PDF و مدیریت دیتابیس</h3>
-              <p className="text-xs text-slate-500">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white">معماری استخراج PDF و مدیریت دیتابیس</h3>
+              <p className="text-xs text-slate-500 dark:text-slate-400">
                 پایگاه داده ساختاریافته دو منبع Lehrbuch و Hörtexte بدون بارگذاری مستقیم PDF در سرور کلاینت
               </p>
             </div>
@@ -202,20 +202,20 @@ export const PdfPipelineManager: React.FC<PdfPipelineManagerProps> = ({ onClose 
 
           <button
             onClick={onClose}
-            className="p-2 rounded-xl bg-slate-100 text-slate-500 hover:text-slate-900 transition-colors"
+            className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Tab Navigation */}
-        <div className="bg-slate-50 border-b border-slate-200 px-4 sm:px-6 flex items-center gap-2 overflow-x-auto text-xs font-bold py-2">
+        <div className="bg-slate-50 dark:bg-slate-850/80 border-b border-slate-200 dark:border-slate-800 px-4 sm:px-6 flex items-center gap-2 overflow-x-auto text-xs font-bold py-2">
           <button
             onClick={() => setActiveTab('pipeline')}
-            className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-1.5 ${
+            className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-1.5 cursor-pointer ${
               activeTab === 'pipeline'
                 ? 'bg-indigo-600 text-white shadow-xs'
-                : 'text-slate-600 hover:bg-slate-200'
+                : 'text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800'
             }`}
           >
             <Cpu className="w-3.5 h-3.5" />
@@ -224,10 +224,10 @@ export const PdfPipelineManager: React.FC<PdfPipelineManagerProps> = ({ onClose 
 
           <button
             onClick={() => setActiveTab('import')}
-            className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-1.5 ${
+            className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-1.5 cursor-pointer ${
               activeTab === 'import'
                 ? 'bg-indigo-600 text-white shadow-xs'
-                : 'text-slate-600 hover:bg-slate-200'
+                : 'text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800'
             }`}
           >
             <Upload className="w-3.5 h-3.5" />
@@ -236,10 +236,10 @@ export const PdfPipelineManager: React.FC<PdfPipelineManagerProps> = ({ onClose 
 
           <button
             onClick={() => setActiveTab('addWord')}
-            className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-1.5 ${
+            className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-1.5 cursor-pointer ${
               activeTab === 'addWord'
                 ? 'bg-indigo-600 text-white shadow-xs'
-                : 'text-slate-600 hover:bg-slate-200'
+                : 'text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800'
             }`}
           >
             <Plus className="w-3.5 h-3.5" />
@@ -248,10 +248,10 @@ export const PdfPipelineManager: React.FC<PdfPipelineManagerProps> = ({ onClose 
 
           <button
             onClick={() => setActiveTab('manage')}
-            className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-1.5 ${
+            className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-1.5 cursor-pointer ${
               activeTab === 'manage'
                 ? 'bg-indigo-600 text-white shadow-xs'
-                : 'text-slate-600 hover:bg-slate-200'
+                : 'text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800'
             }`}
           >
             <Download className="w-3.5 h-3.5" />
@@ -266,28 +266,28 @@ export const PdfPipelineManager: React.FC<PdfPipelineManagerProps> = ({ onClose 
           {activeTab === 'pipeline' && (
             <div className="space-y-6">
               
-              <div className="p-4 bg-indigo-50/70 border border-indigo-100 rounded-2xl space-y-2">
-                <div className="flex items-center gap-2 font-bold text-indigo-900 text-sm">
-                  <CheckCircle2 className="w-4 h-4 text-indigo-600" />
+              <div className="p-4 bg-indigo-50/70 dark:bg-indigo-950/50 border border-indigo-100 dark:border-indigo-800/80 rounded-2xl space-y-2">
+                <div className="flex items-center gap-2 font-bold text-indigo-900 dark:text-indigo-200 text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
                   <span>تضمین عملکرد بسیار سریع و سازگار با Cloudflare Workers</span>
                 </div>
-                <p className="text-xs text-indigo-800 leading-relaxed">
+                <p className="text-xs text-indigo-800 dark:text-indigo-300 leading-relaxed">
                   طبق اصول معماری پایدار، پردازش فایل‌های سنگین PDF به صورت آفلاین یا از طریق پایپ‌لاین جداگانه انجام شده و خروجی ساختاریافته JSON به وبسایت تزریق می‌گردد. بنابراین در سمت کلاینت هیچ‌گونه بار سنگین یا تأخیری ایجاد نخواهد شد.
                 </p>
               </div>
 
               {/* Visual Pipeline Flow */}
               <div className="space-y-4">
-                <h4 className="font-bold text-slate-800 text-sm">مراحل گام‌به‌گام استخراج و اتصال دو منبع:</h4>
+                <h4 className="font-bold text-slate-800 dark:text-slate-200 text-sm">مراحل گام‌به‌گام استخراج و اتصال دو منبع:</h4>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {/* Step 1 & 2: PDF 1 */}
-                  <div className="p-4 rounded-2xl bg-sky-50/60 border border-sky-200/80 space-y-2">
-                    <div className="flex items-center gap-2 font-bold text-sky-900 text-xs">
-                      <BookOpen className="w-4 h-4 text-sky-600" />
+                  <div className="p-4 rounded-2xl bg-sky-50/60 dark:bg-sky-950/40 border border-sky-200/80 dark:border-sky-800/60 space-y-2">
+                    <div className="flex items-center gap-2 font-bold text-sky-900 dark:text-sky-200 text-xs">
+                      <BookOpen className="w-4 h-4 text-sky-600 dark:text-sky-400" />
                       <span>منبع اول: Aspekte neu B1+ Lehrbuch</span>
                     </div>
-                    <ul className="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+                    <ul className="text-xs text-slate-600 dark:text-slate-300 space-y-1.5 list-disc list-inside">
                       <li>تفکیک درس‌های ۱ تا ۱۰ کتاب اصلی</li>
                       <li>استخراج واژگان، اسامی، افعال، صفات، قیدها و اصطلاحات</li>
                       <li>استخراج مثال‌های متنی و قواعد دستوری</li>
@@ -295,12 +295,12 @@ export const PdfPipelineManager: React.FC<PdfPipelineManagerProps> = ({ onClose 
                   </div>
 
                   {/* Step 3 & 4: PDF 2 */}
-                  <div className="p-4 rounded-2xl bg-purple-50/60 border border-purple-200/80 space-y-2">
-                    <div className="flex items-center gap-2 font-bold text-purple-900 text-xs">
-                      <Headphones className="w-4 h-4 text-purple-600" />
+                  <div className="p-4 rounded-2xl bg-purple-50/60 dark:bg-purple-950/40 border border-purple-200/80 dark:border-purple-800/60 space-y-2">
+                    <div className="flex items-center gap-2 font-bold text-purple-900 dark:text-purple-200 text-xs">
+                      <Headphones className="w-4 h-4 text-purple-600 dark:text-purple-400" />
                       <span>منبع دوم: Aspekte neu B1+ Hörtexte</span>
                     </div>
-                    <ul className="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+                    <ul className="text-xs text-slate-600 dark:text-slate-300 space-y-1.5 list-disc list-inside">
                       <li>تفکیک متن‌های شنیداری دروس ۱ تا ۱۰</li>
                       <li>استخراج کلمات و اصطلاحات خاص مکالمات شنیداری</li>
                       <li>ثبت شماره Track و مکالمه مربوطه</li>
@@ -309,19 +309,19 @@ export const PdfPipelineManager: React.FC<PdfPipelineManagerProps> = ({ onClose 
                 </div>
 
                 <div className="flex items-center justify-center py-1">
-                  <div className="p-2 rounded-full bg-slate-100 text-slate-500">
+                  <div className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-slate-700">
                     <ArrowDown className="w-4 h-4" />
                   </div>
                 </div>
 
                 {/* Duplication Merger Step */}
-                <div className="p-4 rounded-2xl bg-amber-50/70 border border-amber-200 space-y-2">
-                  <div className="flex items-center gap-2 font-bold text-amber-900 text-xs">
-                    <Layers className="w-4 h-4 text-amber-600" />
+                <div className="p-4 rounded-2xl bg-amber-50/70 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/70 space-y-2">
+                  <div className="flex items-center gap-2 font-bold text-amber-900 dark:text-amber-200 text-xs">
+                    <Layers className="w-4 h-4 text-amber-600 dark:text-amber-400" />
                     <span>مرحله هوشمند: تشخیص و ادغام موارد مشترک (Duplicate Merger)</span>
                   </div>
-                  <p className="text-xs text-slate-700 leading-relaxed">
-                    اگر واژه‌ای مانند <code className="bg-white px-1.5 py-0.5 rounded font-de font-bold text-slate-900">teilnehmen</code> در هر دو PDF وجود داشته باشد، سیستم آن را دوبار ثبت نمی‌کند؛ بلکه برچسب‌های هر دو منبع (<code className="bg-white px-1.5 py-0.5 rounded font-de text-xs">Lehrbuch + Hörtexte</code>) و موقعیت‌های دقیق هر دو فایل را در یک رکورد واحد تجمیع می‌نماید.
+                  <p className="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
+                    اگر واژه‌ای مانند <code className="bg-white dark:bg-slate-800 px-1.5 py-0.5 rounded font-de font-bold text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700">teilnehmen</code> در هر دو PDF وجود داشته باشد، سیستم آن را دوبار ثبت نمی‌کند؛ بلکه برچسب‌های هر دو منبع (<code className="bg-white dark:bg-slate-800 px-1.5 py-0.5 rounded font-de text-xs dark:text-amber-300 border border-slate-200 dark:border-slate-700">Lehrbuch + Hörtexte</code>) و موقعیت‌های دقیق هر دو فایل را در یک رکورد واحد تجمیع می‌نماید.
                   </p>
                 </div>
               </div>
@@ -329,10 +329,10 @@ export const PdfPipelineManager: React.FC<PdfPipelineManagerProps> = ({ onClose 
               {/* JSON Schema Sample Preview */}
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <h4 className="font-bold text-slate-800 text-xs">نمونه ساختار استاندارد داده (JSON Data Schema):</h4>
-                  <span className="text-[11px] text-slate-400 font-mono">TypeScript / JSON</span>
+                  <h4 className="font-bold text-slate-800 dark:text-slate-200 text-xs">نمونه ساختار استاندارد داده (JSON Data Schema):</h4>
+                  <span className="text-[11px] text-slate-400 dark:text-slate-500 font-mono">TypeScript / JSON</span>
                 </div>
-                <pre className="p-4 bg-slate-900 text-amber-300 rounded-2xl text-[11px] font-mono overflow-x-auto text-left dir-ltr max-h-48">
+                <pre className="p-4 bg-slate-900 dark:bg-slate-950 text-amber-300 rounded-2xl text-[11px] font-mono overflow-x-auto text-left dir-ltr max-h-48 border border-slate-800">
 {`{
   "id": "l1-v1",
   "lesson": 1,
@@ -362,14 +362,14 @@ export const PdfPipelineManager: React.FC<PdfPipelineManagerProps> = ({ onClose 
           {activeTab === 'import' && (
             <div className="space-y-4">
               <div className="space-y-1">
-                <h4 className="text-sm font-bold text-slate-800">ورود دسته‌ای واژگان استخراج‌شده از PDF</h4>
-                <p className="text-xs text-slate-500">
+                <h4 className="text-sm font-bold text-slate-800 dark:text-slate-200">ورود دسته‌ای واژگان استخراج‌شده از PDF</h4>
+                <p className="text-xs text-slate-500 dark:text-slate-400">
                   می‌توانید خروجی JSON استخراج‌شده را در کادر زیر قرار دهید یا فایل JSON را آپلود کنید. موارد تکراری به صورت خودکار ادغام خواهند شد.
                 </p>
               </div>
 
               <div className="flex items-center gap-3">
-                <label className="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold cursor-pointer transition-colors">
+                <label className="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-semibold cursor-pointer transition-colors border border-slate-200 dark:border-slate-700">
                   <Upload className="w-3.5 h-3.5" />
                   <span>انتخاب فایل JSON</span>
                   <input
@@ -387,15 +387,15 @@ export const PdfPipelineManager: React.FC<PdfPipelineManagerProps> = ({ onClose 
                 onChange={(e) => setJsonInput(e.target.value)}
                 placeholder='[{"german": "...", "persian": "...", "category": "Nomen", "lesson": 1, "sources": ["Lehrbuch"]}]'
                 rows={8}
-                className="w-full p-3 font-mono text-xs bg-slate-50 border border-slate-300 rounded-2xl focus:ring-2 focus:ring-indigo-500 outline-hidden dir-ltr text-left"
+                className="w-full p-3 font-mono text-xs bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white rounded-2xl focus:ring-2 focus:ring-indigo-500 outline-hidden dir-ltr text-left"
               />
 
               {importStatus.message && (
                 <div
                   className={`p-3 rounded-xl text-xs flex items-center gap-2 ${
                     importStatus.type === 'success'
-                      ? 'bg-emerald-50 text-emerald-800 border border-emerald-200'
-                      : 'bg-rose-50 text-rose-800 border border-rose-200'
+                      ? 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800'
+                      : 'bg-rose-50 dark:bg-rose-950/60 text-rose-800 dark:text-rose-300 border border-rose-200 dark:border-rose-800'
                   }`}
                 >
                   {importStatus.type === 'success' ? (
@@ -422,35 +422,35 @@ export const PdfPipelineManager: React.FC<PdfPipelineManagerProps> = ({ onClose 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-slate-700">کلمه یا عبارت آلمانی:</label>
+                  <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">کلمه یا عبارت آلمانی:</label>
                   <input
                     type="text"
                     required
                     placeholder="e.g. die Herausforderung"
                     value={newWord.german}
                     onChange={(e) => setNewWord({ ...newWord, german: e.target.value })}
-                    className="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-xl text-xs font-de outline-hidden focus:bg-white focus:border-indigo-500"
+                    className="w-full p-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl text-xs font-de text-slate-900 dark:text-white outline-hidden focus:bg-white dark:focus:bg-slate-800 focus:border-indigo-500"
                   />
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-slate-700">معنی فارسی:</label>
+                  <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">معنی فارسی:</label>
                   <input
                     type="text"
                     required
                     placeholder="e.g. چالش، کار دشوار"
                     value={newWord.persian}
                     onChange={(e) => setNewWord({ ...newWord, persian: e.target.value })}
-                    className="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-xl text-xs outline-hidden focus:bg-white focus:border-indigo-500"
+                    className="w-full p-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl text-xs text-slate-900 dark:text-white outline-hidden focus:bg-white dark:focus:bg-slate-800 focus:border-indigo-500"
                   />
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-slate-700">درس:</label>
+                  <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">درس:</label>
                   <select
                     value={newWord.lesson}
                     onChange={(e) => setNewWord({ ...newWord, lesson: Number(e.target.value) })}
-                    className="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-xl text-xs outline-hidden"
+                    className="w-full p-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 rounded-xl text-xs outline-hidden cursor-pointer"
                   >
                     {LESSONS_DATA.map((l) => (
                       <option key={l.number} value={l.number}>
@@ -464,11 +464,11 @@ export const PdfPipelineManager: React.FC<PdfPipelineManagerProps> = ({ onClose 
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-slate-700">دسته‌بندی دستوری:</label>
+                  <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">دسته‌بندی دستوری:</label>
                   <select
                     value={newWord.category}
                     onChange={(e) => setNewWord({ ...newWord, category: e.target.value as any })}
-                    className="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-xl text-xs outline-hidden"
+                    className="w-full p-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 rounded-xl text-xs outline-hidden cursor-pointer"
                   >
                     <option value="Nomen">اسم (Nomen)</option>
                     <option value="Verben">فعل (Verben)</option>
@@ -479,11 +479,11 @@ export const PdfPipelineManager: React.FC<PdfPipelineManagerProps> = ({ onClose 
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-slate-700">منبع اصلی:</label>
+                  <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">منبع اصلی:</label>
                   <select
                     value={newWord.source}
                     onChange={(e) => setNewWord({ ...newWord, source: e.target.value as any })}
-                    className="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-xl text-xs outline-hidden"
+                    className="w-full p-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 rounded-xl text-xs outline-hidden cursor-pointer"
                   >
                     <option value="Lehrbuch">📘 کتاب اصلی (Lehrbuch)</option>
                     <option value="Hörtexte">🎧 متن شنیداری (Hörtexte)</option>
@@ -493,13 +493,13 @@ export const PdfPipelineManager: React.FC<PdfPipelineManagerProps> = ({ onClose 
 
               {/* Conditional category fields */}
               {newWord.category === 'Nomen' && (
-                <div className="grid grid-cols-2 gap-3 p-3 bg-blue-50/50 rounded-2xl border border-blue-100">
+                <div className="grid grid-cols-2 gap-3 p-3 bg-blue-50/50 dark:bg-blue-950/40 rounded-2xl border border-blue-100 dark:border-blue-800/60">
                   <div className="space-y-1">
-                    <label className="text-xs font-semibold text-blue-900">آرتیکل (Artikel):</label>
+                    <label className="text-xs font-semibold text-blue-900 dark:text-blue-200">آرتیکل (Artikel):</label>
                     <select
                       value={newWord.article}
                       onChange={(e) => setNewWord({ ...newWord, article: e.target.value as any })}
-                      className="w-full p-2 bg-white border border-blue-200 rounded-xl text-xs font-de"
+                      className="w-full p-2 bg-white dark:bg-slate-800 border border-blue-200 dark:border-blue-800 text-slate-800 dark:text-slate-100 rounded-xl text-xs font-de cursor-pointer"
                     >
                       <option value="der">der (مذکر)</option>
                       <option value="die">die (مونث)</option>
@@ -507,48 +507,48 @@ export const PdfPipelineManager: React.FC<PdfPipelineManagerProps> = ({ onClose 
                     </select>
                   </div>
                   <div className="space-y-1">
-                    <label className="text-xs font-semibold text-blue-900">فرم جمع (Plural):</label>
+                    <label className="text-xs font-semibold text-blue-900 dark:text-blue-200">فرم جمع (Plural):</label>
                     <input
                       type="text"
                       placeholder="e.g. die Herausforderungen"
                       value={newWord.plural}
                       onChange={(e) => setNewWord({ ...newWord, plural: e.target.value })}
-                      className="w-full p-2 bg-white border border-blue-200 rounded-xl text-xs font-de"
+                      className="w-full p-2 bg-white dark:bg-slate-800 border border-blue-200 dark:border-blue-800 text-slate-800 dark:text-slate-100 rounded-xl text-xs font-de outline-hidden"
                     />
                   </div>
                 </div>
               )}
 
               {newWord.category === 'Verben' && (
-                <div className="grid grid-cols-3 gap-2 p-3 bg-emerald-50/50 rounded-2xl border border-emerald-100">
+                <div className="grid grid-cols-3 gap-2 p-3 bg-emerald-50/50 dark:bg-emerald-950/40 rounded-2xl border border-emerald-100 dark:border-emerald-800/60">
                   <div className="space-y-1">
-                    <label className="text-[11px] font-semibold text-emerald-900">Präsens 3.P:</label>
+                    <label className="text-[11px] font-semibold text-emerald-900 dark:text-emerald-200">Präsens 3.P:</label>
                     <input
                       type="text"
                       placeholder="e.g. nimmt teil"
                       value={newWord.present}
                       onChange={(e) => setNewWord({ ...newWord, present: e.target.value })}
-                      className="w-full p-2 bg-white border border-emerald-200 rounded-xl text-xs font-de"
+                      className="w-full p-2 bg-white dark:bg-slate-800 border border-emerald-200 dark:border-emerald-800 text-slate-800 dark:text-slate-100 rounded-xl text-xs font-de outline-hidden"
                     />
                   </div>
                   <div className="space-y-1">
-                    <label className="text-[11px] font-semibold text-emerald-900">Präteritum:</label>
+                    <label className="text-[11px] font-semibold text-emerald-900 dark:text-emerald-200">Präteritum:</label>
                     <input
                       type="text"
                       placeholder="e.g. nahm teil"
                       value={newWord.preterite}
                       onChange={(e) => setNewWord({ ...newWord, preterite: e.target.value })}
-                      className="w-full p-2 bg-white border border-emerald-200 rounded-xl text-xs font-de"
+                      className="w-full p-2 bg-white dark:bg-slate-800 border border-emerald-200 dark:border-emerald-800 text-slate-800 dark:text-slate-100 rounded-xl text-xs font-de outline-hidden"
                     />
                   </div>
                   <div className="space-y-1">
-                    <label className="text-[11px] font-semibold text-emerald-900">Perfekt:</label>
+                    <label className="text-[11px] font-semibold text-emerald-900 dark:text-emerald-200">Perfekt:</label>
                     <input
                       type="text"
                       placeholder="e.g. hat teilgenommen"
                       value={newWord.perfect}
                       onChange={(e) => setNewWord({ ...newWord, perfect: e.target.value })}
-                      className="w-full p-2 bg-white border border-emerald-200 rounded-xl text-xs font-de"
+                      className="w-full p-2 bg-white dark:bg-slate-800 border border-emerald-200 dark:border-emerald-800 text-slate-800 dark:text-slate-100 rounded-xl text-xs font-de outline-hidden"
                     />
                   </div>
                 </div>
@@ -556,23 +556,23 @@ export const PdfPipelineManager: React.FC<PdfPipelineManagerProps> = ({ onClose 
 
               <div className="space-y-2">
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-slate-700">جمله مثال آلمانی:</label>
+                  <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">جمله مثال آلمانی:</label>
                   <input
                     type="text"
                     placeholder="e.g. Viele Jugendliche nehmen am Workshop teil."
                     value={newWord.example}
                     onChange={(e) => setNewWord({ ...newWord, example: e.target.value })}
-                    className="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-xl text-xs font-de outline-hidden"
+                    className="w-full p-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl text-xs font-de outline-hidden"
                   />
                 </div>
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-slate-700">ترجمه فارسی مثال:</label>
+                  <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">ترجمه فارسی مثال:</label>
                   <input
                     type="text"
                     placeholder="e.g. بسیاری از نوجوانان در کارگاه شرکت می‌کنند."
                     value={newWord.exampleTranslation}
                     onChange={(e) => setNewWord({ ...newWord, exampleTranslation: e.target.value })}
-                    className="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-xl text-xs outline-hidden"
+                    className="w-full p-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl text-xs outline-hidden"
                   />
                 </div>
               </div>
@@ -590,17 +590,17 @@ export const PdfPipelineManager: React.FC<PdfPipelineManagerProps> = ({ onClose 
           {activeTab === 'manage' && (
             <div className="space-y-4">
               
-              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-3">
+              <div className="p-4 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-3">
                 <div className="flex items-center justify-between">
                   <div className="space-y-1">
-                    <h5 className="font-bold text-slate-800 text-xs">پشتیبان‌گیری کامل از دیتابیس واژگان</h5>
-                    <p className="text-[11px] text-slate-500">
+                    <h5 className="font-bold text-slate-800 dark:text-slate-200 text-xs">پشتیبان‌گیری کامل از دیتابیس واژگان</h5>
+                    <p className="text-[11px] text-slate-500 dark:text-slate-400">
                       دانلود فایل JSON کامل شامل تمامی {vocabulary.length} واژه و نمونه‌ها
                     </p>
                   </div>
                   <button
                     onClick={handleDownloadBackup}
-                    className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-bold hover:bg-slate-800 transition-all shadow-xs"
+                    className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-slate-900 dark:bg-indigo-600 text-white text-xs font-bold hover:bg-slate-800 dark:hover:bg-indigo-700 transition-all shadow-xs cursor-pointer"
                   >
                     <Download className="w-3.5 h-3.5" />
                     <span>دانلود دیتابیس (JSON)</span>
@@ -608,11 +608,11 @@ export const PdfPipelineManager: React.FC<PdfPipelineManagerProps> = ({ onClose 
                 </div>
               </div>
 
-              <div className="p-4 bg-rose-50/60 rounded-2xl border border-rose-200 space-y-3">
+              <div className="p-4 bg-rose-50/60 dark:bg-rose-950/40 rounded-2xl border border-rose-200 dark:border-rose-800/80 space-y-3">
                 <div className="flex items-center justify-between">
                   <div className="space-y-1">
-                    <h5 className="font-bold text-rose-900 text-xs">بازنشانی به داده‌های اولیه درس‌ها</h5>
-                    <p className="text-[11px] text-rose-700">
+                    <h5 className="font-bold text-rose-900 dark:text-rose-200 text-xs">بازنشانی به داده‌های اولیه درس‌ها</h5>
+                    <p className="text-[11px] text-rose-700 dark:text-rose-400">
                       پاک کردن تغییرات دستی و بازگرداندن واژگان نمونه استاندارد Aspekte neu B1+
                     </p>
                   </div>
@@ -626,7 +626,7 @@ export const PdfPipelineManager: React.FC<PdfPipelineManagerProps> = ({ onClose 
                         });
                       }
                     }}
-                    className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-rose-600 text-white text-xs font-bold hover:bg-rose-700 transition-all shadow-xs"
+                    className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-rose-600 text-white text-xs font-bold hover:bg-rose-700 transition-all shadow-xs cursor-pointer"
                   >
                     <RefreshCw className="w-3.5 h-3.5" />
                     <span>بازنشانی پیش‌فرض</span>
@@ -640,11 +640,11 @@ export const PdfPipelineManager: React.FC<PdfPipelineManagerProps> = ({ onClose 
         </div>
 
         {/* Footer */}
-        <div className="p-4 bg-slate-50 border-t border-slate-200 text-xs text-slate-500 flex items-center justify-between">
-          <span>کل واژگان ثبت‌شده در سیستم: <b className="text-slate-800 font-de">{vocabulary.length}</b></span>
+        <div className="p-4 bg-slate-50 dark:bg-slate-850/90 border-t border-slate-200 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400 flex items-center justify-between">
+          <span>کل واژگان ثبت‌شده در سیستم: <b className="text-slate-800 dark:text-slate-100 font-de">{vocabulary.length}</b></span>
           <button
             onClick={onClose}
-            className="px-4 py-2 bg-slate-900 text-white rounded-xl font-bold hover:bg-slate-800 transition-all text-xs"
+            className="px-4 py-2 bg-slate-900 dark:bg-indigo-600 text-white rounded-xl font-bold hover:bg-slate-800 dark:hover:bg-indigo-700 transition-all text-xs cursor-pointer"
           >
             بستن
           </button>
