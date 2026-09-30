@@ -45,60 +45,60 @@ export const Dashboard: React.FC<DashboardProps> = ({
   ).length;
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 space-y-6 sm:space-y-8">
       
       {/* Hero Welcome Banner */}
-      <div className="rounded-3xl bg-linear-to-r from-slate-900 via-indigo-950 to-slate-900 text-white p-6 sm:p-10 shadow-2xl relative overflow-hidden border border-slate-800">
+      <div className="rounded-2xl sm:rounded-3xl bg-linear-to-r from-slate-900 via-indigo-950 to-slate-900 text-white p-5 sm:p-8 shadow-xl relative overflow-hidden border border-slate-800">
         
         {/* Background glow */}
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="relative z-10 space-y-6">
+        <div className="relative z-10 space-y-5 sm:space-y-6">
           
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-5 sm:gap-6">
             
-            <div className="space-y-3 max-w-2xl">
+            <div className="space-y-2.5 max-w-2xl">
               
-              <div className="flex items-center gap-2.5 flex-wrap">
-                <span className="px-3 py-1 rounded-full bg-amber-400 text-slate-950 text-xs font-black tracking-wide font-de">
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="px-2.5 py-0.5 rounded-full bg-amber-400 text-slate-950 text-[11px] font-black tracking-wide font-de">
                   Aspekte neu B1+
                 </span>
-                <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-white/10 text-indigo-200 border border-white/10">
+                <span className="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-white/10 text-indigo-200 border border-white/10">
                   واژه‌نامه تخصصی و هوشمند
                 </span>
-                <span className="text-xs text-amber-300 flex items-center gap-1">
-                  <Flame className="w-3.5 h-3.5 fill-amber-300" />
+                <span className="text-[11px] text-amber-300 flex items-center gap-1">
+                  <Flame className="w-3 h-3 fill-amber-300" />
                   <span>آماده‌سازی آزمون گوته / تلک B1+ و B2</span>
                 </span>
               </div>
 
-              <h1 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight leading-tight sm:leading-snug">
                 یادگیری عمیق واژگان و اصطلاحات آلمانی
               </h1>
 
-              <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-xl">
                 پوشش ساختاریافته درس‌های ۱ تا ۱۰ هر دو منبع <b className="text-white">کتاب اصلی (Lehrbuch)</b> و <b className="text-amber-300">متن‌های شنیداری (Hörtexte)</b> همراه با تلفظ صوتی آلمانی، قواعد دستوری کامل و سیستم مرور هوشمند فلش‌کارت.
               </p>
 
             </div>
 
             {/* Quick Launch Action Buttons */}
-            <div className="flex flex-col sm:flex-row lg:flex-col gap-3 min-w-[220px]">
+            <div className="flex flex-row sm:flex-row lg:flex-col gap-2.5 sm:gap-3 shrink-0">
               
               <button
                 onClick={() => onOpenFlashcards()}
-                className="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-2xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-sm shadow-lg hover:shadow-amber-500/30 transition-all active:scale-95 cursor-pointer"
+                className="flex-1 sm:flex-initial flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs sm:text-sm shadow-md hover:shadow-amber-500/30 transition-all active:scale-95 cursor-pointer"
               >
-                <Layers className="w-4 h-4" />
+                <Layers className="w-4 h-4 shrink-0" />
                 <span>شروع مرور فلش‌کارت‌ها</span>
               </button>
 
               <button
                 onClick={() => onOpenQuiz()}
-                className="flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-2xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm border border-white/20 transition-all active:scale-95 cursor-pointer"
+                className="flex-1 sm:flex-initial flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm border border-white/20 transition-all active:scale-95 cursor-pointer"
               >
-                <Sparkles className="w-4 h-4 text-rose-300" />
+                <Sparkles className="w-4 h-4 text-rose-300 shrink-0" />
                 <span>شرکت در آزمون تستی</span>
               </button>
 
@@ -107,51 +107,51 @@ export const Dashboard: React.FC<DashboardProps> = ({
           </div>
 
           {/* Global Statistics Cards Bar */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 pt-4 border-t border-white/10 text-xs">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3 pt-4 border-t border-white/10 text-xs">
             
-            <div className="bg-white/5 backdrop-blur-xs p-3.5 rounded-2xl border border-white/10">
-              <div className="text-slate-400 mb-1">کل واژگان:</div>
-              <div className="text-xl font-black font-de text-white">{stats.totalWords}</div>
+            <div className="bg-white/5 backdrop-blur-xs p-2.5 sm:p-3 rounded-xl border border-white/10">
+              <div className="text-slate-400 text-[11px] mb-0.5">کل واژگان:</div>
+              <div className="text-lg sm:text-xl font-black font-de text-white">{stats.totalWords}</div>
             </div>
 
-            <div className="bg-sky-500/10 p-3.5 rounded-2xl border border-sky-400/20">
-              <div className="text-sky-300 mb-1 flex items-center gap-1">
-                <BookOpen className="w-3.5 h-3.5" />
+            <div className="bg-sky-500/10 p-2.5 sm:p-3 rounded-xl border border-sky-400/20">
+              <div className="text-sky-300 text-[11px] mb-0.5 flex items-center gap-1">
+                <BookOpen className="w-3 h-3 shrink-0" />
                 <span>Lehrbuch</span>
               </div>
-              <div className="text-xl font-black font-de text-sky-200">{lehrbuchTotal}</div>
+              <div className="text-lg sm:text-xl font-black font-de text-sky-200">{lehrbuchTotal}</div>
             </div>
 
-            <div className="bg-purple-500/10 p-3.5 rounded-2xl border border-purple-400/20">
-              <div className="text-purple-300 mb-1 flex items-center gap-1">
-                <Headphones className="w-3.5 h-3.5" />
+            <div className="bg-purple-500/10 p-2.5 sm:p-3 rounded-xl border border-purple-400/20">
+              <div className="text-purple-300 text-[11px] mb-0.5 flex items-center gap-1">
+                <Headphones className="w-3 h-3 shrink-0" />
                 <span>Hörtexte</span>
               </div>
-              <div className="text-xl font-black font-de text-purple-200">{hoertexteTotal}</div>
+              <div className="text-lg sm:text-xl font-black font-de text-purple-200">{hoertexteTotal}</div>
             </div>
 
-            <div className="bg-emerald-500/10 p-3.5 rounded-2xl border border-emerald-400/20">
-              <div className="text-emerald-300 mb-1 flex items-center gap-1">
-                <CheckCircle2 className="w-3.5 h-3.5" />
+            <div className="bg-emerald-500/10 p-2.5 sm:p-3 rounded-xl border border-emerald-400/20">
+              <div className="text-emerald-300 text-[11px] mb-0.5 flex items-center gap-1">
+                <CheckCircle2 className="w-3 h-3 shrink-0" />
                 <span>یاد گرفته‌اید</span>
               </div>
-              <div className="text-xl font-black font-de text-emerald-300">{stats.learnedWords}</div>
+              <div className="text-lg sm:text-xl font-black font-de text-emerald-300">{stats.learnedWords}</div>
             </div>
 
-            <div className="bg-amber-500/10 p-3.5 rounded-2xl border border-amber-400/20">
-              <div className="text-amber-300 mb-1 flex items-center gap-1">
-                <RotateCcw className="w-3.5 h-3.5" />
+            <div className="bg-amber-500/10 p-2.5 sm:p-3 rounded-xl border border-amber-400/20">
+              <div className="text-amber-300 text-[11px] mb-0.5 flex items-center gap-1">
+                <RotateCcw className="w-3 h-3 shrink-0" />
                 <span>نیازمند مرور</span>
               </div>
-              <div className="text-xl font-black font-de text-amber-300">{stats.reviewWords}</div>
+              <div className="text-lg sm:text-xl font-black font-de text-amber-300">{stats.reviewWords}</div>
             </div>
 
-            <div className="bg-white/5 p-3.5 rounded-2xl border border-white/10">
-              <div className="text-slate-400 mb-1 flex items-center gap-1">
-                <TrendingUp className="w-3.5 h-3.5" />
+            <div className="bg-white/5 p-2.5 sm:p-3 rounded-xl border border-white/10">
+              <div className="text-slate-400 text-[11px] mb-0.5 flex items-center gap-1">
+                <TrendingUp className="w-3 h-3 shrink-0" />
                 <span>درصد تسلط کل</span>
               </div>
-              <div className="text-xl font-black font-de text-amber-300">{stats.completionPercentage}%</div>
+              <div className="text-lg sm:text-xl font-black font-de text-amber-300">{stats.completionPercentage}%</div>
             </div>
 
           </div>
