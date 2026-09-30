@@ -6542,15 +6542,16 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
   // =========================================================================
   // KAPITEL 8: Kaufen, kaufen, kaufen (مصرف‌گرایی، خرید و حقوق مصرف‌کننده)
   // =========================================================================
-  // --- Verben ---
+  // --- Verben (افعال با تمام زمان‌های Präsens / Präteritum / Perfekt و حروف اضافه) ---
   {
     id: 'k8-v1',
     german: 'reklamieren',
-    persian: 'اعتراض و شکایت کردن بابت کالای معیوب، مرجوع کردن',
+    persian: 'اعتراض و شکایت کردن بابت کالای معیوب، مرجوع کردن جنس',
     category: 'Verben',
     lesson: 8,
     sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 3', pageOrTrack: 'S. 98', context: 'Fehlerhafte Ware beim Kundenservice reklamieren' },
       { source: 'Hörtexte', lesson: 8, module: 'Modul 3', pageOrTrack: 'Track 2.22', context: 'einen defekten Laptop beim Kundendienst reklamieren' }
     ],
     pronunciation: '[ʁeklaˈmiːʁən]',
@@ -6559,20 +6560,20 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     preterite: 'reklamierte',
     perfect: 'hat reklamiert',
     auxiliary: 'haben',
-    example: 'Der Kunde hat die beschädigte Ware sofort beim Support reklamiert.',
-    exampleTranslation: 'مشتری کالای آسیب‌دیده را بلافاصله در بخش پشتیبانی مرجوع و ثبت شکایت کرد.',
+    example: 'Wenn das Gerät innerhalb der Garantiezeit kaputtgeht, können Sie es reklamieren.',
+    exampleTranslation: 'اگر دستگاه در مدت گارانتی خراب شود، می‌توانید آن را مرجوع و ثبت شکایت کنید.',
     level: 'B1+',
     tags: ['خرید', 'گارانتی']
   },
   {
     id: 'k8-v2',
     german: 'umtauschen',
-    persian: 'تعویض کردن کالا (با مدل یا سایز دیگر)',
+    persian: 'تعویض کردن کالا (با مدل، رنگ یا سایز دیگر)',
     category: 'Verben',
     lesson: 8,
-    sources: ['Lehrbuch'],
+    sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Lehrbuch', lesson: 8, module: 'Modul 2', pageOrTrack: 'S. 96', context: 'Kleidung gegen Vorlage des Kassenbons umtauschen' }
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 3', pageOrTrack: 'S. 98', context: 'Kleidung gegen Vorlage des Kassenbons umtauschen' }
     ],
     pronunciation: '[ˈʊmˌtaʊ̯ʃn̩]',
     infinitive: 'umtauschen (+ Akk.)',
@@ -6581,20 +6582,20 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     perfect: 'hat umgetauscht',
     auxiliary: 'haben',
     separable: true,
-    example: 'Mit dem Kassenbon können Sie die Jacke innerhalb von 14 Tagen umtauschen.',
-    exampleTranslation: 'با برگه رسید خرید می‌توانید کاپشن را ظرف مدت ۱۴ روز تعویض کنید.',
+    example: 'Ich möchte den Pullover umtauschen, da er mir leider etwas zu klein ist.',
+    exampleTranslation: 'من می‌خواهم پلیور را تعویض کنم، چون متأسفانه کمی برایم کوچک است.',
     level: 'B1+',
     tags: ['فروشگاه', 'مشتری']
   },
   {
     id: 'k8-v3',
     german: 'entsorgen',
-    persian: 'دفع کردن زباله یا وسایل اسقاطی بر اساس اصول',
+    persian: 'دفع کردن زباله یا وسایل اسقاطی طبق اصول زیست‌محیطی',
     category: 'Verben',
     lesson: 8,
     sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Lehrbuch', lesson: 8, module: 'Modul 3', pageOrTrack: 'S. 98', context: 'Elektroschrott umweltgerecht entsorgen' }
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 3', pageOrTrack: 'S. 99', context: 'Elektroschrott umweltgerecht auf dem Wertstoffhof entsorgen' }
     ],
     pronunciation: '[ɛntˈzɔʁɡn̩]',
     infinitive: 'entsorgen (+ Akk.)',
@@ -6602,92 +6603,510 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     preterite: 'entsorgte',
     perfect: 'hat entsorgt',
     auxiliary: 'haben',
-    example: 'Alte Elektrogeräte müssen beim Wertstoffhof fachgerecht entsorgt werden.',
-    exampleTranslation: 'لوازم الکترونیکی کهنه باید در مراکز بازیافت به شیوه اصولی دفع شوند.',
+    example: 'Alte Batterien und Elektrogeräte darf man nicht im Hausmüll entsorgen.',
+    exampleTranslation: 'باتری‌های کهنه و لوازم الکترونیکی را نباید در زباله‌دان خانگی دفع کرد.',
     level: 'B1+',
     tags: ['بازیافت', 'محیط زیست']
   },
-  // --- Nomen ---
+  {
+    id: 'k8-v4',
+    german: 'verzichten auf',
+    persian: 'صرف‌نظر کردن از، چشم‌پوشی نمودن از (خرید خریدهای اضافی)',
+    category: 'Verben',
+    lesson: 8,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 1', pageOrTrack: 'S. 94', context: 'auf überflüssigen Konsum im Alltag bewusst verzichten' }
+    ],
+    pronunciation: '[fɛɐ̯ˈtsɪxtn̩ ʔaʊ̯f]',
+    infinitive: 'verzichten auf (+ Akk.)',
+    present: 'verzichtet',
+    preterite: 'verzichtete',
+    perfect: 'hat verzichtet',
+    auxiliary: 'haben',
+    prepositionCase: 'auf + Akkusativ',
+    example: 'Immer mehr Menschen entscheiden sich, einen Monat lang auf Plastikverpackungen zu verzichten.',
+    exampleTranslation: 'تعداد بیشتری از مردم تصمیم می‌گیرند یک ماه از ظروف و بسته‌بندی‌های پلاستیکی چشم‌پوشی کنند.',
+    level: 'B1+',
+    tags: ['مصرف‌گرایی', 'پایداری']
+  },
+  {
+    id: 'k8-v5',
+    german: 'ausgeben für',
+    persian: 'خرج کردن پول برای (یک کالا یا خدمت)',
+    category: 'Verben',
+    lesson: 8,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 1', pageOrTrack: 'S. 94', context: 'Viel Geld für Markenbekleidung ausgeben' }
+    ],
+    pronunciation: '[ˈaʊ̯sˌɡeːbn̩ fyːɐ̯]',
+    infinitive: 'ausgeben für (+ Akk.)',
+    present: 'gibt aus',
+    preterite: 'gab aus',
+    perfect: 'hat ausgegeben',
+    auxiliary: 'haben',
+    separable: true,
+    prepositionCase: 'für + Akkusativ',
+    example: 'Er gibt monatlich viel Geld für technische Spielereien und Gadgets aus.',
+    exampleTranslation: 'او ماهانه پول زیادی برای گجت‌ها و وسایل فنی خرج می‌کند.',
+    level: 'B1+',
+    tags: ['پول', 'خرید']
+  },
+  {
+    id: 'k8-v6',
+    german: 'verführen zu',
+    persian: 'وسوسه کردن و به طمع انداختن (توسط تبلیغات برای خرید)',
+    category: 'Verben',
+    lesson: 8,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 4', pageOrTrack: 'S. 100', context: 'Gezielte Werbung verführt Konsumenten zu Spontankäufen.' }
+    ],
+    pronunciation: '[fɛɐ̯ˈfyːʁən tsuː]',
+    infinitive: 'verführen zu (+ Dat.)',
+    present: 'verführt',
+    preterite: 'verführte',
+    perfect: 'hat verführt',
+    auxiliary: 'haben',
+    prepositionCase: 'zu + Dativ',
+    example: 'Sonderangebote verführen Kunden oft dazu, Dinge zu kaufen, die sie gar nicht brauchen.',
+    exampleTranslation: 'پیشنهادهای ویژه اغلب مشتریان را وسوسه می‌کنند چیزهایی بخرند که اصلاً نیاز ندارند.',
+    level: 'B1+',
+    tags: ['تبلیغات', 'وسوسه']
+  },
+  {
+    id: 'k8-v7',
+    german: 'leihen / ausleihen',
+    persian: 'قرض گرفتن / امانت گرفتن کالا یا ابزار',
+    category: 'Verben',
+    lesson: 8,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 2', pageOrTrack: 'S. 96', context: 'Werkzeuge vom Nachbarn leihen statt kaufen' }
+    ],
+    pronunciation: '[ˈaʊ̯sˌlaɪ̯ən]',
+    infinitive: 'ausleihen (+ Akk. + Dat.)',
+    present: 'leiht aus',
+    preterite: 'lieh aus',
+    perfect: 'hat ausgeliehen',
+    auxiliary: 'haben',
+    separable: true,
+    example: 'Anstatt teure Maschinen zu kaufen, kann man sie im Baumarkt günstig leihen.',
+    exampleTranslation: 'به جای خرید ماشین‌آلات گران، می‌توان آن‌ها را در فروشگاه ابزار با قیمت ارزان امانت گرفت.',
+    level: 'B1+',
+    tags: ['اشتراک‌گذاری', 'اقتصاد']
+  },
+  {
+    id: 'k8-v8',
+    german: 'erstatten / zurückerstatten',
+    persian: 'استرداد دادن، بازپرداخت نمودن وجه به مشتری',
+    category: 'Verben',
+    lesson: 8,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 3', pageOrTrack: 'S. 98', context: 'Den vollen Kaufpreis bei Reklamation erstatten' }
+    ],
+    pronunciation: '[ɛɐ̯ˈʃtatn̩]',
+    infinitive: 'erstatten (+ Akk.)',
+    present: 'erstattet',
+    preterite: 'erstattete',
+    perfect: 'hat erstattet',
+    auxiliary: 'haben',
+    example: 'Das Geschäft hat mir nach der Rückgabe der Ware den vollen Betrag erstattet.',
+    exampleTranslation: 'فروشگاه پس از مرجوع کردن کالا، کل مبلغ را به من استرداد داد.',
+    level: 'B1+',
+    tags: ['مالی', 'حقوق']
+  },
+  {
+    id: 'k8-v9',
+    german: 'verschwenden',
+    persian: 'حیف و میل کردن، تلف نمودن (پول، انرژی یا منابع)',
+    category: 'Verben',
+    lesson: 8,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 1', pageOrTrack: 'S. 94', context: 'Keine Lebensmittel oder Geld unnötig verschwenden' }
+    ],
+    pronunciation: '[fɛɐ̯ˈʃvɛndn̩]',
+    infinitive: 'verschwenden (+ Akk.)',
+    present: 'verschwendet',
+    preterite: 'verschwendete',
+    perfect: 'hat verschwendet',
+    auxiliary: 'haben',
+    example: 'Wer unüberlegt einkauft, verschwendet oft wertvolle Ressourcen.',
+    exampleTranslation: 'کسی که نسنجیده خرید کند، اغلب منابع ارزشمند را حیف و میل می‌کند.',
+    level: 'B1+',
+    tags: ['اسراف', 'مصرف']
+  },
+
+  // --- Nomen (اسامی همراه آرتیکل، جمع، تلفظ و جنسیت) ---
   {
     id: 'k8-n1',
     german: 'das Konsumverhalten',
-    persian: 'الگوی رفتار مصرفی و خرید مردم',
+    persian: 'الگوی رفتار مصرفی و خرید در جامعه',
     category: 'Nomen',
     lesson: 8,
     sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Hörtexte', lesson: 8, module: 'DVD Kapitel 8', pageOrTrack: 'DVD (S. 203 - Generation Konsum)', context: 'Das Konsumverhalten Jugendlicher im Wandel' }
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 1', pageOrTrack: 'S. 94', context: 'Das Konsumverhalten der jungen Generation analysieren' },
+      { source: 'Hörtexte', lesson: 8, module: 'DVD Kapitel 8', pageOrTrack: 'DVD (S. 203)', context: 'Dokumentation über geändertes Konsumverhalten' }
     ],
     pronunciation: '[kɔnˈzuːmfɛɐ̯ˌhaltn̩]',
     article: 'das',
     plural: 'die Konsumverhalten (معمولاً مفرد)',
     genderPersian: 'خنثی (das)',
-    example: 'Nachhaltiges Konsumverhalten schützt Ressourcen und schont das Klima.',
-    exampleTranslation: 'الگوی مصرف پایدار از منابع حفاظت کرده و از آسیب به اقلیم می‌کاهد.',
+    example: 'Ein nachhaltiges Konsumverhalten schont die Umwelt und spart langfristig Geld.',
+    exampleTranslation: 'یک الگوی مصرف پایدار به محیط زیست کمک کرده و در درازمدت موجب پس‌انداز می‌شود.',
     level: 'B1+',
     tags: ['اقتصاد', 'جامعه']
   },
   {
     id: 'k8-n2',
     german: 'die Tauschbörse',
-    persian: 'شبکه و بازارچه مبادله کالا و خدمات بدون پول',
+    persian: 'بازارچه و شبکه مبادله کالا و خدمات بدون پول',
     category: 'Nomen',
     lesson: 8,
     sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Hörtexte', lesson: 8, module: 'Modul 2', pageOrTrack: 'Track 2.21', context: 'Kleider und Bücher auf der Tauschbörse anbieten' }
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 2', pageOrTrack: 'S. 96', context: 'Gebrauchte Kleidung auf der Tauschbörse anbieten' },
+      { source: 'Hörtexte', lesson: 8, module: 'Modul 2', pageOrTrack: 'Track 2.21', context: 'Online-Tauschbörsen für Bücher und Spielzeug' }
     ],
     pronunciation: '[ˈtaʊ̯ʃˌbœʁzə]',
     article: 'die',
     plural: 'die Tauschbörsen',
     genderPersian: 'مونث (die)',
-    example: 'Auf der Tauschbörse kann man gebrauchte Bücher gegen nützliche Haushaltsartikel tauschen.',
-    exampleTranslation: 'در بازارچه مبادله می‌توان کتاب‌های دست‌دوم را با اقلام کاربردی خانگی معاوضه کرد.',
+    example: 'Auf der Tauschbörse kann man gut erhaltene Kleidung gegen andere Dinge tauschen.',
+    exampleTranslation: 'در بازارچه مبادله می‌توان لباس‌های سالم را با وسایل دیگر معاوضه کرد.',
     level: 'B1+',
     tags: ['اشتراک‌گذاری', 'پایداری']
   },
-  // --- Adjektive & Adverbien ---
+  {
+    id: 'k8-n3',
+    german: 'die Schuldenfalle',
+    persian: 'دام بدهی و بدهکاری مالی (ناشی از خریدهای اعتباری بیش از حد)',
+    category: 'Nomen',
+    lesson: 8,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 1', pageOrTrack: 'S. 95', context: 'Durch Ratenkäufe leicht in die Schuldenfalle geraten' }
+    ],
+    pronunciation: '[ˈʃʊldn̩ˌfalə]',
+    article: 'die',
+    plural: 'die Schuldenfallen',
+    genderPersian: 'مونث (die)',
+    example: 'Ratenkäufe und Kreditkarten verleiten Jugendliche oft dazu, in die Schuldenfalle zu tappen.',
+    exampleTranslation: 'خرید قسطی و کارت‌های اعتباری اغلب جوانان را متمایل به افتادن در دام بدهی می‌کنند.',
+    level: 'B1+',
+    tags: ['بدهی', 'مالی']
+  },
+  {
+    id: 'k8-n4',
+    german: 'der Kassenbon',
+    persian: 'رسید و فاکتور خرید فروشگاه (برگه رسید)',
+    category: 'Nomen',
+    lesson: 8,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 3', pageOrTrack: 'S. 98', context: 'Den Kassenbon als Kaufbeleg aufbewahren' }
+    ],
+    pronunciation: '[ˈkasn̩ˌbɔŋ]',
+    article: 'der',
+    plural: 'die Kassenbons',
+    genderPersian: 'مذکر (der)',
+    example: 'Bewahren Sie den Kassenbon gut auf, falls Sie die Ware umtauschen möchten.',
+    exampleTranslation: 'برگه رسید خرید را خوب نگه دارید تا در صورت تمایل بتوانید کالا را تعویض کنید.',
+    level: 'B1+',
+    tags: ['فروشگاه', 'رسید']
+  },
+  {
+    id: 'k8-n5',
+    german: 'die Garantie',
+    persian: 'ضمانت‌نامه و گارانتی رسمی کالا',
+    category: 'Nomen',
+    lesson: 8,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 3', pageOrTrack: 'S. 98', context: 'Zwei Jahre Garantie auf elektronische Geräte' }
+    ],
+    pronunciation: '[ɡaʁanˈtiː]',
+    article: 'die',
+    plural: 'die Garantien',
+    genderPersian: 'مونث (die)',
+    example: 'Auf den neuen Kühlschrank gibt der Hersteller zwei Jahre Garantie.',
+    exampleTranslation: 'تولیدکننده روی یخچال جدید دو سال گارانتی ارائه می‌دهد.',
+    level: 'B1+',
+    tags: ['حقوق', 'گارانتی']
+  },
+  {
+    id: 'k8-n6',
+    german: 'das Schnäppchen',
+    persian: 'جنس بسیار ارزان و تخفیف‌خورده با قیمت عالی',
+    category: 'Nomen',
+    lesson: 8,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 1', pageOrTrack: 'S. 94', context: 'Auf der Suche nach echten Schnäppchen im Schlussverkauf' }
+    ],
+    pronunciation: '[ˈʃnɛpçn̩]',
+    article: 'das',
+    plural: 'die Schnäppchen',
+    genderPersian: 'خنثی (das)',
+    example: 'Im Ausverkauf hat sie eine Markenjacke als echtes Schnäppchen ergattert.',
+    exampleTranslation: 'در حراجی پایان فصل، او یک کاپشن برند را به عنوان یک جنس فوق‌العاده ارزان به دست آورد.',
+    level: 'B1+',
+    tags: ['حراج', 'تخفیف']
+  },
+  {
+    id: 'k8-n7',
+    german: 'die Nachhaltigkeit',
+    persian: 'پایداری زیست‌محیطی و استفاده مسئولانه از منابع',
+    category: 'Nomen',
+    lesson: 8,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 2', pageOrTrack: 'S. 96', context: 'Nachhaltigkeit durch Wiederverwendung von Gegenständen fördern' }
+    ],
+    pronunciation: '[ˈnaːxhaltɪçkaɪ̯t]',
+    article: 'die',
+    plural: 'die Nachhaltigkeit (بدون جمع)',
+    genderPersian: 'مونث (die)',
+    example: 'Immer mehr Unternehmen legen bei ihren Produkten großen Wert auf Nachhaltigkeit.',
+    exampleTranslation: 'تعداد بیشتری از شرکت‌ها در محصولات خود اهمیت زیادی برای پایداری زیست‌محیطی قائل هستند.',
+    level: 'B1+',
+    tags: ['پایداری', 'محیط زیست']
+  },
+  {
+    id: 'k8-n8',
+    german: 'die Werbebotschaft',
+    persian: 'پیام تبلیغاتی (در تیزرها و بیلبوردها)',
+    category: 'Nomen',
+    lesson: 8,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 4', pageOrTrack: 'S. 100', context: 'Die psychologische Wirkung von Werbebotschaften' }
+    ],
+    pronunciation: '[ˈvɛʁbəbɔtˌʃaft]',
+    article: 'die',
+    plural: 'die Werbebotschaften',
+    genderPersian: 'مونث (die)',
+    example: 'Spezialisten gestalten Werbebotschaften so, dass sie Wünsche im Kunden wecken.',
+    exampleTranslation: 'متخصصان پیام‌های تبلیغاتی را طوری طراحی می‌کنند که تمایلات را در مشتری بیدار کنند.',
+    level: 'B1+',
+    tags: ['تبلیغات', 'روانشناسی']
+  },
+
+  // --- Adjektive & Adverbien (صفات همراه حالات مقایسه‌ای و متضاد) ---
   {
     id: 'k8-adj1',
     german: 'überflüssig',
     persian: 'اضافی، غیرضروری و بیهوده',
     category: 'Adjektive',
     lesson: 8,
-    sources: ['Lehrbuch'],
+    sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Lehrbuch', lesson: 8, module: 'Modul 1', pageOrTrack: 'S. 94', context: 'auf überflüssige Konsumgüter verzichten' }
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 1', pageOrTrack: 'S. 94', context: 'auf überflüssige Konsumgüter im Alltag verzichten' }
     ],
     pronunciation: '[ˈyːbɐˌflysɪç]',
     comparative: 'überflüssiger',
     superlative: 'am überflüssigsten',
     opposite: 'notwendig / unentbehrlich',
-    example: 'Viele Menschen besitzen zu viele überflüssige Dinge, die nur im Schrank verstauben.',
-    exampleTranslation: 'بسیاری از افراد وسایل اضافی زیادی دارند که تنها در کمد خاک می‌خورند.',
+    example: 'Vor dem Kauf sollte man sich fragen, ob der Gegenstand nicht völlig überflüssig ist.',
+    exampleTranslation: 'قبل از خرید فرد باید از خود بپرسد که آیا این وسیله کاملاً اضافی نیست.',
     level: 'B1+',
     tags: ['مینیمالیسم', 'خرید']
   },
-  // --- Redewendungen ---
+  {
+    id: 'k8-adj2',
+    german: 'nachhaltig',
+    persian: 'پایدار، سازگار با محیط زیست و دارای اثر درازمدت',
+    category: 'Adjektive',
+    lesson: 8,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 2', pageOrTrack: 'S. 96', context: 'nachhaltige Produkte aus ökologischer Herstellung kaufen' }
+    ],
+    pronunciation: '[ˈnaːxˌhaltɪç]',
+    comparative: 'nachhaltiger',
+    superlative: 'am nachhaltigsten',
+    opposite: 'umweltschädlich / kurzlebig',
+    example: 'Nachhaltige Kleidung wird aus biologischen Materialien und ohne Kinderarbeit hergestellt.',
+    exampleTranslation: 'پوشاک پایدار از مواد ارگانیک و بدون کار کودکان تولید می‌شود.',
+    level: 'B1+',
+    tags: ['پایداری', 'محیط زیست']
+  },
+  {
+    id: 'k8-adj3',
+    german: 'erschwinglich',
+    persian: 'قابل خرید، دارای قیمت مناسب و متناسب با بودجه',
+    category: 'Adjektive',
+    lesson: 8,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 1', pageOrTrack: 'S. 94', context: 'Qualität zu erschwinglichen Preisen anbieten' }
+    ],
+    pronunciation: '[ɛɐ̯ˈʃvɪŋlɪç]',
+    comparative: 'erschwinglicher',
+    superlative: 'am erschwinglichsten',
+    opposite: 'unbezahlbar / teuer',
+    example: 'Die Reparatur des Autos war glücklicherweise überraschend erschwinglich.',
+    exampleTranslation: 'تعمیر ماشین خوشبختانه به طرز غافلگیرکننده‌ای دارای قیمت مناسب و قابل پرداخت بود.',
+    level: 'B1+',
+    tags: ['قیمت', 'اقتصاد']
+  },
+  {
+    id: 'k8-adj4',
+    german: 'defekt',
+    persian: 'خراب، معیوب و دارای نقص فنی',
+    category: 'Adjektive',
+    lesson: 8,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 3', pageOrTrack: 'S. 98', context: 'defekte Elektrogeräte zur Reparatur bringen' }
+    ],
+    pronunciation: '[deˈfɛkt]',
+    comparative: '—',
+    superlative: '—',
+    opposite: 'einwandfrei / intakt',
+    example: 'Da das gelieferte Smartphone defekt war, forderte der Kunde sofort Ersatz.',
+    exampleTranslation: 'از آنجایی که گوشی هوشمند تحویلی معیوب بود، مشتری بلافاصله تقاضای جایگزین کرد.',
+    level: 'B1+',
+    tags: ['کیفیت', 'گارانتی']
+  },
+  {
+    id: 'k8-adj5',
+    german: 'sparsam',
+    persian: 'صرفه‌جو، قناعت‌پیشه و مدبر در خرج پول',
+    category: 'Adjektive',
+    lesson: 8,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 1', pageOrTrack: 'S. 94', context: 'ein sparsames Leben ohne unnötige Luxusausgaben führen' }
+    ],
+    pronunciation: '[ˈʃpaːʁzaːm]',
+    comparative: 'sparsamer',
+    superlative: 'am sparsamsten',
+    opposite: 'verschwenderisch',
+    example: 'Durch eine sparsame Lebensweise konnte die Familie Geld für das eigene Haus zurücklegen.',
+    exampleTranslation: 'با شیوه زندگی باصرفه، خانواده توانست برای خانه شخصی خود پول کنار بگذارد.',
+    level: 'B1+',
+    tags: ['اخلاق', 'مالی']
+  },
+
+  // --- Redewendungen & Ausdrücke (اصطلاحات کاربردی) ---
   {
     id: 'k8-red1',
     german: 'das Geld zum Fenster hinauswerfen',
-    persian: 'پول را هدر دادن و بی‌حساب‌کتاب خرج کردن',
+    persian: 'پول را هدر دادن و بی‌حساب‌کتاب خرج چیزهای بی‌ارزش کردن',
+    category: 'Redewendungen',
+    lesson: 8,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 1', pageOrTrack: 'S. 94', context: 'Wer unüberlegt konsumiert, wirft sein Geld zum Fenster hinaus.' }
+    ],
+    pronunciation: '[das ɡɛlt tsuːm ˈfɛnstɐ hɪˈnaʊ̯sˌvɛʁfn̩]',
+    explanation: 'خرج کردن بی‌ملاحظه پول برای کالاهای نامناسب یا غیرضروری.',
+    literalMeaning: 'پول را از پنجره به بیرون پرت کردن',
+    example: 'Wer ständig teure Markenkleidung kauft, wirft oft sein hart verdientes Geld zum Fenster hinaus.',
+    exampleTranslation: 'کسی که مدام پوشاک گران‌قیمت برند می‌خرد، اغلب دسترنج خود را به باد می‌دهد.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'پول']
+  },
+  {
+    id: 'k8-red2',
+    german: 'die Katze im Sack kaufen',
+    persian: 'ندیده و نشنیده چیزی را خریدن (بدون بررسی کیفیت)',
+    category: 'Redewendungen',
+    lesson: 8,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 1', pageOrTrack: 'S. 95', context: 'Beim Online-Kauf ohne Bewertungen kauft man oft die Katze im Sack.' }
+    ],
+    pronunciation: '[diː ˈkat͡sə ɪm zak ˈkaʊ̯fn̩]',
+    explanation: 'خریدن کالا قبل از اطمینان از سلامت یا کارایی آن.',
+    literalMeaning: 'گربه را در گونی خریدن',
+    example: 'Testen Sie das Auto unbedingt vor dem Kauf, um nicht die Katze im Sack zu kaufen.',
+    exampleTranslation: 'حتماً قبل از خرید، ماشین را تست کنید تا جنس نادیده خریده نباشید.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'خرید']
+  },
+  {
+    id: 'k8-red3',
+    german: 'auf großem Fuße leben',
+    persian: 'پرخرج و اعیانی زندگی کردن، ولخرجی نمودن',
     category: 'Redewendungen',
     lesson: 8,
     sources: ['Lehrbuch'],
     sourceDetails: [
-      { source: 'Lehrbuch', lesson: 8, module: 'Modul 1', pageOrTrack: 'S. 94', context: 'Kritik an sinnlosem Konsum' }
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 1', pageOrTrack: 'S. 95', context: 'Wer auf zu großem Fuße lebt, macht schnell Schulden.' }
     ],
-    explanation: 'خرج کردن بی‌ملاحظه پول برای کالاهای بی‌ارزش یا نامناسب.',
-    example: 'Wer ständig teure Markensachen kauft, wirft oft sein hart verdientes Geld zum Fenster hinaus.',
-    exampleTranslation: 'کسی که مدام اجناس گران‌قیمت برند می‌خرد، اغلب دسترنج خود را به باد می‌دهد.',
+    pronunciation: '[ʔaʊ̯f ˈɡʁoːsn̩ ˈfuːsə ˈleːbn̩]',
+    explanation: 'سبک زندگی پرهزینه خارج از توان واقعی مالی.',
+    literalMeaning: 'روی پای بزرگ زندگی کردن',
+    example: 'Obwohl er wenig verdient, lebt er auf sehr großem Fuße und fährt ein teures Sportauto.',
+    exampleTranslation: 'با اینکه کم درآمد دارد، پرخرج و اعیانی زندگی می‌کند و ماشین اسپرت گران می‌راند.',
     level: 'B1+',
-    tags: ['اصطلاح', 'پول']
+    tags: ['اصطلاح', 'سبک زندگی']
+  },
+  {
+    id: 'k8-red4',
+    german: 'den Gürtel enger schnallen',
+    persian: 'کمربندها را محکم‌تر بستن، قناعت کردن و هزینه‌ها را کاهش دادن',
+    category: 'Redewendungen',
+    lesson: 8,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 1', pageOrTrack: 'S. 95', context: 'In Zeiten hoher Inflation muss man den Gürtel enger schnallen.' }
+    ],
+    pronunciation: '[deːn ˈɡʏʁtl̩ ˈɛŋɐ ˈʃnaln̩]',
+    explanation: 'صرفه‌جویی اجباری در اثر سختی مالی یا تورم.',
+    literalMeaning: 'کمربند را تنگ‌تر سفت کردن',
+    example: 'Da die Preise steigen, müssen viele Familien in diesem Jahr den Gürtel enger schnallen.',
+    exampleTranslation: 'چون قیمت‌ها بالا می‌رود، بسیاری از خانواده‌ها امسال باید کمربندها را محکم‌تر ببندند.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'صرفه‌جویی']
+  },
+  {
+    id: 'k8-red5',
+    german: 'Schnäppchen jagen / machen',
+    persian: 'شکار اجناس تخفیف‌دار و ارزان کردن',
+    category: 'Redewendungen',
+    lesson: 8,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 8, module: 'Modul 1', pageOrTrack: 'S. 94', context: 'Beim Black Friday gehen viele auf Schnäppchenjagd.' }
+    ],
+    pronunciation: '[ˈʃnɛpçn̩ ˈjaːɡn̩]',
+    explanation: 'جستجو برای پیدا کردن کالاها با نازل‌ترین قیمت.',
+    literalMeaning: 'اجناس ارزان را شکار کردن',
+    example: 'Viele Kunden gehen am Rabatt-Wochenende online auf Schnäppchenjagd.',
+    exampleTranslation: 'بسیاری از مشتریان در آخر هفته تخفیفی به شکار اجناس ارزان آنلاین می‌پردازند.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'تخفیف']
+  },
+  {
+    id: 'k8-red6',
+    german: 'sich etwas von den Lippen absparen',
+    persian: 'از نان شب خود زدن برای پس‌انداز کردن',
+    category: 'Redewendungen',
+    lesson: 8,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Hörtexte', lesson: 8, module: 'Modul 1', pageOrTrack: 'Track 2.20', context: 'Die Großmutter spart sich jeden Cent von den Lippen ab.' }
+    ],
+    pronunciation: '[zɪç ˈɛtvas fɔn deːn ˈlɪpn̩ ˈapˌʃpaːʁən]',
+    explanation: 'دست کشیدن از نیازهای اولیه برای جمع کردن پول.',
+    literalMeaning: 'چیزی را از روی لب‌های خود پس‌انداز کردن',
+    example: 'Die Eltern sparten sich das Schulgeld für ihre Kinder förmlich von den Lippen ab.',
+    exampleTranslation: 'والدین شهریه مدرسه فرزندانشان را رسماً از نان شب خود زدند و پس‌انداز کردند.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'ایثار']
   },
 
   // =========================================================================
-  // KAPITEL 9: Endlich Urlaub (سفر، گردشگری و جهانگردی)
+  // KAPITEL 9: Endlich Urlaub (سفر، گردشگری، اقامت و جهانگردی)
   // =========================================================================
-  // --- Verben ---
+  // --- Verben (افعال با تمام زمان‌های Präsens / Präteritum / Perfekt و حروف اضافه) ---
   {
     id: 'k9-v1',
     german: 'verreisen',
@@ -6696,7 +7115,8 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     lesson: 9,
     sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Lehrbuch', lesson: 9, module: 'Modul 1', pageOrTrack: 'S. 106', context: 'in den Sommerferien ans Meer verreisen' }
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 1', pageOrTrack: 'S. 106', context: 'in den Sommerferien an die Ostsee verreisen' },
+      { source: 'Hörtexte', lesson: 9, module: 'Modul 1', pageOrTrack: 'Track 2.27', context: 'Wohin verreisen die Deutschen am liebsten?' }
     ],
     pronunciation: '[fɛɐ̯ˈʁaɪ̯zn̩]',
     infinitive: 'verreisen',
@@ -6704,20 +7124,21 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     preterite: 'verreiste',
     perfect: 'ist verreist',
     auxiliary: 'sein',
-    example: 'Im August verreist die ganze Familie für zwei Wochen nach Süditalien.',
-    exampleTranslation: 'در ماه آگوست تمام خانواده برای دو هفته به جنوب ایتالیا مسافرت می‌کنند.',
+    example: 'Im August verreist die ganze Familie für zwei Wochen in die Schweizer Alpen.',
+    exampleTranslation: 'در ماه آگوست تمام خانواده برای دو هفته به کوه‌های آلپ سوئیس مسافرت می‌کنند.',
     level: 'B1+',
     tags: ['تعطیلات', 'سفر']
   },
   {
     id: 'k9-v2',
     german: 'stornieren',
-    persian: 'لغو کردن (رزرو بلیت، هتل یا تور)',
+    persian: 'لغو کردن (رزرو بلیت، هتل، پرواز یا تور)',
     category: 'Verben',
     lesson: 9,
     sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Hörtexte', lesson: 9, module: 'Modul 3', pageOrTrack: 'Track 2.32', context: 'eine Hotelbuchung kostenlos stornieren' }
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 3', pageOrTrack: 'S. 110', context: 'die Reise wegen Krankheit kostenlos stornieren' },
+      { source: 'Hörtexte', lesson: 9, module: 'Modul 3', pageOrTrack: 'Track 2.32', context: 'eine Hotelbuchung im Reisebüro stornieren' }
     ],
     pronunciation: '[ʃtɔʁˈniːʁən]',
     infinitive: 'stornieren (+ Akk.)',
@@ -6725,20 +7146,20 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     preterite: 'stornierte',
     perfect: 'hat storniert',
     auxiliary: 'haben',
-    example: 'Wegen Krankheit musste er seine gebuchte Flugreise leider kurzfristig stornieren.',
-    exampleTranslation: 'به دلیل بیماری او متأسفانه مجبور شد بلیت پرواز رزرو شده خود را لغو کند.',
+    example: 'Wegen des ungeplanten Streiks musste der Gast den gebuchten Flug leider stornieren.',
+    exampleTranslation: 'به دلیل اعتصاب غیرمنتظره، مسافر مجبور شد پرواز رزرو شده خود را لغو کند.',
     level: 'B1+',
     tags: ['رزرو', 'هتل']
   },
   {
     id: 'k9-v3',
     german: 'erkunden',
-    persian: 'کشف و جستجو کردن، با دقت گشتن و شناختن (یک شهر یا منطقه)',
+    persian: 'کشف و سیاحت کردن، با دقت گشتن و شناختن (یک شهر یا منطقه)',
     category: 'Verben',
     lesson: 9,
-    sources: ['Lehrbuch'],
+    sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Lehrbuch', lesson: 9, module: 'Modul 4', pageOrTrack: 'S. 112', context: 'die historische Altstadt zu Fuß erkunden' }
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 4', pageOrTrack: 'S. 112', context: 'die historische Altstadt und Denkmäler zu Fuß erkunden' }
     ],
     pronunciation: '[ɛɐ̯ˈkʊndn̩]',
     infinitive: 'erkunden (+ Akk.)',
@@ -6746,90 +7167,506 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     preterite: 'erkundete',
     perfect: 'hat erkundet',
     auxiliary: 'haben',
-    example: 'Wir haben die kleinen Gassen der Altstadt am liebsten zu Fuß erkundet.',
-    exampleTranslation: 'ما کوچه‌های باریک بخش قدیمی شهر را ترجیحاً پیاده کشف و سیاحت کردیم.',
+    example: 'Die Touristen erkundeten die verdeckten Sehenswürdigkeiten der Stadt mit dem Fahrrad.',
+    exampleTranslation: 'گردشگران جاذبه‌های دیدنی پنهان شهر را با دوچرخه کشف و سیاحت کردند.',
     level: 'B1+',
     tags: ['گردشگری', 'کشف']
   },
-  // --- Nomen ---
+  {
+    id: 'k9-v4',
+    german: 'übernachten',
+    persian: 'شب را سپری کردن، اقامت شبانه داشتن در (هتل یا اقامتگاه)',
+    category: 'Verben',
+    lesson: 9,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 2', pageOrTrack: 'S. 108', context: 'günstig bei Einheimischen per Couchsurfing übernachten' }
+    ],
+    pronunciation: '[yːbɐˈnaxtn̩]',
+    infinitive: 'übernachten',
+    present: 'übernachtet',
+    preterite: 'übernachtete',
+    perfect: 'hat übernachtet',
+    auxiliary: 'haben',
+    example: 'Wir haben während unseres Trips in einer gemütlichen Jugendherberge übernachtet.',
+    exampleTranslation: 'ما در طول سفرمان در یک مسافرخانه جوانان (هاستل) باصفا شب را سپری کردیم.',
+    level: 'B1+',
+    tags: ['اقامت', 'هتل']
+  },
+  {
+    id: 'k9-v5',
+    german: 'genießen',
+    persian: 'لذت بردن از (طبیعت، آرامش یا چشم‌انداز)',
+    category: 'Verben',
+    lesson: 9,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 1', pageOrTrack: 'S. 106', context: 'die Ruhe und das sonnige Wetter am Strand genießen' }
+    ],
+    pronunciation: '[ɡəˈniːsn̩]',
+    infinitive: 'genießen (+ Akk.)',
+    present: 'genießt',
+    preterite: 'genoss',
+    perfect: 'hat genossen',
+    auxiliary: 'haben',
+    example: 'Am Abend genossen die Reisenden den atemberaubenden Sonnenuntergang am Meer.',
+    exampleTranslation: 'عصرگاه مسافران از غروب آفتاب نفس‌گیر در کنار دریا لذت بردند.',
+    level: 'B1+',
+    tags: ['استراحت', 'احساس']
+  },
+  {
+    id: 'k9-v6',
+    german: 'sich beschweren über',
+    persian: 'شکایت کردن بر سر (خدمات ضعیف هتل، کیفیت غذا یا پرواز)',
+    category: 'Verben',
+    lesson: 8,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 3', pageOrTrack: 'S. 110', context: 'sich beim Reiseleiter über den Lärm im Hotel beschweren' }
+    ],
+    pronunciation: '[zɪç bəˈʃveːʁən ˈyːbɐ]',
+    infinitive: 'sich beschweren über (+ Akk.)',
+    present: 'beschwert sich',
+    preterite: 'beschwerte sich',
+    perfect: 'hat sich beschwert',
+    auxiliary: 'haben',
+    reflexive: true,
+    prepositionCase: 'über + Akkusativ',
+    example: 'Die Urlauber beschwerten sich an der Rezeption über das schmutzige Zimmer.',
+    exampleTranslation: 'مسافران تعطیلات در پذیرش بابت کثیف بودن اتاق شکایت کردند.',
+    level: 'B1+',
+    tags: ['شکایت', 'خدمات']
+  },
+  {
+    id: 'k9-v7',
+    german: 'buchen',
+    persian: 'رزرو کردن (پرواز، بلیت قطار یا اتاق هتل)',
+    category: 'Verben',
+    lesson: 9,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 1', pageOrTrack: 'S. 106', context: 'eine Pauschalreise online im Reiseportal buchen' }
+    ],
+    pronunciation: '[ˈbuːxn̩]',
+    infinitive: 'buchen (+ Akk.)',
+    present: 'bucht',
+    preterite: 'buchte',
+    perfect: 'hat gebucht',
+    auxiliary: 'haben',
+    example: 'Sie buchte den Flug und das Hotel bereits drei Monate im Voraus.',
+    exampleTranslation: 'او پرواز و هتل را از سه ماه قبل رزرو کرد.',
+    level: 'B1+',
+    tags: ['رزرو', 'سفر']
+  },
+  {
+    id: 'k9-v8',
+    german: 'knüpfen',
+    persian: 'برقرار کردن و ایجاد نمودن (ارتباط با افراد بومی در سفر)',
+    category: 'Verben',
+    lesson: 9,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 2', pageOrTrack: 'S. 108', context: 'neue Kontakte zu Einheimischen im Ausland knüpfen' }
+    ],
+    pronunciation: '[ˈknʏpfn̩]',
+    infinitive: 'knüpfen (+ Akk. z.B. Kontakte)',
+    present: 'knüpft',
+    preterite: 'knüpfte',
+    perfect: 'hat geknüpft',
+    auxiliary: 'haben',
+    example: 'Beim Couchsurfing kann man sehr leicht neue Freundschaften mit Ortsansässigen knüpfen.',
+    exampleTranslation: 'در کاوچ‌سرفینگ فرد می‌تواند خیلی راحت دوستی‌های جدیدی با اهالی محل برقرار کند.',
+    level: 'B1+',
+    tags: ['ارتباط', 'فرهنگ']
+  },
+  {
+    id: 'k9-v9',
+    german: 'schwärmen von',
+    persian: 'با وجد و اشتیاق تعریف کردن از (یک مقصد زیبا یا سفر)',
+    category: 'Verben',
+    lesson: 9,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Hörtexte', lesson: 9, module: 'Modul 4', pageOrTrack: 'Track 2.34', context: 'von der unberührten Natur in Skandinavien schwärmen' }
+    ],
+    pronunciation: '[ˈʃvɛʁmən fɔn]',
+    infinitive: 'schwärmen von (+ Dat.)',
+    present: 'schwärmt',
+    preterite: 'schwärmte',
+    perfect: 'hat geschwärmt',
+    auxiliary: 'haben',
+    prepositionCase: 'von + Dativ',
+    example: 'Nach ihrer Rückkehr schwärmte sie tagelang von den Gastgebern in Portugal.',
+    exampleTranslation: 'پس از بازگشتش، او روزها با وجد از میزبانان در پرتغال تعریف می‌کرد.',
+    level: 'B1+',
+    tags: ['اشتیاق', 'خاطره']
+  },
+
+  // --- Nomen (اسامی همراه آرتیکل، جمع، تلفظ و جنسیت) ---
   {
     id: 'k9-n1',
-    german: 'das Workcamp',
-    persian: 'اردوی داوطلبانه بین‌المللی (کار عام‌المنفعه در سفر)',
+    german: 'das Fernweh',
+    persian: 'شوق شدید سفر به دوردست‌ها و دلتنگی برای جهانگردی',
     category: 'Nomen',
     lesson: 9,
     sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Hörtexte', lesson: 9, module: 'Modul 2', pageOrTrack: 'Track 2.31', context: 'Erfahrungen in einem internationalen Workcamp in Indien' }
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 1', pageOrTrack: 'S. 106', context: 'Wenn das Fernweh im grauen Alltag erwacht' },
+      { source: 'Hörtexte', lesson: 9, module: 'Modul 1', pageOrTrack: 'Track 2.27', context: 'Interviews über Fernweh und Reiselust' }
+    ],
+    pronunciation: '[ˈfɛʁnˌveː]',
+    article: 'das',
+    plural: 'das Fernweh (بدون جمع)',
+    genderPersian: 'خنثی (das)',
+    example: 'Im nassen Winter packt viele Menschen das Fernweh nach sonnigen Inseln.',
+    exampleTranslation: 'در زمستان مرطوب، شوق رفتن به جزایر آفتابی جان بسیاری از مردم را می‌گیرد.',
+    level: 'B1+',
+    tags: ['سفر', 'احساس']
+  },
+  {
+    id: 'k9-n2',
+    german: 'das Workcamp',
+    persian: 'اردوی بین‌المللی داوطلبانه (کار عام‌المنفعه در سفر)',
+    category: 'Nomen',
+    lesson: 9,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 2', pageOrTrack: 'S. 108', context: 'Teilnahme an einem ökologischen Workcamp' },
+      { source: 'Hörtexte', lesson: 9, module: 'Modul 2', pageOrTrack: 'Track 2.31', context: 'Erfahrungsbericht aus einem Workcamp in Nepal' }
     ],
     pronunciation: '[ˈvœːɐ̯kˌkɛmp]',
     article: 'das',
     plural: 'die Workcamps',
     genderPersian: 'خنثی (das)',
-    example: 'In einem Workcamp helfen junge Menschen ehrenamtlich beim Bau von Schulen.',
-    exampleTranslation: 'در یک اردوی داوطلبانه، جوانان به صورت خیریه در ساخت مدارس کمک می‌کنند.',
+    example: 'In einem Workcamp helfen Jugendliche ehrenamtlich beim Naturschutz und lernen Fremdsprachen.',
+    exampleTranslation: 'در یک اردوی داوطلبانه، جوانان به صورت خیریه در حفظ طبیعت کمک کرده و زبان‌های خارجی می‌آموزند.',
     level: 'B1+',
     tags: ['داوطلبانه', 'سفر']
   },
   {
-    id: 'k9-n2',
+    id: 'k9-n3',
     german: 'die Weltreise',
     persian: 'سفر دور دنیا',
     category: 'Nomen',
     lesson: 9,
     sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Hörtexte', lesson: 9, module: 'Modul 1', pageOrTrack: 'Track 2.27', context: '15 Monate auf Weltreise mit kleinem Budget' }
+      { source: 'Hörtexte', lesson: 9, module: 'Modul 1', pageOrTrack: 'Track 2.27', context: 'Planung einer einjährigen Weltreise mit kleinem Rucksack' }
     ],
     pronunciation: '[ˈvɛltˌʁaɪ̯zə]',
     article: 'die',
     plural: 'die Weltreisen',
     genderPersian: 'مونث (die)',
-    example: 'Nach dem Abschluss erfüllte sie sich ihren großen Traum von einer Weltreise.',
-    exampleTranslation: 'پس از فارغ‌التحصیلی، او به رویای بزرگ خود یعنی سفر دور دنیا جامه عمل پوشاند.',
+    example: 'Nach zehn Jahren Arbeit kündigte er und begab sich auf eine einjährige Weltreise.',
+    exampleTranslation: 'پس از ده سال کار، او استعفا داد و عازم یک سفر یک‌ساله دور دنیا شد.',
     level: 'B1+',
     tags: ['ماجراجویی', 'جهانگردی']
   },
-  // --- Adjektive & Adverbien ---
+  {
+    id: 'k9-n4',
+    german: 'die Sehenswürdigkeit',
+    persian: 'جاذبه گردشگری و بنای دیدنی شهر',
+    category: 'Nomen',
+    lesson: 9,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 4', pageOrTrack: 'S. 112', context: 'Die wichtigsten historischen Sehenswürdigkeiten Berlins' }
+    ],
+    pronunciation: '[ˈzeːənsˌvʏʁdɪçkaɪ̯t]',
+    article: 'die',
+    plural: 'die Sehenswürdigkeiten',
+    genderPersian: 'مونث (die)',
+    example: 'Das Brandenburger Tor ist die bekannteste Sehenswürdigkeit der deutschen Hauptstadt.',
+    exampleTranslation: 'دروازه براندنبورگ شناخته‌شده‌ترین جاذبه دیدنی پایتخت آلمان است.',
+    level: 'B1+',
+    tags: ['گردشگری', 'تاریخ']
+  },
+  {
+    id: 'k9-n5',
+    german: 'die Stornierung',
+    persian: 'لغو و کنسل نمودن رزرو (هتل یا بلیت)',
+    category: 'Nomen',
+    lesson: 9,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 3', pageOrTrack: 'S. 110', context: 'Gebühren für die Stornierung einer Pauschalreise' }
+    ],
+    pronunciation: '[ʃtɔʁˈniːʁʊŋ]',
+    article: 'die',
+    plural: 'die Stornierungen',
+    genderPersian: 'مونث (die)',
+    example: 'Bei einer Stornierung wenige Tage vor Reiseantritt fallen Stornogebühren an.',
+    exampleTranslation: 'در صورت لغو رزرو چند روز قبل از شروع سفر، هزینه‌های جریمه لغو تعلق می‌گیرد.',
+    level: 'B1+',
+    tags: ['حقوق', 'رزرو']
+  },
+  {
+    id: 'k9-n6',
+    german: 'die Reiserücktrittsversicherung',
+    persian: 'بیمه کنسلی و لغو سفر (جبران خسارت کنسلی به دلیل بیماری)',
+    category: 'Nomen',
+    lesson: 9,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 3', pageOrTrack: 'S. 110', context: 'Eine Reiserücktrittsversicherung vor teuren Flügen abschließen' }
+    ],
+    pronunciation: '[ˈʁaɪ̯zəˌʁʏktʁɪtsfɛɐ̯ˌzɪçəʁʊŋ]',
+    article: 'die',
+    plural: 'die Reiserücktrittsversicherungen',
+    genderPersian: 'مونث (die)',
+    example: 'Dank der Reiserücktrittsversicherung bekam er das Geld für den Stornoflug zurück.',
+    exampleTranslation: 'به لطف بیمه لغو سفر، او پول بلیت پرواز کنسل‌شده را پس گرفت.',
+    level: 'B1+',
+    tags: ['بیمه', 'سفر']
+  },
+  {
+    id: 'k9-n7',
+    german: 'die Unterkunft',
+    persian: 'اقامتگاه، محل اسکان (هتل، هاستل یا آپارتمان)',
+    category: 'Nomen',
+    lesson: 9,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 1', pageOrTrack: 'S. 106', context: 'eine preiswerte Unterkunft nahe am Zentrum finden' }
+    ],
+    pronunciation: '[ˈʊntɐˌkʊnft]',
+    article: 'die',
+    plural: 'die Unterkünfte',
+    genderPersian: 'مونث (die)',
+    example: 'Die gebuchte Unterkunft war sehr sauber und lag direkt am Sandstrand.',
+    exampleTranslation: 'اقامتگاه رزرو شده بسیار تمیز بود و دقیقاً در کنار ساحل ماسه‌ای قرار داشت.',
+    level: 'B1+',
+    tags: ['اقامت', 'هتل']
+  },
+  {
+    id: 'k9-n8',
+    german: 'der Massentourismus',
+    persian: 'گردشگری انبوه‌گرایانه و هجوم بی‌رویه توریست‌ها',
+    category: 'Nomen',
+    lesson: 9,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 1', pageOrTrack: 'S. 107', context: 'Folgen des Massentourismus für Umwelt und Einheimische' }
+    ],
+    pronunciation: '[ˈmasn̩tuˌʁɪsmʊs]',
+    article: 'der',
+    plural: 'der Massentourismus (بدون جمع)',
+    genderPersian: 'مذکر (der)',
+    example: 'In manchen historischen Städten zerstört der Massentourismus die Lebensqualität der Bewohner.',
+    exampleTranslation: 'در برخی شهرهای تاریخی، گردشگری انبوه کیفیت زندگی ساکنان را نابود می‌کند.',
+    level: 'B1+',
+    tags: ['گردشگری', 'محیط زیست']
+  },
+
+  // --- Adjektive & Adverbien (صفات همراه حالات مقایسه‌ای و متضاد) ---
   {
     id: 'k9-adj1',
     german: 'reiselustig',
     persian: 'مشتاق سفر، اهل گشت‌وگذار و ماجراجویی',
     category: 'Adjektive',
     lesson: 9,
-    sources: ['Lehrbuch'],
+    sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Lehrbuch', lesson: 9, module: 'Modul 1', pageOrTrack: 'S. 106', context: 'reiselustige Backpacker' }
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 1', pageOrTrack: 'S. 106', context: 'reiselustige Jugendliche erkunden fremde Kontinente' }
     ],
     pronunciation: '[ˈʁaɪ̯zəˌlʊstɪç]',
     comparative: 'reiselustiger',
     superlative: 'am reiselustigsten',
     opposite: 'sesshaft / heimatverbunden',
-    example: 'Reiselustige Studenten nutzen die Semesterferien für Interrail durch Europa.',
-    exampleTranslation: 'دانشجویان اهل سفر از تعطیلات ترم برای قطارگردی در اروپا استفاده می‌کنند.',
+    example: 'Reiselustige Studenten nutzen die lange Sommerpause für Interrail durch ganz Europa.',
+    exampleTranslation: 'دانشجویان مشتاق سفر از تعطیلات طولانی تابستان برای قطارگردی در کل اروپا استفاده می‌کنند.',
     level: 'B1+',
     tags: ['سفر', 'شخصیت']
   },
-  // --- Redewendungen ---
+  {
+    id: 'k9-adj2',
+    german: 'atemberaubend',
+    persian: 'حیرت‌آور، نفس‌گیر و فوق‌العاده زیبا',
+    category: 'Adjektive',
+    lesson: 9,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 4', pageOrTrack: 'S. 112', context: 'eine atemberaubende Aussicht auf das Gebirge genießen' }
+    ],
+    pronunciation: '[ˈaːtəmˌbəʁaʊ̯bn̩t]',
+    comparative: 'atemberaubender',
+    superlative: 'am atemberaubendsten',
+    opposite: 'unscheinbar / langweilig',
+    example: 'Vom Gipfel des Berges hat man einen atemberaubenden Blick über das ganze Tal.',
+    exampleTranslation: 'از قله کوه، فرد چشم‌اندازی نفس‌گیر بر کل دره دارد.',
+    level: 'B1+',
+    tags: ['طبیعت', 'زیبایی']
+  },
+  {
+    id: 'k9-adj3',
+    german: 'gastfreundlich',
+    persian: 'مهمان‌نواز، دارای برخورد گرم با مسافران',
+    category: 'Adjektive',
+    lesson: 9,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 2', pageOrTrack: 'S. 108', context: 'gastfreundliche Menschen auf dem Land kennenlernen' }
+    ],
+    pronunciation: '[ˈɡastˌfʁɔɪ̯ntlɪç]',
+    comparative: 'gastfreundlicher',
+    superlative: 'am gastfreundlichsten',
+    opposite: 'unfreundlich / abweisend',
+    example: 'Die Einheimischen waren extrem gastfreundlich und luden uns spontan zum Essen ein.',
+    exampleTranslation: 'اهالی محل فوق‌العاده مهمان‌نواز بودند و ما را خودجوش به غذا دعوت کردند.',
+    level: 'B1+',
+    tags: ['فرهنگ', 'مهمان‌نوازی']
+  },
+  {
+    id: 'k9-adj4',
+    german: 'malerisch',
+    persian: 'تماشایی، رویایی و مثل تابلوی نقاشی (طبیعت یا دهکده)',
+    category: 'Adjektive',
+    lesson: 9,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 4', pageOrTrack: 'S. 112', context: 'ein malerisches Fischerdorf am Mittelmeer' }
+    ],
+    pronunciation: '[ˈmaːləʁɪʃ]',
+    comparative: 'malerischer',
+    superlative: 'am malerischsten',
+    opposite: 'hässlich / trostlos',
+    example: 'Das kleine Küstenstädtchen mit seinen bunten Häusern wirkt völlig malerisch.',
+    exampleTranslation: 'شهر ساحلی کوچک با خانه‌های رنگارنگش کاملاً رویایی و تماشایی به نظر می‌رسد.',
+    level: 'B1+',
+    tags: ['زیبایی', 'طبیعت']
+  },
+  {
+    id: 'k9-adj5',
+    german: 'kostenfrei / stornierbar',
+    persian: 'رایگان / قابل لغو بدون خسارت مالی',
+    category: 'Adjektive',
+    lesson: 9,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 3', pageOrTrack: 'S. 110', context: 'kostenfrei stornierbare Angebote im Internet wählen' }
+    ],
+    pronunciation: '[ˈkɔstn̩ˌfʁaɪ̯]',
+    comparative: '—',
+    superlative: '—',
+    opposite: 'kostenpflichtig / gebührenpflichtig',
+    example: 'Das Hotel bietet eine bis 24 Stunden vor Anreise kostenfrei stornierbare Buchung an.',
+    exampleTranslation: 'هتل رزروی ارائه می‌دهد که تا ۲۴ ساعت قبل از وصول، به صورت رایگان قابل لغو است.',
+    level: 'B1+',
+    tags: ['رزرو', 'هتل']
+  },
+
+  // --- Redewendungen & Ausdrücke (اصطلاحات کاربردی) ---
   {
     id: 'k9-red1',
     german: 'das Fernweh packt jemanden',
     persian: 'شوق شدید سفر و دلتنگی برای رفتن به سرزمین‌های دور دست دادن به کسی',
     category: 'Redewendungen',
     lesson: 9,
-    sources: ['Lehrbuch'],
+    sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Lehrbuch', lesson: 9, module: 'Modul 1', pageOrTrack: 'S. 106', context: 'Wenn draußen der Winter kommt, packt mich das Fernweh.' }
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 1', pageOrTrack: 'S. 106', context: 'Wenn draußen der kalte Winter kommt, packt mich das Fernweh.' }
     ],
+    pronunciation: '[das ˈfɛʁnˌveː bakt ˈjeːmandn̩]',
     explanation: 'احساس عمیق دلتنگی برای سفر و ماجراجویی در کشورهای دوردست (نقطه مقابل Heimweh).',
-    example: 'Jedes Mal beim Betrachten alter Reisefotos packt mich sofort das Fernweh.',
+    literalMeaning: 'شوق دوردست‌ها کسی را چنگ زدن',
+    example: 'Jedes Mal beim Betrachten alter Reisefotos packt mich sofort wieder das Fernweh.',
     exampleTranslation: 'هر بار با نگاه کردن به عکس‌های سفر قدیمی، فوراً شوق رفتن به دوردست‌ها به جانم می‌افتد.',
     level: 'B1+',
     tags: ['اصطلاح', 'فرهنگ آلمانی']
   },
+  {
+    id: 'k9-red2',
+    german: 'die Seele baumeln lassen',
+    persian: 'روح و روان را رها کردن، کاملاً ریلکس شدن و به آرامش مطلق رسیدن',
+    category: 'Redewendungen',
+    lesson: 9,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 1', pageOrTrack: 'S. 106', context: 'Im Urlaub endlich am Strand die Seele baumeln lassen' }
+    ],
+    pronunciation: '[diː ˈzeːlə ˈbaʊ̯ml̩n ˈlasn̩]',
+    explanation: 'استراحت عمیق فکری و روحی بدون هیچ دغدغه و استرسی.',
+    literalMeaning: 'روح را آویزان و آویخته رها کردن',
+    example: 'Nach dem prüfungsintensiven Semester wollte er zwei Wochen lang nur die Seele baumeln lassen.',
+    exampleTranslation: 'پس از ترم پر امتحانات، او می‌خواست دو هفته تمام فقط روح و روانش را رها کرده و ریلکس کند.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'آرامش']
+  },
+  {
+    id: 'k9-red3',
+    german: 'neue Kräfte tanken',
+    persian: 'تجدید قوا کردن، انرژی تازه گرفتن برای ادامه کار',
+    category: 'Redewendungen',
+    lesson: 9,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 1', pageOrTrack: 'S. 106', context: 'In der Natur frische Luft atmen und neue Kräfte tanken' }
+    ],
+    pronunciation: '[ˈnɔɪ̯ə ˈkʁɛftə ˈtaŋkn̩]',
+    explanation: 'بازبازیابی انرژی جسمی و روحی در طول سفر یا استراحت.',
+    literalMeaning: 'نیروهای جدید را بنزین زدن',
+    example: 'Ein Kurzurlaub am Wochenende hilft ungemein, um wieder neue Kräfte zu tanken.',
+    exampleTranslation: 'یک سفر کوتاه در آخر هفته به طرز فوق‌العاده‌ای کمک می‌کند تا فرد انرژی تازه بگیرد.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'انرژی']
+  },
+  {
+    id: 'k9-red4',
+    german: 'den Horizont erweitern',
+    persian: 'افق دید، شناخت و بینش جهان‌شناختی خود را گسترش دادن',
+    category: 'Redewendungen',
+    lesson: 9,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 2', pageOrTrack: 'S. 108', context: 'Reisen in fremde Kulturen erweitert den eigenen Horizont.' }
+    ],
+    pronunciation: '[deːn hoʁiˈtsɔnt ɛɐ̯ˈvaɪ̯tɐn]',
+    explanation: 'آشنایی با فرهنگ‌ها و آداب جدید که باعث رشد فکر می‌شود.',
+    literalMeaning: 'افق را عریض‌تر کردن',
+    example: 'Wer viel reist und sich auf fremde Lebensweisen einlässt, erweitert seinen Horizont.',
+    exampleTranslation: 'کسی که زیاد سفر کند و پذیرا فرهنگ‌های بیگانه باشد، افق دید خود را گسترش می‌دهد.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'رشد']
+  },
+  {
+    id: 'k9-red5',
+    german: 'den Alltag hinter sich lassen',
+    persian: 'دغدغه‌ها و یکنواختی زندگی روزمره را پشت سر گذاشتن',
+    category: 'Redewendungen',
+    lesson: 9,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 1', pageOrTrack: 'S. 106', context: 'Einfach mal den stressigen Alltag komplett hinter sich lassen' }
+    ],
+    pronunciation: '[deːn ˈalˌtaːk ˈhɪntɐ zɪç ˈlasn̩]',
+    explanation: 'فراموش کردن موقت مشکلات شغلی و زندگی در طول سفر.',
+    literalMeaning: 'زندگی روزمره را پشت سر خود رها کردن',
+    example: 'Sobald das Flugzeug abhebt, kann ich den stressigen Alltag völlig hinter mir lassen.',
+    exampleTranslation: 'به محض اینکه هواپیما از زمین بلند می‌شود، می‌توانم دغدغه‌های روزمره را کاملاً پشت سر بگذارم.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'سفر']
+  },
+  {
+    id: 'k9-red6',
+    german: 'in die Ferne schweifen',
+    persian: 'به سرزمین‌ها و افق‌های دوردست اندیشیدن و سفر نمودن',
+    category: 'Redewendungen',
+    lesson: 9,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 9, module: 'Modul 1', pageOrTrack: 'S. 106', context: 'Warum in die Ferne schweifen? Sieh, das Gute liegt so nah!' }
+    ],
+    pronunciation: '[ɪn diː ˈfɛʁnə ˈʃvaɪ̯fn̩]',
+    explanation: 'تمایل به رفتن به جاهای خیلی دور (برگرفته از شعر معروف گوته).',
+    literalMeaning: 'به سوی دوردست‌ها پرسه زدن',
+    example: 'Man muss nicht immer in die Ferne schweifen, um wunderschöne Natur zu erleben.',
+    exampleTranslation: 'برای تجربه طبیعت فوق‌العاده، همیشه لازم نیست به دوردست‌ها سفر کرد.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'ادبیات']
+  },
 
-  // =========================================================================
-  // KAPITEL 10: Natürlich Natur! (حیوانات، حیات وحش و حفاظت از محیط زیست)
+    // =========================================================================
+  // KAPITEL 10: Natürlich Natur! (حیوانات، حیات وحش، آب و منابع طبیعی، محیط زیست و ارائه‌های علمی)
   // =========================================================================
   // --- Verben ---
   {
@@ -6897,6 +7734,116 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     level: 'B1+',
     tags: ['حیات وحش', 'بقا']
   },
+  {
+    id: 'k10-v4',
+    german: 'aussterben',
+    persian: 'منقرض شدن، نسل چیزی از بین رفتن',
+    category: 'Verben',
+    lesson: 10,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 10, module: 'Modul 1', pageOrTrack: 'S. 118', context: 'Wenn wir die Lebensräume zerstören, werden noch mehr Arten aussterben.' }
+    ],
+    pronunciation: '[ˈaʊ̯sˌʃtɛʁbn̩]',
+    infinitive: 'aussterben',
+    present: 'stirbt aus',
+    preterite: 'starb aus',
+    perfect: 'ist ausgestorben',
+    auxiliary: 'sein',
+    separable: true,
+    example: 'Wenn der Raubbau an der Natur anhält, werden hunderte Tierarten unwiederbringlich aussterben.',
+    exampleTranslation: 'اگر تخریب بی‌رویه طبیعت ادامه یابد، صدها گونه جانوری برای همیشه منقرض خواهند شد.',
+    level: 'B1+',
+    tags: ['زیست‌شناسی', 'محیط زیست']
+  },
+  {
+    id: 'k10-v5',
+    german: 'anpassen an',
+    persian: 'وفق دادن، سازگار کردن با (محیط یا شرایط جدید)',
+    category: 'Verben',
+    lesson: 10,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Hörtexte', lesson: 10, module: 'Modul 1', pageOrTrack: 'Track 2.33 (S. 190 - Tiere in der Stadt)', context: 'Wildtiere haben sich an das Leben in den Städten erstaunlich gut angepasst.' }
+    ],
+    pronunciation: '[ˈanˌpasn̩ an]',
+    infinitive: 'anpassen an (+ Akk.)',
+    present: 'passt an',
+    preterite: 'passte an',
+    perfect: 'hat angepasst',
+    auxiliary: 'haben',
+    separable: true,
+    prepositionCase: 'an + Akkusativ',
+    example: 'Füchse und Waschbären haben sich hervorragend an das Nahrungsangebot in den Städten angepasst.',
+    exampleTranslation: 'روباه‌ها و راکون‌ها خود را به طرز فوق‌العاده‌ای با منابع غذایی موجود در شهرها سازگار کرده‌اند.',
+    level: 'B1+',
+    tags: ['تکامل', 'حیات وحش']
+  },
+  {
+    id: 'k10-v6',
+    german: 'verschwenden',
+    persian: 'هدر دادن، تلف کردن (آب، انرژی، پول)',
+    category: 'Verben',
+    lesson: 10,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Hörtexte', lesson: 10, module: 'Modul 4 Aufgabe 2a', pageOrTrack: 'Track 2.37 (S. 192 - Referat Wasser)', context: 'In den Industrieländern wird jeden Tag kostbares Trinkwasser verschwendet.' }
+    ],
+    pronunciation: '[fɛɐ̯ˈʃvɛndn̩]',
+    infinitive: 'verschwenden (+ Akk.)',
+    present: 'verschwendet',
+    preterite: 'verschwendete',
+    perfect: 'hat verschwendet',
+    auxiliary: 'haben',
+    example: 'Beim Zähneputzen sollte man das Wasser nicht ungenutzt laufen lassen und verschwenden.',
+    exampleTranslation: 'هنگام مسواک زدن نباید اجازه داد آب هدر برود و تلف شود.',
+    level: 'B1+',
+    tags: ['مصرف‌گرایی', 'منابع طبیعی']
+  },
+  {
+    id: 'k10-v7',
+    german: 'einschränken',
+    persian: 'محدود کردن، کاهش دادن (مصرف یا فعالیت)',
+    category: 'Verben',
+    lesson: 10,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 10, module: 'Modul 4', pageOrTrack: 'S. 123', context: 'Wir müssen unseren Ressourcenverbrauch deutlich einschränken.' }
+    ],
+    pronunciation: '[ˈaɪ̯nˌʃʁɛŋkn̩]',
+    infinitive: 'einschränken (+ Akk.)',
+    present: 'schränkt ein',
+    preterite: 'schränkte ein',
+    perfect: 'hat eingeschränkt',
+    auxiliary: 'haben',
+    separable: true,
+    example: 'Um CO2-Emissionen zu reduzieren, sollten wir den Flugverkehr und Autoverkehr einschränken.',
+    exampleTranslation: 'برای کاهش انتشار گازهای گلخانه‌ای، باید رفت‌وآمد با هواپیما و خودرو را محدود کنیم.',
+    level: 'B1+',
+    tags: ['حفاظت اقلیم', 'مدیریت']
+  },
+  {
+    id: 'k10-v8',
+    german: 'verursachen',
+    persian: 'موجب شدن، باعث شدن، موجب بروز آسیب شدن',
+    category: 'Verben',
+    lesson: 10,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Hörtexte', lesson: 10, module: 'Modul 4', pageOrTrack: 'Track 2.38 (S. 192)', context: 'Plastikmüll im Meer verursacht immense Schäden an der marinen Umwelt.' }
+    ],
+    pronunciation: '[fɛɐ̯ˈʔuːɐ̯zakn̩]',
+    infinitive: 'verursachen (+ Akk.)',
+    present: 'verursacht',
+    preterite: 'verursachte',
+    perfect: 'hat verursacht',
+    auxiliary: 'haben',
+    example: 'Extreme Wetterereignisse wie Starkregen verursachen jährlich Millionenschäden.',
+    exampleTranslation: 'رویدادهای شدید آب‌وهوایی مانند بارش‌های شدید سالانه میلیون‌ها یورو خسارت به بار می‌آورند.',
+    level: 'B1+',
+    tags: ['علت و معلول', 'محیط زیست']
+  },
+
   // --- Nomen ---
   {
     id: 'k10-n1',
@@ -6906,7 +7853,7 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     lesson: 10,
     sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Hörtexte', lesson: 10, module: 'Modul 2', pageOrTrack: 'Track 2.34', context: 'Besuch im Tierheim Leipzig' }
+      { source: 'Hörtexte', lesson: 10, module: 'Modul 2', pageOrTrack: 'Track 2.34 (S. 191)', context: 'Besuch im Tierheim Leipzig - Aufnahme von Fundtieren' }
     ],
     pronunciation: '[ˈtiːɐ̯ˌhaɪ̯m]',
     article: 'das',
@@ -6955,6 +7902,140 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     level: 'B1+',
     tags: ['طبیعت', 'اکولوژی']
   },
+  {
+    id: 'k10-n4',
+    german: 'das Raubtier',
+    persian: 'حیوان گوشت‌خوار و شکاری (مانند گرگ، شیر، روباه)',
+    category: 'Nomen',
+    lesson: 10,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Hörtexte', lesson: 10, module: 'Modul 1', pageOrTrack: 'Track 2.33 (S. 190)', context: 'Wilde Raubtiere breiten sich in unseren Städten aus.' }
+    ],
+    pronunciation: '[ˈʁaʊ̯pˌtiːɐ̯]',
+    article: 'das',
+    plural: 'die Raubtiere',
+    genderPersian: 'خنثی (das)',
+    example: 'Der Wolf ist ein heimisches Raubtier, das langsam nach Deutschland zurückkehrt.',
+    exampleTranslation: 'گرگ یک حیوان شکاری بومی است که به آرامی در حال بازگشت به آلمان است.',
+    level: 'B1+',
+    tags: ['حیات وحش', 'جانورشناسی']
+  },
+  {
+    id: 'k10-n5',
+    german: 'der Tierschutz',
+    persian: 'حفاظت و حمایت از حیوانات',
+    category: 'Nomen',
+    lesson: 10,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Hörtexte', lesson: 10, module: 'Modul 2', pageOrTrack: 'Track 2.34 (S. 191)', context: 'Ehrenamtliches Engagement im Tierschutzverein' }
+    ],
+    pronunciation: '[ˈtiːɐ̯ˌʃʊts]',
+    article: 'der',
+    plural: 'der Tierschutz (بدون جمع)',
+    genderPersian: 'مذکر (der)',
+    example: 'Immer mehr Menschen engagieren sich ehrenamtlich für den Tierschutz.',
+    exampleTranslation: 'افراد بیشتری به صورت داوطلبانه در زمینه حمایت از حقوق حیوانات فعالیت می‌کنند.',
+    level: 'B1+',
+    tags: ['حمایت', 'جامعه']
+  },
+  {
+    id: 'k10-n6',
+    german: 'die Dürre',
+    persian: 'خشکسالی، کمبود طولانی‌مدت بارندگی',
+    category: 'Nomen',
+    lesson: 10,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Hörtexte', lesson: 10, module: 'Modul 4 Aufgabe 2a', pageOrTrack: 'Track 2.37 (S. 192)', context: 'Anhaltende Dürren bedrohen die Landwirtschaft in vielen Regionen.' }
+    ],
+    pronunciation: '[ˈdʏʁə]',
+    article: 'die',
+    plural: 'die Dürren',
+    genderPersian: 'مونث (die)',
+    example: 'Nach monatelanger Dürre sind die Grundwasserspiegel besorgniserregend gesunken.',
+    exampleTranslation: 'پس از چندین ماه خشکسالی، سطح آب‌های زیرزمینی به طور نگران‌کننده‌ای کاهش یافته است.',
+    level: 'B1+',
+    tags: ['اقلیم', 'حوادث طبیعی']
+  },
+  {
+    id: 'k10-n7',
+    german: 'der Rohstoff',
+    persian: 'ماده خام، منبع طبیعی اولیه (مانند نفت، چوب، فلزات)',
+    category: 'Nomen',
+    lesson: 10,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 10, module: 'Modul 4', pageOrTrack: 'S. 122', context: 'Schonung der natürlichen Rohstoffe durch Recycling' }
+    ],
+    pronunciation: '[ˈʁoːˌʃtɔf]',
+    article: 'der',
+    plural: 'die Rohstoffe',
+    genderPersian: 'مذکر (der)',
+    example: 'Erdöl und Metalle sind begrenzte Rohstoffe, die wir sparsam nutzen müssen.',
+    exampleTranslation: 'نفت و فلزات منابع خام محدودی هستند که باید از آنها به طور صرفه‌جویانه استفاده کنیم.',
+    level: 'B1+',
+    tags: ['صنعت', 'منابع']
+  },
+  {
+    id: 'k10-n8',
+    german: 'das Referat',
+    persian: 'ارائه شفاهی، سخنرانی علمی یا درسی در کلاس',
+    category: 'Nomen',
+    lesson: 10,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Hörtexte', lesson: 10, module: 'Modul 4 Aufgabe 2a', pageOrTrack: 'Track 2.37 (S. 192 - Referat Struktur)', context: 'Ein wissenschaftliches Referat über das Thema Wasser halten' }
+    ],
+    pronunciation: '[ʁefəˈʁaːt]',
+    article: 'das',
+    plural: 'die Referate',
+    genderPersian: 'خنثی (das)',
+    example: 'Der Student hielt ein gelungenes Referat über die Folgen des Raubbaus im Regenwald.',
+    exampleTranslation: 'دانشجو یک ارائه موفق درباره پیامدهای بهره‌برداری بی‌رویه در جنگل‌های بارانی ایراد کرد.',
+    level: 'B1+',
+    tags: ['دانشگاه', 'ارائه']
+  },
+  {
+    id: 'k10-n9',
+    german: 'die Gliederung',
+    persian: 'سرفصل‌ها، ساختار و طبقه‌بندی مطالب (یک کنفرانس یا متنه)',
+    category: 'Nomen',
+    lesson: 10,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 10, module: 'Modul 4', pageOrTrack: 'S. 122', context: 'Eine übersichtliche Gliederung erleichtert dem Publikum das Verstehen.' }
+    ],
+    pronunciation: '[ˈɡliːdəʁʊŋ]',
+    article: 'die',
+    plural: 'die Gliederungen',
+    genderPersian: 'مونث (die)',
+    example: 'Bevor man einen Vortrag hält, sollte man eine klare Gliederung an der Tafel zeigen.',
+    exampleTranslation: 'قبل از ایراد سخنرانی، باید سرفصل‌های شفافی را روی تخته نشان داد.',
+    level: 'B1+',
+    tags: ['آموزش', 'ساختار']
+  },
+  {
+    id: 'k10-n10',
+    german: 'der Umweltschutz',
+    persian: 'حفاظت از محیط زیست، صیانت از طبیعت',
+    category: 'Nomen',
+    lesson: 10,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 10, module: 'Modul 4', pageOrTrack: 'S. 122', context: 'Aktionen für den aktiven Umweltschutz im Alltag' }
+    ],
+    pronunciation: '[ˈʊmvɛltˌʃʊts]',
+    article: 'der',
+    plural: 'der Umweltschutz (بدون جمع)',
+    genderPersian: 'مذکر (der)',
+    example: 'Effektiver Umweltschutz beginnt mit einfachen Maßnahmen im eigenen Haushalt.',
+    exampleTranslation: 'حفاظت مؤثر از محیط زیست با اقدامات ساده در خانه خود فرد آغاز می‌شود.',
+    level: 'B1+',
+    tags: ['محیط زیست', 'مسئولیت']
+  },
+
   // --- Adjektive & Adverbien ---
   {
     id: 'k10-adj1',
@@ -6994,6 +8075,83 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     level: 'B1+',
     tags: ['پایداری', 'محیط زیست']
   },
+  {
+    id: 'k10-adj3',
+    german: 'bedroht',
+    persian: 'در معرض خطر (منقرض شدن یا آسیب دیدن)',
+    category: 'Adjektive',
+    lesson: 10,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 10, module: 'Modul 1', pageOrTrack: 'S. 118', context: 'Vom Aussterben bedrohte Tierarten stehen auf der Roten Liste.' }
+    ],
+    pronunciation: '[bəˈdʁoːt]',
+    comparative: 'bedrohter',
+    superlative: 'am bedrohtesten',
+    opposite: 'geschützt / ungefährdet',
+    example: 'Der Eisbär gehört zu den am stärksten vom Klimawandel bedrohten Tierarten.',
+    exampleTranslation: 'خرس قطبی از جمله گونه‌های جانوری است که بیشترین تهدید ناشی از تغییرات اقلیمی متوجه آن است.',
+    level: 'B1+',
+    tags: ['حفاظت', 'خطر']
+  },
+  {
+    id: 'k10-adj4',
+    german: 'scheu',
+    persian: 'خجالتی، گریزان از انسان، حذرکننده',
+    category: 'Adjektive',
+    lesson: 10,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Hörtexte', lesson: 10, module: 'Modul 1', pageOrTrack: 'Track 2.33 (S. 190)', context: 'Rehe sind extrem scheue Waldtiere, die Menschen meiden.' }
+    ],
+    pronunciation: '[ʃɔɪ̯]',
+    comparative: 'scheuer',
+    superlative: 'am scheuesten',
+    opposite: 'zutraulich / frech',
+    example: 'Wildkatzen sind so scheu, dass man sie in freier Wildbahn nur selten zu Gesicht bekommt.',
+    exampleTranslation: 'گربه‌های وحشی آن‌قدر گریزان هستند که در طبیعت آزاد به ندرت مشاهده می‌شوند.',
+    level: 'B1+',
+    tags: ['حیوانات', 'طبیعت']
+  },
+  {
+    id: 'k10-adj5',
+    german: 'sparsam',
+    persian: 'صرفه‌جویانه، مدبرانه در مصرف (منابع یا پول)',
+    category: 'Adjektive',
+    lesson: 10,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 10, module: 'Modul 4', pageOrTrack: 'S. 122', context: 'sparsamer Einsatz von Energie und Wasser' }
+    ],
+    pronunciation: '[ˈʃpaːɐ̯zaːm]',
+    comparative: 'sparsamer',
+    superlative: 'am sparsamsten',
+    opposite: 'verschwenderisch',
+    example: 'Moderne Haushaltsgeräte sind extrem sparsam im Wasser- und Stromverbrauch.',
+    exampleTranslation: 'وسایل خانگی مدرن در مصرف آب و برق بسیار صرفه‌جو هستند.',
+    level: 'B1+',
+    tags: ['مصرف', 'انرژی']
+  },
+  {
+    id: 'k10-adj6',
+    german: 'umweltbewusst',
+    persian: 'دارای آگاهی محیط‌زیستی، آگاه به مسائل اقلیمی',
+    category: 'Adjektive',
+    lesson: 10,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 10, module: 'Modul 4', pageOrTrack: 'S. 122', context: 'umweltbewusstes Verhalten im Alltag fördern' }
+    ],
+    pronunciation: '[ˈʊmvɛltbəˌvʊst]',
+    comparative: 'umweltbewusster',
+    superlative: 'am umweltbewusstesten',
+    opposite: 'umweltschädlich',
+    example: 'Umweltbewusste Bürger fahren öfter mit dem Fahrrad statt mit dem Auto.',
+    exampleTranslation: 'شهروندان باآگاهی محیط‌زیستی به جای خودرو بیشتر با دوچرخه رفت‌وآمد می‌کنند.',
+    level: 'B1+',
+    tags: ['فرهنگ', 'محیط زیست']
+  },
+
   // --- Redewendungen ---
   {
     id: 'k10-red1',
@@ -7010,5 +8168,69 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     exampleTranslation: 'با تفکیک زباله و صرفه‌جویی در مصرف انرژی، هر شهروند می‌تواند سهم خود را در حفاظت از اقلیم ادا کند.',
     level: 'B1+',
     tags: ['اصطلاح', 'مسئولیت اجتماعی']
+  },
+  {
+    id: 'k10-red2',
+    german: 'im Einklang mit der Natur leben',
+    persian: 'در هماهنگی و همزیستی مسالمت‌آمیز با طبیعت زندگی کردن',
+    category: 'Redewendungen',
+    lesson: 10,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 10, module: 'Modul 1', pageOrTrack: 'S. 118', context: 'Traditionelle Völker lebten oft im Einklang mit der Natur.' }
+    ],
+    explanation: 'به شیوه‌ای زیستن که به منابع طبیعی و موجودات زنده آسیبی وارد نشود.',
+    example: 'Nachhaltiger Tourismus versucht, Reisen im Einklang mit der Natur zu ermöglichen.',
+    exampleTranslation: 'گردشگری پایدار می‌کوشد سفر کردن در هماهنگی کامل با طبیعت را ممکن سازد.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'طبیعت']
+  },
+  {
+    id: 'k10-red3',
+    german: 'Alarm schlagen',
+    persian: 'زنگ خطر را به صدا درآوردن، هشدار جدی دادن',
+    category: 'Redewendungen',
+    lesson: 10,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Hörtexte', lesson: 10, module: 'Modul 4', pageOrTrack: 'Track 2.37 (S. 192)', context: 'Umweltforscher schlagen seit Jahren wegen des Artensterbens Alarm.' }
+    ],
+    explanation: 'هشدار دادن عمومی درباره یک خطرات بزرگ و فوری اقلیمی یا اجتماعی.',
+    example: 'Klimaforscher schlagen Alarm, weil die Polkappen schneller schmelzen als erwartet.',
+    exampleTranslation: 'پژوهشگران اقلیم زنگ خطر را به صدا درآورده‌اند زیرا کلاهک‌های قطبی سریع‌تر از حد انتظار در حال ذوب شدن هستند.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'هشدار']
+  },
+  {
+    id: 'k10-red4',
+    german: 'Rücksicht nehmen auf',
+    persian: 'مراعات حال چیزی/کسی را کردن، ملاحظه کردن',
+    category: 'Redewendungen',
+    lesson: 10,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 10, module: 'Modul 1', pageOrTrack: 'S. 119', context: 'Wanderer sollten im Wald Rücksicht auf die Wildtiere nehmen.' }
+    ],
+    explanation: 'احترام گذاشتن به حقوق و آرامش دیگران یا موجودات حیات وحش.',
+    example: 'Beim Schutz von Brutgebieten muss man stets Rücksicht auf seltene Vogelarten nehmen.',
+    exampleTranslation: 'هنگام حفاظت از مناطق جوجه‌آوری، باید همواره ملاحظه گونه‌های کمیاب پرندگان را نمود.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'اخلاق']
+  },
+  {
+    id: 'k10-red5',
+    german: 'in Kauf nehmen',
+    persian: 'خطر یا ضرر چیزی را به جان خریدن، پیامد منفی را پذیرفتن',
+    category: 'Redewendungen',
+    lesson: 10,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 10, module: 'Modul 4', pageOrTrack: 'S. 123', context: 'Wer Bequemlichkeit sucht, nimmt oft Umweltverschmutzung in Kauf.' }
+    ],
+    explanation: 'قبول کردن یک اثر جانبی نامطلوب برای رسیدن به یک هدف دیگر.',
+    example: 'Für den schnellen Transport nimmt die Gesellschaft lange Anfahrtswege und Abgase in Kauf.',
+    exampleTranslation: 'جامعه برای حمل‌ونقل سریع، مسافت‌های طولانی و دود خودروها را به جان می‌خرد.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'تصمیم‌گیری']
   }
 ];
