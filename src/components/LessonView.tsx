@@ -102,27 +102,27 @@ export const LessonView: React.FC<LessonViewProps> = ({
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+    <div className="w-full max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-6 space-y-6 overflow-hidden">
       
       {/* Top Breadcrumb and Lesson Switcher */}
-      <div className="flex items-center justify-between gap-4 flex-wrap">
-        <div className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
+      <div className="flex items-center justify-between gap-2.5 flex-wrap w-full max-w-full">
+        <div className="flex items-center gap-1.5 text-xs sm:text-sm text-slate-500 dark:text-slate-400">
           <button
             onClick={onBackToDashboard}
             className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors flex items-center gap-1 font-medium cursor-pointer"
           >
             <span>داشبورد درس‌ها</span>
           </button>
-          <ChevronRight className="w-4 h-4 text-slate-400 dark:text-slate-500 rotate-180" />
-          <span className="font-bold text-slate-800 dark:text-slate-200 font-de">Lektion {lessonNumber}</span>
+          <ChevronRight className="w-3.5 h-3.5 text-slate-400 dark:text-slate-500 rotate-180 shrink-0" />
+          <span className="font-bold text-slate-800 dark:text-slate-200 font-de truncate">Lektion {lessonNumber}</span>
         </div>
 
         {/* Previous / Next Lesson Navigation Buttons */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5 max-w-full">
           <button
             disabled={lessonNumber <= 1}
             onClick={() => onSelectLesson(lessonNumber - 1)}
-            className="p-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 disabled:opacity-40 disabled:cursor-not-allowed transition-all cursor-pointer"
+            className="p-1.5 sm:p-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 disabled:opacity-40 disabled:cursor-not-allowed transition-all cursor-pointer shrink-0"
             title="درس قبلی"
           >
             <ArrowRight className="w-4 h-4" />
@@ -131,11 +131,11 @@ export const LessonView: React.FC<LessonViewProps> = ({
           <select
             value={lessonNumber}
             onChange={(e) => onSelectLesson(Number(e.target.value))}
-            className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-100 font-de font-bold text-xs py-2 px-3 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-hidden cursor-pointer"
+            className="max-w-[170px] sm:max-w-xs truncate bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-100 font-de font-bold text-xs py-1.5 sm:py-2 px-2 sm:px-3 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-hidden cursor-pointer"
           >
             {LESSONS_DATA.map((l) => (
               <option key={l.number} value={l.number}>
-                Lektion {l.number}: {l.germanTitle} ({l.persianTitle})
+                Lektion {l.number}: {l.germanTitle}
               </option>
             ))}
           </select>
@@ -143,7 +143,7 @@ export const LessonView: React.FC<LessonViewProps> = ({
           <button
             disabled={lessonNumber >= 10}
             onClick={() => onSelectLesson(lessonNumber + 1)}
-            className="p-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 disabled:opacity-40 disabled:cursor-not-allowed transition-all cursor-pointer"
+            className="p-1.5 sm:p-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 disabled:opacity-40 disabled:cursor-not-allowed transition-all cursor-pointer shrink-0"
             title="درس بعدی"
           >
             <ArrowLeft className="w-4 h-4" />

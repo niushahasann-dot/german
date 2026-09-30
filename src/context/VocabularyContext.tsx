@@ -48,8 +48,8 @@ interface VocabularyContextType {
   };
 }
 
-const STORAGE_KEY_VOCAB = 'aspekte_b1plus_vocab_v6';
-const STORAGE_KEY_PROGRESS = 'aspekte_b1plus_progress_v6';
+const STORAGE_KEY_VOCAB = 'aspekte_b1plus_vocab_v9';
+const STORAGE_KEY_PROGRESS = 'aspekte_b1plus_progress_v9';
 
 const defaultProgress: UserProgressState = {
   words: {},

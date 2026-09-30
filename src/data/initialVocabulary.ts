@@ -4607,18 +4607,19 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
   },
 
   // =========================================================================
-  // KAPITEL 5: Alles will gelernt sein (آموزش، حافظه و مهارت‌ها)
+  // KAPITEL 5: Alles will gelernt sein (آموزش، یادگیری، حافظه و مهارت‌ها)
   // =========================================================================
-  // --- Verben ---
+  // --- Verben (افعال با تمام زمان‌های Präsens / Präteritum / Perfekt و حروف اضافه) ---
   {
     id: 'k5-v1',
     german: 'sich einprägen',
-    persian: 'به خاطر سپردن، ملکه ذهن کردن',
+    persian: 'به خاطر سپردن، ملکه ذهن کردن و صریح در حافظه ضبط نمودن',
     category: 'Verben',
     lesson: 5,
     sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Hörtexte', lesson: 5, module: 'Modul 3', pageOrTrack: 'Track 1.35', context: 'Wie prägt man sich Vokabeln am besten ein?' }
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 3', pageOrTrack: 'S. 62', context: 'Vokabeln durch Visualisierung schneller einprägen' },
+      { source: 'Hörtexte', lesson: 5, module: 'Modul 3', pageOrTrack: 'Track 1.35', context: 'Wie prägt man sich komplexe Zusammenhänge am besten ein?' }
     ],
     pronunciation: '[zɪç ˈaɪ̯nˌpʁɛːɡn̩]',
     infinitive: 'sich (+ Dat.) einprägen (+ Akk.)',
@@ -4628,20 +4629,21 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     auxiliary: 'haben',
     reflexive: true,
     separable: true,
-    example: 'Mit Eselsbrücken und Beispielsätzen kann man sich neue Wörter dauerhaft einprägen.',
-    exampleTranslation: 'با ترفندهای یادسپاری و جملات مثال می‌توان کلمات جدید را برای همیشه به خاطر سپرد.',
+    example: 'Mit Mnemonic-Techniken und Bildern kann man sich schwierige Begriffe dauerhaft einprägen.',
+    exampleTranslation: 'با ترفندهای تصویرسازی و یادسپاری می‌توان مفاهیم سخت را برای همیشه به خاطر سپرد.',
     level: 'B1+',
     tags: ['حافظه', 'یادگیری']
   },
   {
     id: 'k5-v2',
     german: 'fördern',
-    persian: 'پرورش دادن، تقویت و حمایت کردن',
+    persian: 'پرورش دادن، تقویت، رشد دادن و حمایت کردن از استعداد/مهارت',
     category: 'Verben',
     lesson: 5,
     sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Lehrbuch', lesson: 5, module: 'Modul 2', pageOrTrack: 'S. 60', context: 'die kognitiven Fähigkeiten gezielt fördern' }
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 2', pageOrTrack: 'S. 60', context: 'die kognitiven Fähigkeiten von Kindern gezielt fördern' },
+      { source: 'Hörtexte', lesson: 5, module: 'Modul 2', pageOrTrack: 'Track 1.33', context: 'Schulen sollten individuelle Talente stärker fördern.' }
     ],
     pronunciation: '[ˈfœʁdɐn]',
     infinitive: 'fördern (+ Akk.)',
@@ -4649,20 +4651,20 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     preterite: 'förderte',
     perfect: 'hat gefördert',
     auxiliary: 'haben',
-    example: 'Gute Lehrer fördern die individuellen Talente und Stärken jedes Schülers.',
-    exampleTranslation: 'معلمان خوب استعدادها و توانمندی‌های فردی هر دانش‌آموز را پرورش می‌دهند.',
+    example: 'Gute Pädagogen fördern die individuellen Stärken und Talente jedes einzelnen Schülers.',
+    exampleTranslation: 'مربیان خوب توانمندی‌ها و استعدادهای فردی تک‌تک دانش‌آموزان را پرورش می‌دهند.',
     level: 'B1+',
     tags: ['آموزش', 'رشد']
   },
   {
     id: 'k5-v3',
     german: 'erwerben',
-    persian: 'کسب کردن، به دست آوردن (دانش، مدرک یا مهارت)',
+    persian: 'کسب کردن، به دست آوردن (دانش، مهارت، مدارک یا تخصص)',
     category: 'Verben',
     lesson: 5,
-    sources: ['Lehrbuch'],
+    sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Lehrbuch', lesson: 5, module: 'Modul 1', pageOrTrack: 'S. 58', context: 'wertvolle Qualifikationen im Kurs erwerben' }
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 1', pageOrTrack: 'S. 58', context: 'neue Qualifikationen durch Weiterbildung erwerben' }
     ],
     pronunciation: '[ɛɐ̯ˈvɛʁbn̩]',
     infinitive: 'erwerben (+ Akk.)',
@@ -4670,101 +4672,628 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     preterite: 'erwarb',
     perfect: 'hat erworben',
     auxiliary: 'haben',
-    example: 'In der Fortbildung hat sie fundierte Kenntnisse im Projektmanagement erworben.',
-    exampleTranslation: 'در دوره ارتقای مهارت، او دانش عمیقی در مدیریت پروژه کسب کرد.',
+    example: 'Im Laufe des Studiums erwerben die Studenten fundierte Fachkenntnisse in der Informatik.',
+    exampleTranslation: 'در طول مدت تحصیل، دانشجویان دانش تخصصی عمیقی در علوم کامپیوتر کسب می‌کنند.',
     level: 'B1+',
     tags: ['دانش', 'مهارت']
   },
-  // --- Nomen ---
   {
-    id: 'k5-n1',
-    german: 'die Volkshochschule',
-    persian: 'مرکز آموزش مردمی و بزرگسالان (VHS)',
-    category: 'Nomen',
+    id: 'k5-v4',
+    german: 'sich aneignen',
+    persian: 'فراگرفتن، برای خود ملکه کردن و خودآموزی نمودن (زبان یا مهارت)',
+    category: 'Verben',
     lesson: 5,
     sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Hörtexte', lesson: 5, module: 'Modul 1', pageOrTrack: 'Track 1.30', context: 'Kursangebote der Volkshochschule für Sprachen und IT' }
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 1', pageOrTrack: 'S. 58', context: 'sich eine Fremdsprache im Selbststudium aneignen' }
     ],
-    pronunciation: '[ˈfɔlksˌhoːxʃuːlə]',
-    article: 'die',
-    plural: 'die Volkshochschulen (die VHS)',
-    genderPersian: 'مونث (die)',
-    example: 'An der Volkshochschule kann man günstig Fremdsprachen und berufliche Fähigkeiten lernen.',
-    exampleTranslation: 'در مرکز آموزش مردمی می‌توان زبان‌های خارجی و مهارت‌های شغلی را با هزینه مناسب آموخت.',
+    pronunciation: '[zɪç ˈanˌʔaɪ̯ɡnən]',
+    infinitive: 'sich (+ Dat.) aneignen (+ Akk.)',
+    present: 'eignet sich an',
+    preterite: 'eignete sich an',
+    perfect: 'hat sich angeeignet',
+    auxiliary: 'haben',
+    reflexive: true,
+    separable: true,
+    example: 'Er hat sich die Grundlagen der Programmierung ganz ohne Lehrer selbst angeeignet.',
+    exampleTranslation: 'او اساس و مبانی برنامه‌نویسی را کاملاً بدون معلم به صورت خودآموز فراگرفت.',
     level: 'B1+',
-    tags: ['آموزش', 'جامعه']
+    tags: ['یادگیری', 'خودآموزی']
   },
   {
-    id: 'k5-n2',
+    id: 'k5-v5',
+    german: 'auffrischen',
+    persian: 'بازخوانی و تازه‌سازی کردن (دانش یا زبان فراموش‌شده)',
+    category: 'Verben',
+    lesson: 5,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 1', pageOrTrack: 'S. 59', context: 'seine Sprachkenntnisse vor der Reise wieder auffrischen' }
+    ],
+    pronunciation: '[ˈaʊ̯fˌfʁɪʃn̩]',
+    infinitive: 'auffrischen (+ Akk.)',
+    present: 'frischt auf',
+    preterite: 'frischte auf',
+    perfect: 'hat aufgefrischt',
+    auxiliary: 'haben',
+    separable: true,
+    example: 'Vor ihrer Reise nach Spanien frischte sie ihre Spanischkenntnisse in einem Intensivkurs auf.',
+    exampleTranslation: 'پیش از سفر به اسپانیا، او دانش زبان اسپانیایی خود را در یک دوره فشرده تازه‌سازی کرد.',
+    level: 'B1+',
+    tags: ['بازخوانی', 'زبان']
+  },
+  {
+    id: 'k5-v6',
+    german: 'büffeln',
+    persian: 'حرص زدن و فشرده درس خواندن (اصطلاح عامیانه برای حفظ کردن برای امتحان)',
+    category: 'Verben',
+    lesson: 5,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 4', pageOrTrack: 'S. 64', context: 'Tag und Nacht für die Abschlussprüfung büffeln' },
+      { source: 'Hörtexte', lesson: 5, module: 'Modul 4', pageOrTrack: 'Track 1.36', context: 'Studenten büffeln in der Universitätsbibliothek.' }
+    ],
+    pronunciation: '[ˈbʏfl̩n]',
+    infinitive: 'büffeln für (+ Akk.)',
+    present: 'büffelt',
+    preterite: 'büffelte',
+    perfect: 'hat gebüffelt',
+    auxiliary: 'haben',
+    prepositionCase: 'für + Akkusativ',
+    example: 'Vor den Klausuren büffeln die Studenten tagelang bis spät in die Nacht in der Bibliothek.',
+    exampleTranslation: 'پیش از امتحانات، دانشجویان روزها تا پاسی از شب در کتابخانه فشرده درس می‌خوانند.',
+    level: 'B1+',
+    tags: ['امتحان', 'درس']
+  },
+  {
+    id: 'k5-v7',
+    german: 'ablegen',
+    persian: 'شرکت کردن و سپری نمودن (امتحان یا آزمون رسمی)',
+    category: 'Verben',
+    lesson: 5,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 4', pageOrTrack: 'S. 64', context: 'eine mündliche oder schriftliche Prüfung ablegen' }
+    ],
+    pronunciation: '[ˈapˌleːɡn̩]',
+    infinitive: 'ablegen (+ Akk. z.B. eine Prüfung)',
+    present: 'legt ab',
+    preterite: 'legte ab',
+    perfect: 'hat abgelegt',
+    auxiliary: 'haben',
+    separable: true,
+    example: 'Nächste Woche legt sie die B1-Sprachprüfung beim Goethe-Institut ab.',
+    exampleTranslation: 'هفته آینده او آزمون زبان B1 را در موسسه گوته سپری می‌کند.',
+    level: 'B1+',
+    tags: ['آزمون', 'مدرک']
+  },
+  {
+    id: 'k5-v8',
+    german: 'durchfallen',
+    persian: 'رد شدن و قبول نشدن در آزمون یا امتحان',
+    category: 'Verben',
+    lesson: 5,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 4', pageOrTrack: 'S. 64', context: 'bei der Fahrprüfung leider durchfallen' }
+    ],
+    pronunciation: '[ˈdʊʁçˌfalən]',
+    infinitive: 'durchfallen bei / in (+ Dat.)',
+    present: 'fällt durch',
+    preterite: 'fiel durch',
+    perfect: 'ist durchgefallen',
+    auxiliary: 'sein',
+    separable: true,
+    prepositionCase: 'bei / in + Dativ',
+    example: 'Wer nicht ausreichend lernt, riskiert, bei der schweren Mathematikprüfung durchzufallen.',
+    exampleTranslation: 'کسی که به قدر کافی درس نخواند، ریسک رد شدن در امتحان سخت ریاضی را به جان می‌خرد.',
+    level: 'B1+',
+    tags: ['امتحان', 'شکست']
+  },
+  {
+    id: 'k5-v9',
+    german: 'vermitteln',
+    persian: 'انتقال دادن و آموزش دادن (دانش، تجربه یا مفهوم)',
+    category: 'Verben',
+    lesson: 5,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 4', pageOrTrack: 'S. 65', context: 'Wissen verständlich und praxisnah vermitteln' }
+    ],
+    pronunciation: '[fɛɐ̯ˈmɪtl̩n]',
+    infinitive: 'vermitteln (+ Akk.)',
+    present: 'vermittelt',
+    preterite: 'vermittelte',
+    perfect: 'hat vermittelt',
+    auxiliary: 'haben',
+    example: 'Der Dozent versteht es hervorragend, komplexe Theorien anschaulich zu vermitteln.',
+    exampleTranslation: 'استاد دانشگاه به زیبایی بلد است تئوری‌های پیچیده را ملموس و قابل‌فهم انتقال دهد.',
+    level: 'B1+',
+    tags: ['تدریس', 'آموزش']
+  },
+  {
+    id: 'k5-v10',
+    german: 'sich verknüpfen mit',
+    persian: 'ارتباط دادن و ربط دادن اطلاعات جدید به داده‌های قبلی ذهن',
+    category: 'Verben',
+    lesson: 5,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 3', pageOrTrack: 'S. 62', context: 'Neue Informationen mit genanntem Wissen verknüpfen' }
+    ],
+    pronunciation: '[fɛɐ̯ˈknʏp͡fn̩]',
+    infinitive: 'sich verknüpfen mit (+ Dat.)',
+    present: 'verknüpft sich',
+    preterite: 'verknüpfte sich',
+    perfect: 'hat sich verknüpft',
+    auxiliary: 'haben',
+    reflexive: true,
+    prepositionCase: 'mit + Dativ',
+    example: 'Das Gehirn lernt am effektivsten, wenn sich neue Fakten mit bekannten Erfahrungen verknüpfen.',
+    exampleTranslation: 'مغز زمانی به موثرترین شکل می‌آموزد که واقعیت‌های جدید با تجربه‌های قبلی مرتبط شوند.',
+    level: 'B1+',
+    tags: ['مغز', 'یادگیری']
+  },
+  {
+    id: 'k5-v11',
+    german: 'behalten',
+    persian: 'در یاد نگه داشتن، فراموش نکردن',
+    category: 'Verben',
+    lesson: 5,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 3', pageOrTrack: 'S. 63', context: 'Wie kann man sich Namen und Zahlen besser behalten?' }
+    ],
+    pronunciation: '[bəˈhaltn̩]',
+    infinitive: 'behalten (+ Akk.)',
+    present: 'behält',
+    preterite: 'behielt',
+    perfect: 'hat behalten',
+    auxiliary: 'haben',
+    example: 'Manche Menschen besitzen ein fotografisches Gedächtnis und behalten jedes Detail.',
+    exampleTranslation: 'برخی افراد دارای حافظه تصویری بوده و هر جزئیاتی را در یاد نگه می‌دارند.',
+    level: 'B1+',
+    tags: ['حافظه', 'یادآوری']
+  },
+  {
+    id: 'k5-v12',
+    german: 'abrufen',
+    persian: 'فراخواندن و بازیابی اطلاعات/دانش ذخیره‌شده از حافظه',
+    category: 'Verben',
+    lesson: 5,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 3', pageOrTrack: 'S. 62', context: 'Gelerntes Wissen in Stresssituationen abrufen' }
+    ],
+    pronunciation: '[ˈapˌʁuːfn̩]',
+    infinitive: 'abrufen (+ Akk.)',
+    present: 'ruft ab',
+    preterite: 'rief ab',
+    perfect: 'hat abgefragt / abgerufen',
+    auxiliary: 'haben',
+    separable: true,
+    example: 'Bei Prüfungsangst fällt es vielen schwer, ihr gelerntes Wissen ruhig abzurufen.',
+    exampleTranslation: 'هنگام استرس امتحان، بازیابی و فراخواندن دانش آموخته‌شده برای خیلی‌ها دشوار می‌شود.',
+    level: 'B1+',
+    tags: ['حافظه', 'امتحان']
+  },
+
+  // --- Nomen (اسامی همراه آرتیکل، جمع، تلفظ و جنسیت) ---
+  {
+    id: 'k5-n1',
     german: 'das Gedächtnis',
-    persian: 'حافظه، قدرت یادآوری',
+    persian: 'حافظه، توانایی به خاطر سپردن و یادآوری ذهن',
     category: 'Nomen',
     lesson: 5,
     sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Lehrbuch', lesson: 5, module: 'Modul 3', pageOrTrack: 'S. 62', context: 'Das Gedächtnis durch regelmäßiges Training stärken' }
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 3', pageOrTrack: 'S. 62', context: 'Das menschliche Gedächtnis trainieren' },
+      { source: 'Hörtexte', lesson: 5, module: 'Modul 3', pageOrTrack: 'Track 1.35', context: 'Wie funktioniert das Kurz- und Langzeitgedächtnis?' }
     ],
     pronunciation: '[ɡəˈdɛçtnɪs]',
     article: 'das',
     plural: 'die Gedächtnisse',
     genderPersian: 'خنثی (das)',
-    example: 'Durch tägliche Denkübungen bleibt das Gedächtnis auch im Alter leistungsfähig.',
-    exampleTranslation: 'با تمرین‌های فکری روزانه، حافظه حتی در سنین بالا نیز کارآمد می‌ماند.',
+    example: 'Durch Gehirnjogging und Rätsel lässt sich das Gedächtnis bis ins hohe Alter fit halten.',
+    exampleTranslation: 'با ورزش فکری و معما، می‌توان حافظه را تا سنین بالا پرقدرت نگه داشت.',
     level: 'B1+',
-    tags: ['روانشناسی', 'ذهن']
+    tags: ['روانشناسی', 'حافظه']
   },
-  // --- Adjektive & Adverbien ---
+  {
+    id: 'k5-n2',
+    german: 'die Weiterbildung',
+    persian: 'آموزش تکمیلی، دوره ارتقای مهارت شغلی و تخصصی',
+    category: 'Nomen',
+    lesson: 5,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 1', pageOrTrack: 'S. 58', context: 'An einer beruflichen Weiterbildung teilnehmen' }
+    ],
+    pronunciation: '[ˈvaɪ̯tɐˌbɪldʊŋ]',
+    article: 'die',
+    plural: 'die Weiterbildungen',
+    genderPersian: 'مونث (die)',
+    example: 'In vielen Berufen ist die regelmäßige Weiterbildung eine Pflicht für den Aufstieg.',
+    exampleTranslation: 'در بسیاری از مشاغل، شرکت در دوره‌های ارتقای مهارت شرط لازم برای پیشرفت است.',
+    level: 'B1+',
+    tags: ['آموزش', 'شغل']
+  },
+  {
+    id: 'k5-n3',
+    german: 'die Begabung',
+    persian: 'استعداد، موهبت خدادادی و توانمندی ذاتی',
+    category: 'Nomen',
+    lesson: 5,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 2', pageOrTrack: 'S. 60', context: 'Musikalische oder mathematische Begabung früh erkennen' }
+    ],
+    pronunciation: '[bəˈɡaːpʊŋ]',
+    article: 'die',
+    plural: 'die Begabungen',
+    genderPersian: 'مونث (die)',
+    example: 'Schon im Kindesalter zeigte sich seine besondere Begabung für Sprachen.',
+    exampleTranslation: 'حتی در سنین کودکی استعداد ویژه او برای زبان‌آموزی نمایان شد.',
+    level: 'B1+',
+    tags: ['استعداد', 'هوش']
+  },
+  {
+    id: 'k5-n4',
+    german: 'die Eselsbrücke',
+    persian: 'رمز گردانی و ترفند یادسپاری (وسیله کمکی برای یادآوری کلمات یا فرمول‌ها)',
+    category: 'Nomen',
+    lesson: 5,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 3', pageOrTrack: 'S. 63', context: 'Sich Regeln mithilfe von Eselsbrücken merken' }
+    ],
+    pronunciation: '[ˈeːzl̩sˌbʁʏkə]',
+    article: 'die',
+    plural: 'die Eselsbrücken',
+    genderPersian: 'مونث (die)',
+    example: 'Lustige Eselsbrücken helfen dabei, Grammatikregeln nie wieder zu vergessen.',
+    exampleTranslation: 'رمزگردانی‌های خنده‌دار کمک می‌کنند که قواعد گرامری هرگز فراموش نشوند.',
+    level: 'B1+',
+    tags: ['یادگیری', 'ترفند']
+  },
+  {
+    id: 'k5-n5',
+    german: 'die Prüfungsangst',
+    persian: 'استرس و ترس شدید از امتحان',
+    category: 'Nomen',
+    lesson: 5,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 4', pageOrTrack: 'S. 64', context: 'Tipps zur Überwindung von lähmender Prüfungsangst' },
+      { source: 'Hörtexte', lesson: 5, module: 'Modul 4', pageOrTrack: 'Track 1.36', context: 'Beratungsstelle für Schüler mit Prüfungsangst' }
+    ],
+    pronunciation: '[ˈpʁyːfʊŋsˌʔaŋst]',
+    article: 'die',
+    plural: 'die Prüfungsängste',
+    genderPersian: 'مونث (die)',
+    example: 'Gegen starke Prüfungsangst helfen Atemübungen und gute Vorbereitung.',
+    exampleTranslation: 'در برابر استرس شدید امتحان، تمرینات تنفسی و آمادگی خوب کارساز هستند.',
+    level: 'B1+',
+    tags: ['استرس', 'امتحان']
+  },
+  {
+    id: 'k5-n6',
+    german: 'das Zeugnis',
+    persian: 'کارنامه، مدرک تحصیلی یا گواهی علمی',
+    category: 'Nomen',
+    lesson: 5,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 4', pageOrTrack: 'S. 65', context: 'Gute Noten im Schulzeugnis vorweisen' }
+    ],
+    pronunciation: '[ˈtsɔɪ̯knɪs]',
+    article: 'das',
+    plural: 'die Zeugnisse',
+    genderPersian: 'خنثی (das)',
+    example: 'Mit dem hervorragenden Zeugnis bewarb er sich um einen Studienplatz.',
+    exampleTranslation: 'با آن کارنامه فوق‌العاده، او برای صندلی دانشگاه درخواست داد.',
+    level: 'B1+',
+    tags: ['مدرک', 'تحصیل']
+  },
+  {
+    id: 'k5-n7',
+    german: 'die Qualifikation',
+    persian: 'شایستگی، شایستگی تخصص شغلی و مدرک کسب‌شده',
+    category: 'Nomen',
+    lesson: 5,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 1', pageOrTrack: 'S. 58', context: 'Zusätzliche Qualifikationen im Lebenslauf angeben' }
+    ],
+    pronunciation: '[kvaliﬁkaˈt͡si̯oːn]',
+    article: 'die',
+    plural: 'die Qualifikationen',
+    genderPersian: 'مونث (die)',
+    example: 'Zusatzqualifikationen wie Sprachzertifikate erhöhen die Chancen auf dem Arbeitsmarkt.',
+    exampleTranslation: 'شایستگی‌های تکمیلی مانند مدرک زبان، شانس حضور در بازار کار را افزایش می‌دهند.',
+    level: 'B1+',
+    tags: ['رزومه', 'مهارت']
+  },
+  {
+    id: 'k5-n8',
+    german: 'der Notendurchschnitt',
+    persian: 'معدل و میانگین نمرات تحصیلی',
+    category: 'Nomen',
+    lesson: 5,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 4', pageOrTrack: 'S. 64', context: 'Einen Notendurchschnitt von 1,5 im Abitur erreichen' }
+    ],
+    pronunciation: '[ˈnoːtn̩ˌdʊʁçʃnɪt]',
+    article: 'der',
+    plural: 'die Notendurchschnitte',
+    genderPersian: 'مذکر (der)',
+    example: 'Für das Medizinstudium benötigt man einen exzellenten Notendurchschnitt im Abitur.',
+    exampleTranslation: 'برای تحصیل در رشته پزشکی، فرد نیازمند یک معدل دیپلم عالی است.',
+    level: 'B1+',
+    tags: ['نمره', 'تحصیل']
+  },
+  {
+    id: 'k5-n9',
+    german: 'die Allgemeinbildung',
+    persian: 'اطلاعات عمومی و دانش پایه فرهنگ و جامعه',
+    category: 'Nomen',
+    lesson: 5,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 1', pageOrTrack: 'S. 59', context: 'Eine breite Allgemeinbildung ist der Schlüssel zum Erfolg.' }
+    ],
+    pronunciation: '[ˈalɡəmaɪ̯nˌbɪldʊŋ]',
+    article: 'die',
+    plural: 'die Allgemeinbildung (بدون جمع)',
+    genderPersian: 'مونث (die)',
+    example: 'Wer regelmäßig Nachrichten liest und Bücher liest, erweitert seine Allgemeinbildung.',
+    exampleTranslation: 'کسی که مرتب اخبار و کتاب می‌خواند، اطلاعات عمومی خود را گسترش می‌دهد.',
+    level: 'B1+',
+    tags: ['اطلاعات عمومی', 'فرهنگ']
+  },
+  {
+    id: 'k5-n10',
+    german: 'der Lerntyp',
+    persian: 'تیپ و سبک یادگیری (دیداری، شنیداری، لمسی یا تحلیلی)',
+    category: 'Nomen',
+    lesson: 5,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 3', pageOrTrack: 'S. 62', context: 'Den eigenen Lerntyp analysieren und nutzen' }
+    ],
+    pronunciation: '[ˈlɛʁnˌtyːp]',
+    article: 'der',
+    plural: 'die Lerntypen',
+    genderPersian: 'مذکر (der)',
+    example: 'Visuelle Lerntypen lernen am besten durch Diagramme, Farben und Grafiken.',
+    exampleTranslation: 'تیپ‌های یادگیری دیداری از طریق نمودارها، رنگ‌ها و گرافیک‌ها به بهترین شکل می‌آموزند.',
+    level: 'B1+',
+    tags: ['سبک یادگیری', 'آموزش']
+  },
+
+  // --- Adjektive & Adverbien (صفات همراه حالات مقایسه‌ای و متضاد) ---
   {
     id: 'k5-adj1',
     german: 'hochbegabt',
-    persian: 'تیزهوش، دارای نبوغ و استعداد ویژه',
+    persian: 'تیزهوش، دارای نبوغ و استعداد و هوش فوق‌العاده',
     category: 'Adjektive',
     lesson: 5,
     sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Hörtexte', lesson: 5, module: 'DVD Kapitel 5', pageOrTrack: 'DVD (S. 201)', context: 'Hochbegabte Kinder brauchen spezielle Förderung.' }
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 2', pageOrTrack: 'S. 60', context: 'Hochbegabte Kinder individuell im Unterricht fördern' },
+      { source: 'Hörtexte', lesson: 5, module: 'DVD Kapitel 5', pageOrTrack: 'DVD (S. 201)', context: 'Porträt eines hochbegabten Mathematikers' }
     ],
     pronunciation: '[ˈhoːxbəˌɡaːpt]',
     comparative: 'hochbegabter',
     superlative: 'am hochbegabtesten',
-    opposite: 'durchschnittlich',
-    example: 'Das hochbegabte Kind beherrscht bereits mit sieben Jahren virtuos das Klavierspiel.',
-    exampleTranslation: 'این کودک تیزهوش در هفت سالگی ساز پیانو را استادانه می‌نوازد.',
+    opposite: 'durchschnittlich / leistungsschwach',
+    example: 'Hochbegabte Kinder langweilen sich im normalen Schulunterricht oft rasch.',
+    exampleTranslation: 'کودکان تیزهوش در کلاس درس معمولی مدرسه اغلب به سرعت کلافه می‌شوند.',
     level: 'B1+',
-    tags: ['استعداد', 'هوش']
+    tags: ['هوش', 'استعداد']
   },
-  // --- Redewendungen ---
+  {
+    id: 'k5-adj2',
+    german: 'anspruchsvoll',
+    persian: 'پرچالش، نیازمند دقت و سطح بالا، سخت و استاندارد بالا',
+    category: 'Adjektive',
+    lesson: 5,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 1', pageOrTrack: 'S. 58', context: 'Ein anspruchsvoller Weiterbildungskurs für Führungskräfte' }
+    ],
+    pronunciation: '[ˈanʃpʁʊksˌfɔl]',
+    comparative: 'anspruchsvoller',
+    superlative: 'am anspruchsvollsten',
+    opposite: 'anspruchslos / einfach',
+    example: 'Das Studium an der Elite-Universität ist extrem anspruchsvoll und zeitintensiv.',
+    exampleTranslation: 'تحصیل در دانشگاه ممتاز فوق‌العاده پرچالش و نیازمند وقت فراوان است.',
+    level: 'B1+',
+    tags: ['چالش', 'کیفیت']
+  },
+  {
+    id: 'k5-adj3',
+    german: 'praxisnah',
+    persian: 'کاربردی، ملموس و نزدیک به واقعیت عملی (نه فقط تئوری)',
+    category: 'Adjektive',
+    lesson: 5,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 1', pageOrTrack: 'S. 59', context: 'Praxisnaher Unterricht bereitet gut auf den Beruf vor.' }
+    ],
+    pronunciation: '[ˈpʁaksɪsˌnaː]',
+    comparative: 'praxisnäher',
+    superlative: 'am praxisnächsten',
+    opposite: 'theoretisch / praxisfern',
+    example: 'Die Fachhochschule bietet eine sehr praxisnahe Ausbildung mit vielen Projekten.',
+    exampleTranslation: 'دانشگاه کاربردی آموزشي بسیار ملموس و عملی همراه با پروژه‌های متعدد ارائه می‌دهد.',
+    level: 'B1+',
+    tags: ['عملکرد', 'آموزش']
+  },
+  {
+    id: 'k5-adj4',
+    german: 'einprägsam',
+    persian: 'به‌یادماندنی، روشن و به‌راحتی قابل به خاطر سپردن',
+    category: 'Adjektive',
+    lesson: 5,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 3', pageOrTrack: 'S. 62', context: 'Einprägsame Beispiele erleichtern das Lernen.' }
+    ],
+    pronunciation: '[ˈaɪ̯nˌpʁɛːksaːm]',
+    comparative: 'einprägsamer',
+    superlative: 'am einprägsamsten',
+    opposite: 'kompliziert / unübersichtlich',
+    example: 'Der Lehrer benutzte eine sehr einprägsame Formel, die allen im Gedächtnis blieb.',
+    exampleTranslation: 'معلم از یک فرمول بسیار به‌یادماندنی استفاده کرد که در یاد همه ماند.',
+    level: 'B1+',
+    tags: ['یادگیری', 'وضوح']
+  },
+  {
+    id: 'k5-adj5',
+    german: 'zielstrebig',
+    persian: 'مصمم، دارای هدف مشخص و بااراده برای رسیدن به موفقیت',
+    category: 'Adjektive',
+    lesson: 5,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Hörtexte', lesson: 5, module: 'Modul 1', pageOrTrack: 'Track 1.32', context: 'Zielstrebige Studenten erreichen ihre Karriereziele schneller.' }
+    ],
+    pronunciation: '[ˈtsiːlˌʃtʁeːbɪç]',
+    comparative: 'zielstrerebiger',
+    superlative: 'am zielstrebigsten',
+    opposite: 'planlos / unentschlossen',
+    example: 'Sie verfolgt zielstrebig ihren Plan, in vier Jahren ihren Doktorabschluss zu machen.',
+    exampleTranslation: 'او با عزم راسخ هدفش را برای گرفتن مدرک دکترا در چهار سال دنبال می‌کند.',
+    level: 'B1+',
+    tags: ['اراده', 'موفقیت']
+  },
+
+  // --- Redewendungen & Ausdrücke (اصطلاحات کاربردی) ---
   {
     id: 'k5-red1',
     german: 'man lernt nie aus',
     persian: 'انسان هیچ‌وقت از آموختن بی‌نیاز نمی‌شود (ز گهواره تا گور دانش بجوی)',
     category: 'Redewendungen',
     lesson: 5,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 1', pageOrTrack: 'S. 58', context: 'Lebenslanges Lernen im Alter: Man lernt eben nie aus.' }
+    ],
+    pronunciation: '[man lɛʁnt niː ˈaʊ̯s]',
+    explanation: 'تأکید بر اهمیت یادگیری مستمر و مداوم در تمام مراحل زندگی انسان.',
+    literalMeaning: 'آدم هرگز درسش تمام نمی‌شود',
+    example: 'Selbst der erfahrene Professor gab zu: Bei dieser neuen Entdeckung lernt man eben nie aus.',
+    exampleTranslation: 'حتی استاد باسابقه هم اعتراف کرد: با این کشف جدید، آدم واقعاً هیچ‌وقت از یادگیری بی‌نیاز نمی‌شود.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'دانش']
+  },
+  {
+    id: 'k5-red2',
+    german: 'auf dem Schlauch stehen',
+    persian: 'چیزی را متوجه نشدن، گیج و هنگ شدن موقت در فهم مطلب',
+    category: 'Redewendungen',
+    lesson: 5,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Hörtexte', lesson: 5, module: 'Modul 3', pageOrTrack: 'Track 1.35', context: 'Entschuldigung, ich stehe gerade völlig auf dem Schlauch.' }
+    ],
+    pronunciation: '[ʔaʊ̯f deːm ʃlaʊ̯x ˈʃteːən]',
+    explanation: 'سردرگمی و عدم درک لحظه‌ای یک موضوع ساده گرامری یا ریاضی.',
+    literalMeaning: 'روی شیلنگ ایستادن',
+    example: 'Erklär mir das Matheproblem bitte nochmal, ich stand eben völlig auf dem Schlauch.',
+    exampleTranslation: 'لطفاً مسئله ریاضی را دوباره برایم توضیح بده، همین الان کاملاً گیج و هنگ شده بودم.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'فهم']
+  },
+  {
+    id: 'k5-red3',
+    german: 'die Schulbank drücken',
+    persian: 'روی نیمکت مدرسه نشستن، تحصیل کردن و درس خواندن',
+    category: 'Redewendungen',
+    lesson: 5,
     sources: ['Lehrbuch'],
     sourceDetails: [
-      { source: 'Lehrbuch', lesson: 5, module: 'Modul 1', pageOrTrack: 'S. 58', context: 'Lebenslanges Lernen: Man lernt nie aus.' }
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 1', pageOrTrack: 'S. 58', context: 'Mit dreißig Jahren noch einmal die Schulbank drücken' }
     ],
-    explanation: 'تأکید بر لزوم یادگیری مستمر در تمام طول حیات.',
-    example: 'Auch nach 40 Jahren Berufserfahrung gilt: Man lernt eben nie aus.',
-    exampleTranslation: 'حتی بعد از ۴۰ سال سابقه کاری حقیقت این است: آدم هیچ‌وقت از یادگیری بی‌نیاز نمی‌شود.',
+    pronunciation: '[diː ˈʃuːlbaŋk ˈdʁʏkn̩]',
+    explanation: 'بازگشت به تحصیل یا حضور در کلاس درس در سنین بزرگسالی.',
+    literalMeaning: 'نیمکت مدرسه را فشار دادن',
+    example: 'Nach fünf Jahren im Beruf entschied er sich, nochmal die Schulbank zu drücken und zu studieren.',
+    exampleTranslation: 'پس از پنج سال کار، او تصمیم گرفت دوباره روی نیمکت درس بنشیند و در دانشگاه تحصیل کند.',
     level: 'B1+',
-    tags: ['ضرب‌المثل', 'دانش']
+    tags: ['اصطلاح', 'تحصیل']
+  },
+  {
+    id: 'k5-red4',
+    german: 'etwas wie seine Westentasche kennen',
+    persian: 'مثل کف دست چیزی یا جایی را شناختن و تسلط کامل داشتن',
+    category: 'Redewendungen',
+    lesson: 5,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Hörtexte', lesson: 5, module: 'Modul 3', pageOrTrack: 'Track 1.35', context: 'Der Experte kennt das Fachgebiet wie seine Westentasche.' }
+    ],
+    pronunciation: '[ˈɛtvas viː ˈzaɪ̯nə ˈvɛstn̩taʃə ˈkɛnən]',
+    explanation: 'آگاهی و تسلط بی‌چون‌وچرا نسبت به یک حوزه علمی یا نقشه جغرافیایی.',
+    literalMeaning: 'چیزی را مثل جیب جلیقه خود شناختن',
+    example: 'Frage ihn ruhig zur Grammatik: Er kennt die deutschen Regeln wie seine Westentasche.',
+    exampleTranslation: 'راحت درباره گرامر از او بپرس: او قواعد آلمانی را مثل کف دستش می‌شناسد.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'تسلط']
+  },
+  {
+    id: 'k5-red5',
+    german: 'etwas auswendig lernen',
+    persian: 'چیزی را کلمه‌به‌کلمه حفظ کردن',
+    category: 'Redewendungen',
+    lesson: 5,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 5, module: 'Modul 3', pageOrTrack: 'S. 62', context: 'Gedichte oder Formeln auswendig lernen' }
+    ],
+    pronunciation: '[ˈɛtvas ˈaʊ̯svɛndɪç ˈlɛʁnən]',
+    explanation: 'حفظ کردن مطالب بدون نگاه کردن به متن.',
+    literalMeaning: 'چیزی را از بر یاد گرفتن',
+    example: 'Für den Theaterauftritt musste jeder Schauspieler seinen kompletten Text auswendig lernen.',
+    exampleTranslation: 'برای اجرای تئاتر، هر بازیگری باید کل متن خود را حفظ می‌کرد.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'حفظ']
+  },
+  {
+    id: 'k5-red6',
+    german: 'jemandem ein Licht aufgehen',
+    persian: 'موضوعی ناگهان برای کسی روشن و شفاف شدن (یافتم! یافتم!)',
+    category: 'Redewendungen',
+    lesson: 5,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Hörtexte', lesson: 5, module: 'Modul 3', pageOrTrack: 'Track 1.35', context: 'Nach der Erklärung ging ihm endlich ein Licht auf.' }
+    ],
+    pronunciation: '[ˈjeːmandn̩ aɪ̯n lɪçt ˈaʊ̯fˌɡeːən]',
+    explanation: 'فهمیدن ناگهانی یک مسئله پیچیده پس از توضیحات ساده.',
+    literalMeaning: 'چراغی برای کسی روشن شدن',
+    example: 'Als der Lehrer das Beispiel an der Tafel zeichnete, ging allen Schülern ein Licht auf.',
+    exampleTranslation: 'وقتی معلم مثال را روی تخته کشید، ناگهان موضوع برای همه دانش‌آموزان روشن شد.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'فهم']
   },
 
   // =========================================================================
-  // KAPITEL 6: Berufsbilder (مشاغل، بازار کار و آینده شغلی)
+  // KAPITEL 6: Berufsbilder (مشاغل، بازار کار، رزومه و آینده شغلی)
   // =========================================================================
-  // --- Verben ---
+  // --- Verben (افعال با تمام زمان‌های Präsens / Präteritum / Perfekt و حروف اضافه) ---
   {
     id: 'k6-v1',
     german: 'sich bewerben um',
-    persian: 'درخواست دادن برای، اپلای کردن برای (شغل یا موقعیت)',
+    persian: 'درخواست دادن برای، اپلای کردن برای (موقعیت شغلی یا بورس تحصیلی)',
     category: 'Verben',
     lesson: 6,
     sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Lehrbuch', lesson: 6, module: 'Modul 1', pageOrTrack: 'S. 70', context: 'sich um eine offene Stelle bewerben' }
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 1', pageOrTrack: 'S. 70', context: 'sich um eine ausgeschriebene Stelle im Marketing bewerben' },
+      { source: 'Hörtexte', lesson: 6, module: 'Modul 1', pageOrTrack: 'Track 2.1', context: 'Wie bewirbt man sich erfolgreich auf dem Arbeitsmarkt?' }
     ],
     pronunciation: '[zɪç bəˈvɛʁbn̩ ʊm]',
     infinitive: 'sich bewerben um (+ Akk.)',
@@ -4774,20 +5303,20 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     auxiliary: 'haben',
     reflexive: true,
     prepositionCase: 'um + Akkusativ',
-    example: 'Er hat sich erfolgreich um eine Stelle als IT-Consultant beworben.',
-    exampleTranslation: 'او با موفقیت برای موقعیت شغلی به عنوان مشاور فناوری اطلاعات اقدام کرد.',
+    example: 'Er hat sich erfolgreich um die Stelle als leitender Ingenieur bei Siemens beworben.',
+    exampleTranslation: 'او با موفقیت برای موقعیت شغلی ارشد مهندسی در شرکت زیمنس درخواست داد.',
     level: 'B1+',
     tags: ['استخدام', 'شغل']
   },
   {
     id: 'k6-v2',
     german: 'einstellen',
-    persian: 'استخدام کردن به کارمند',
+    persian: 'استخدام کردن، به خدمت گرفتن نیرو در شرکت',
     category: 'Verben',
     lesson: 6,
-    sources: ['Lehrbuch'],
+    sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Lehrbuch', lesson: 6, module: 'Modul 2', pageOrTrack: 'S. 72', context: 'neue Mitarbeiter im Unternehmen einstellen' }
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 2', pageOrTrack: 'S. 72', context: 'neue qualifizierte Mitarbeiter im Betrieb einstellen' }
     ],
     pronunciation: '[ˈaɪ̯nˌʃtɛlən]',
     infinitive: 'einstellen (+ Akk.)',
@@ -4796,20 +5325,20 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     perfect: 'hat eingestellt',
     auxiliary: 'haben',
     separable: true,
-    example: 'Das wachsende Software-Unternehmen möchte dieses Jahr zehn neue Entwickler einstellen.',
-    exampleTranslation: 'این شرکت نرم‌افزاری رو به رشد می‌خواهد امسال ده توسعه‌دهنده جدید استخدام کند.',
+    example: 'Das IT-Unternehmen stellt trotz Wirtschaftskrise fünf neue Softwareentwickler ein.',
+    exampleTranslation: 'شرکت فناوری اطلاعات با وجود بحران اقتصادی پنج توسعه‌دهنده نرم‌افزار جدید استخدام می‌کند.',
     level: 'B1+',
     tags: ['استخدام', 'شرکت']
   },
   {
     id: 'k6-v3',
     german: 'verhandeln über',
-    persian: 'مذاکره کردن بر سر (حقوق، شرایط کاری)',
+    persian: 'مذاکره کردن بر سر (حقوق، شرایط کاری یا قرارداد)',
     category: 'Verben',
     lesson: 6,
-    sources: ['Lehrbuch'],
+    sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Lehrbuch', lesson: 6, module: 'Modul 1', pageOrTrack: 'S. 71', context: 'über das Gehalt und Arbeitszeiten verhandeln' }
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 1', pageOrTrack: 'S. 71', context: 'im Vorstellungsgespräch über das Einstiegsgehalt verhandeln' }
     ],
     pronunciation: '[fɛɐ̯ˈhandl̩n]',
     infinitive: 'verhandeln über (+ Akk.)',
@@ -4818,51 +5347,382 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     perfect: 'hat verhandelt',
     auxiliary: 'haben',
     prepositionCase: 'über + Akkusativ',
-    example: 'Im Vorstellungsgespräch verhandelte sie selbstbewusst über ihr Einstiegsgehalt.',
-    exampleTranslation: 'در مصاحبه کاری او با اعتماد به نفس درباره حقوق پایه خود مذاکره کرد.',
+    example: 'Sie verhandelte im Vorstellungsgespräch geschickt über flexible Arbeitszeiten und Zusatzleistungen.',
+    exampleTranslation: 'او در مصاحبه شغلی با مهارت درباره ساعات کاری شناور و مزایای تکمیلی مذاکره کرد.',
     level: 'B1+',
-    tags: ['مذاکره', 'درآمد']
+    tags: ['مذاکره', 'حقوق']
   },
-  // --- Nomen ---
   {
-    id: 'k6-n1',
-    german: 'das Vorstellungsgespräch',
-    persian: 'مصاحبه استخدامی و شغلی',
-    category: 'Nomen',
+    id: 'k6-v4',
+    german: 'ausüben',
+    persian: 'مشغول بودن به، انجام دادن و اشتغال داشتن به (یک حرفه یا شغل)',
+    category: 'Verben',
+    lesson: 6,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 2', pageOrTrack: 'S. 72', context: 'einen anstrengenden Handwerksberuf mit Leidenschaft ausüben' }
+    ],
+    pronunciation: '[ˈaʊ̯sˌʔyːbn̩]',
+    infinitive: 'ausüben (+ Akk. z.B. einen Beruf)',
+    present: 'übt aus',
+    preterite: 'übte aus',
+    perfect: 'hat ausgeübt',
+    auxiliary: 'haben',
+    separable: true,
+    example: 'Er übt seinen Beruf als Tischler nun schon seit über zwanzig Jahren mit großer Freude aus.',
+    exampleTranslation: 'او شغل خود به عنوان نجّار را اکنون بیش از بیست سال است که با شادمانی فراوان انجام می‌دهد.',
+    level: 'B1+',
+    tags: ['شغل', 'اشتغال']
+  },
+  {
+    id: 'k6-v5',
+    german: 'entlassen',
+    persian: 'اخراج کردن، تعدیل نیرو نمودن از شرکت',
+    category: 'Verben',
     lesson: 6,
     sources: ['Lehrbuch'],
     sourceDetails: [
-      { source: 'Lehrbuch', lesson: 6, module: 'Modul 1', pageOrTrack: 'S. 71', context: 'Tipps für ein erfolgreiches Vorstellungsgespräch' }
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 2', pageOrTrack: 'S. 73', context: 'Mitarbeiter wegen der schlechten Wirtschaftslage entlassen' }
     ],
-    pronunciation: '[ˈfoːɐ̯ʃtɛlʊŋsɡəˌʃpʁɛːç]',
-    article: 'das',
-    plural: 'die Vorstellungsgespräche',
-    genderPersian: 'خنثی (das)',
-    example: 'Eine gute Vorbereitung auf typische Fragen ist der Schlüssel zum Vorstellungsgespräch.',
-    exampleTranslation: 'آمادگی خوب برای سوالات متداول، کلید موفقیت در مصاحبه استخدامی است.',
+    pronunciation: '[ɛntˈlasn̩]',
+    infinitive: 'entlassen (+ Akk.)',
+    present: 'entlässt',
+    preterite: 'entließ',
+    perfect: 'hat entlassen',
+    auxiliary: 'haben',
+    example: 'Wegen Umsatzrückgangs musste die Firma leider zwanzig Angestellte entlassen.',
+    exampleTranslation: 'به دلیل کاهش فروش، شرکت متأسفانه مجبور شد بیست کارمند را تعدیل نیرو کند.',
     level: 'B1+',
-    tags: ['کاریابی', 'مصاحبه']
+    tags: ['اخراج', 'بازار کار']
   },
   {
-    id: 'k6-n2',
-    german: 'die Walz',
-    persian: 'سنت کهن سفر کاری نجاران و صنعت‌گران دوره‌گرد',
+    id: 'k6-v6',
+    german: 'kündigen',
+    persian: 'استعفا دادن / فسخ نمودن قرارداد کاری',
+    category: 'Verben',
+    lesson: 6,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 2', pageOrTrack: 'S. 73', context: 'seinen alten Job kündigen und etwas Neues wagen' },
+      { source: 'Hörtexte', lesson: 6, module: 'Modul 2', pageOrTrack: 'Track 2.5', context: 'Warum hat die Mitarbeiterin ihren Vertrag gekündigt?' }
+    ],
+    pronunciation: '[ˈkʏndɪɡn̩]',
+    infinitive: 'kündigen (+ Dat. / + Akk.)',
+    present: 'kündigt',
+    preterite: 'kündigte',
+    perfect: 'hat gekündigt',
+    auxiliary: 'haben',
+    example: 'Weil ihr das Arbeitsklima nicht gefiel, hat sie nach wenigen Monaten selbst gekündigt.',
+    exampleTranslation: 'چون محیط کاری را دوست نداشت، خودش پس از چند ماه استعفا داد.',
+    level: 'B1+',
+    tags: ['استعفا', 'قرارداد']
+  },
+  {
+    id: 'k6-v7',
+    german: 'überzeugen von',
+    persian: 'متقاعد و قانع ساختن بر سر (توانمندی، طرح یا رزومه)',
+    category: 'Verben',
+    lesson: 6,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 1', pageOrTrack: 'S. 71', context: 'den Personalleiter im Interview von seinen Qualifikationen überzeugen' }
+    ],
+    pronunciation: '[yːbɐˈtsɔɪ̯ɡn̩]',
+    infinitive: 'überzeugen von (+ Dat.)',
+    present: 'überzeugt',
+    preterite: 'überzeugte',
+    perfect: 'hat überzeugt',
+    auxiliary: 'haben',
+    prepositionCase: 'von + Dativ',
+    example: 'Der Bewerber konnte den Chef von seinen fachlichen Stärken und Erfahrungen überzeugen.',
+    exampleTranslation: 'متقاضی توانست مدیر را از توانمندی‌های تخصصی و تجارب خود متقاعد سازد.',
+    level: 'B1+',
+    tags: ['مصاحبه', 'اقناع']
+  },
+  {
+    id: 'k6-v8',
+    german: 'einreichen',
+    persian: 'تحویل دادن و ارسال رسمی (مدارک، رزومه یا درخواست)',
+    category: 'Verben',
+    lesson: 6,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 1', pageOrTrack: 'S. 70', context: 'die vollen Bewerbungsunterlagen fristgerecht einreichen' }
+    ],
+    pronunciation: '[ˈaɪ̯nˌʁaɪ̯çn̩]',
+    infinitive: 'einreichen (+ Akk.)',
+    present: 'reicht ein',
+    preterite: 'reichte ein',
+    perfect: 'hat eingereicht',
+    auxiliary: 'haben',
+    separable: true,
+    example: 'Reichen Sie bitte Ihr Zeugnis und das Anschreiben vor Ende des Monats ein.',
+    exampleTranslation: 'لطفاً کارنامه و انگیزه‌نامه خود را پیش از پایان ماه تحویل دهید.',
+    level: 'B1+',
+    tags: ['مدارک', 'استخدام']
+  },
+  {
+    id: 'k6-v9',
+    german: 'vereinbaren mit',
+    persian: 'هماهنگ و هماهنگ‌سازی کردن (توازن بین کار و زندگی / قرار ملاقات)',
+    category: 'Verben',
+    lesson: 6,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 3', pageOrTrack: 'S. 74', context: 'Familie und Beruf dank Homeoffice besser vereinbaren' }
+    ],
+    pronunciation: '[fɛɐ̯ˈʔaɪ̯nbaːʁən]',
+    infinitive: 'vereinbaren mit (+ Dat.)',
+    present: 'vereinbart',
+    preterite: 'vereinbarte',
+    perfect: 'hat vereinbart',
+    auxiliary: 'haben',
+    prepositionCase: 'mit + Dativ',
+    example: 'Teilzeitarbeit ermöglicht es Eltern, Familie und Beruf optimal miteinander zu vereinbaren.',
+    exampleTranslation: 'کار پاره‌وقت به والدین این امکان را می‌دهد تا توازن عالی میان خانواده و شغل ایجاد کنند.',
+    level: 'B1+',
+    tags: ['تعادل', 'خانواده']
+  },
+  {
+    id: 'k6-v10',
+    german: 'leiten',
+    persian: 'مدیریت و سرپرستی کردن (یک دپارتمان، پروژه یا تیم)',
+    category: 'Verben',
+    lesson: 6,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 2', pageOrTrack: 'S. 72', context: 'ein internationales Team von Experten leiten' }
+    ],
+    pronunciation: '[ˈlaɪ̯tn̩]',
+    infinitive: 'leiten (+ Akk.)',
+    present: 'leitet',
+    preterite: 'leitete',
+    perfect: 'hat geleitet',
+    auxiliary: 'haben',
+    example: 'Seit drei Jahren leitet sie die Forschungsabteilung eines Pharmaunternehmens.',
+    exampleTranslation: 'از سه سال پیش او دپارتمان تحقیقاتی یک شرکت داروسازی را مدیریت می‌کند.',
+    level: 'B1+',
+    tags: ['مدیریت', 'رهبری']
+  },
+  {
+    id: 'k6-v11',
+    german: 'anpacken',
+    persian: 'دست به کار شدن، همت کردن و کار را با انرژی تحویل گرفتن',
+    category: 'Verben',
+    lesson: 6,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 1', pageOrTrack: 'S. 70', context: 'Mitarbeiter gesucht, die kräftig anpacken können' }
+    ],
+    pronunciation: '[ˈanˌpakn̩]',
+    infinitive: 'anpacken',
+    present: 'packt an',
+    preterite: 'packte an',
+    perfect: 'hat angepackt',
+    auxiliary: 'haben',
+    separable: true,
+    example: 'Wir suchen engagierte Kollegen, die im Betrieb praktisch anpacken wollen.',
+    exampleTranslation: 'ما جویای همکاران باانگیزه‌ای هستیم که بخواهند در شرکت با انرژی دست به کار شوند.',
+    level: 'B1+',
+    tags: ['پشتکار', 'عمل']
+  },
+
+  // --- Nomen (اسامی همراه آرتیکل، جمع، تلفظ و جنسیت) ---
+  {
+    id: 'k6-n1',
+    german: 'das Vorstellungsgespräch',
+    persian: 'مصاحبه شغلی و استخدامی حضوری یا آنلاین',
     category: 'Nomen',
     lesson: 6,
     sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Hörtexte', lesson: 6, module: 'DVD Kapitel 6', pageOrTrack: 'DVD (S. 202 - Auf der Walz)', context: 'Handwerksgesellen auf der traditionellen Walz' }
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 1', pageOrTrack: 'S. 71', context: 'Gute Vorbereitung auf das Vorstellungsgespräch' },
+      { source: 'Hörtexte', lesson: 6, module: 'Modul 1', pageOrTrack: 'Track 2.2', context: 'Simulation eines Vorstellungsgesprächs beim Personalchef' }
+    ],
+    pronunciation: '[ˈfoːɐ̯ˌʃtɛlʊŋsɡəˈʃpʁɛːç]',
+    article: 'das',
+    plural: 'die Vorstellungsgespräche',
+    genderPersian: 'خنثی (das)',
+    example: 'Beim Vorstellungsgespräch ist pünktliches Erscheinen und angemessene Kleidung entscheidend.',
+    exampleTranslation: 'در مصاحبه شغلی، حضور به‌موقع و لباس مناسب تعیین‌کننده است.',
+    level: 'B1+',
+    tags: ['مصاحبه', 'استخدام']
+  },
+  {
+    id: 'k6-n2',
+    german: 'die Stellenausschreibung',
+    persian: 'آگهی فراخوان استخدام و اعلام نیاز شغلی',
+    category: 'Nomen',
+    lesson: 6,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 1', pageOrTrack: 'S. 70', context: 'Stellenausschreibungen auf Online-Jobbörsen lesen' }
+    ],
+    pronunciation: '[ˈʃtɛlənʔaʊ̯sˌʃʁaɪ̯bʊŋ]',
+    article: 'die',
+    plural: 'die Stellenausschreibungen',
+    genderPersian: 'مونث (die)',
+    example: 'In der Stellenausschreibung werden alle geforderten Qualifikationen aufgelistet.',
+    exampleTranslation: 'در آگهی استخدام، تمامی شایستگی‌های مورد نیاز فهرست شده‌اند.',
+    level: 'B1+',
+    tags: ['آگهی', 'شغل']
+  },
+  {
+    id: 'k6-n3',
+    german: 'der Lebenslauf',
+    persian: 'رزومه، سوابق تحصیلی و کاری (CV)',
+    category: 'Nomen',
+    lesson: 6,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 1', pageOrTrack: 'S. 70', context: 'Einen tabellarischen Lebenslauf verfassen' }
+    ],
+    pronunciation: '[ˈleːbn̩sˌlaʊ̯f]',
+    article: 'der',
+    plural: 'die Lebensläufe',
+    genderPersian: 'مذکر (der)',
+    example: 'Ein übersichtlicher und lückenloser Lebenslauf hinterlässt einen guten ersten Eindruck.',
+    exampleTranslation: 'یک رزومه منظم و بدون فاصله زمانی ناخواسته، اولین انطباق مثبت را ایجاد می‌کند.',
+    level: 'B1+',
+    tags: ['رزومه', 'مدارک']
+  },
+  {
+    id: 'k6-n4',
+    german: 'das Anschreiben',
+    persian: 'انگیزه‌نامه و نامه درخواست شغل (Cover Letter)',
+    category: 'Nomen',
+    lesson: 6,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 1', pageOrTrack: 'S. 70', context: 'Das persönliche Anschreiben individuell formulieren' }
+    ],
+    pronunciation: '[ˈanˌʃʁaɪ̯bn̩]',
+    article: 'das',
+    plural: 'die Anschreiben',
+    genderPersian: 'خنثی (das)',
+    example: 'Im Anschreiben erklärt der Bewerber, warum er genau zu dieser Firma passt.',
+    exampleTranslation: 'در انگیزه‌نامه، متقاضی توضیح می‌دهد که چرا دقیقاً مناسب این شرکت است.',
+    level: 'B1+',
+    tags: ['انگیزه‌نامه', 'رزومه']
+  },
+  {
+    id: 'k6-n5',
+    german: 'das Einstiegsgehalt',
+    persian: 'حقوق و دستمزد پایه در بدو ورود به شغل',
+    category: 'Nomen',
+    lesson: 6,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 1', pageOrTrack: 'S. 71', context: 'Das durchschnittliche Einstiegsgehalt für Absolventen' }
+    ],
+    pronunciation: '[ˈaɪ̯nʃtiːksɡəˌhalt]',
+    article: 'das',
+    plural: 'die Einstiegsgehälter',
+    genderPersian: 'خنثی (das)',
+    example: 'Das Einstiegsgehalt hängt stark von der Branche und dem akademischen Abschluss ab.',
+    exampleTranslation: 'حقوق پایه اولیه وابستگی شدیدی به صنعت و مدرک آکادمیک فرد دارد.',
+    level: 'B1+',
+    tags: ['حقوق', 'مالی']
+  },
+  {
+    id: 'k6-n6',
+    german: 'das Arbeitsklima',
+    persian: 'جوّ و فضای حاکم بر محیط کار',
+    category: 'Nomen',
+    lesson: 6,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 2', pageOrTrack: 'S. 73', context: 'Ein gesundes Arbeitsklima steigert die Produktivität.' },
+      { source: 'Hörtexte', lesson: 6, module: 'Modul 2', pageOrTrack: 'Track 2.6', context: 'Mitarbeiter loben das gute Arbeitsklima im Team.' }
+    ],
+    pronunciation: '[ˈaʁbaɪ̯tsˌkliːma]',
+    article: 'das',
+    plural: 'das Arbeitsklima (بدون جمع)',
+    genderPersian: 'خنثی (das)',
+    example: 'Ein freundliches Arbeitsklima ist für viele Arbeitnehmer wichtiger als ein hohes Gehalt.',
+    exampleTranslation: 'یک جوّ کاری صمیمانه برای بسیاری از کارمندان مهم‌تر از حقوق بالا است.',
+    level: 'B1+',
+    tags: ['محیط کار', 'رضایت']
+  },
+  {
+    id: 'k6-n7',
+    german: 'die Gleitzeit',
+    persian: 'ساعت کاری شناور (شناور بودن زمان شروع و پایان کار)',
+    category: 'Nomen',
+    lesson: 6,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 3', pageOrTrack: 'S. 74', context: 'Vorteile von Gleitzeit gegenüber starrer Schichtarbeit' }
+    ],
+    pronunciation: '[ˈɡlaɪ̯tˌt͡saɪ̯t]',
+    article: 'die',
+    plural: 'die Gleitzeit (بدون جمع)',
+    genderPersian: 'مونث (die)',
+    example: 'Dank Gleitzeit kann er seine Arbeitsstunden flexibel an sein Familienleben anpassen.',
+    exampleTranslation: 'به لطف ساعت کاری شناور، او می‌تواند ساعات کارش را به صورت شناور با زندگی خانوادگی تنظیم کند.',
+    level: 'B1+',
+    tags: ['ساعت کار', 'انعطاف']
+  },
+  {
+    id: 'k6-n8',
+    german: 'die Überstunde',
+    persian: 'اضافه‌کاری، ساعت کاری مازاد بر قرارداد',
+    category: 'Nomen',
+    lesson: 6,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 3', pageOrTrack: 'S. 74', context: 'Überstunden durch Freizeit ausgleichen' }
+    ],
+    pronunciation: '[ˈyːbɐˌʃtʊndə]',
+    article: 'die',
+    plural: 'die Überstunden',
+    genderPersian: 'مونث (die)',
+    example: 'Im letzten Monat hat er wegen des wichtigen Projekts dreißig Überstunden gemacht.',
+    exampleTranslation: 'در ماه گذشته او به دلیل پروژه مهم، سی ساعت اضافه‌کاری انجام داد.',
+    level: 'B1+',
+    tags: ['کار', 'اضافه‌کاری']
+  },
+  {
+    id: 'k6-n9',
+    german: 'die Aufstiegschance',
+    persian: 'فرصت پیشرفت و ارتقای شغلی در سازمان',
+    category: 'Nomen',
+    lesson: 6,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 2', pageOrTrack: 'S. 73', context: 'Gute Aufstiegschancen in einem internationalen Konzern' }
+    ],
+    pronunciation: '[ˈaʊ̯fʃtiːksˌʃɑ̃ːsə]',
+    article: 'die',
+    plural: 'die Aufstiegschancen',
+    genderPersian: 'مونث (die)',
+    example: 'Das Großunternehmen bietet jungen Talenten hervorragende Aufstiegschancen.',
+    exampleTranslation: 'شرکت بزرگ به استعدادهای جوان فرصت‌های پیشرفت شغلی فوق‌العاده‌ای ارائه می‌دهد.',
+    level: 'B1+',
+    tags: ['پیشرفت', 'کاریره']
+  },
+  {
+    id: 'k6-n10',
+    german: 'die Walz',
+    persian: 'سنت قدیمی سفر و کار سه‌ساله کارآموزان و معماران صنعت در آلمان (Wanderschaft)',
+    category: 'Nomen',
+    lesson: 6,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 6, module: 'DVD Kapitel 6', pageOrTrack: 'S. 76 (DVD)', context: 'Handwerksgesellen auf der traditionellen Walz' },
+      { source: 'Hörtexte', lesson: 6, module: 'DVD Kapitel 6', pageOrTrack: 'Track 2.10', context: 'Erfahrungsberichte von Gesellen auf der Walz' }
     ],
     pronunciation: '[valts]',
     article: 'die',
-    plural: 'die Wanderschaft (معمولاً مفرد)',
+    plural: 'die Walz (معمولاً مفرد)',
     genderPersian: 'مونث (die)',
-    example: 'Auf der Walz reisen junge Handwerker drei Jahre und einen Tag durch die Welt.',
-    exampleTranslation: 'در سنت والز، کارآموزان جوان سه سال و یک روز در دنیا سفر و کار می‌کنند.',
+    example: 'Auf der Walz reisen junge Handwerker drei Jahre und einen Tag durch die Welt, um Erfahrungen zu sammeln.',
+    exampleTranslation: 'در سنت والز، حرفه‌آموزان جوان سه سال و یک روز در دنیا سفر و کار می‌کنند تا تجربه بیندوزند.',
     level: 'B1+',
     tags: ['سنت', 'صنعت']
   },
-  // --- Adjektive & Adverbien ---
+
+  // --- Adjektive & Adverbien (صفات همراه حالات مقایسه‌ای و متضاد) ---
   {
     id: 'k6-adj1',
     german: 'abwechslungsreich',
@@ -4871,39 +5731,208 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     lesson: 6,
     sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Hörtexte', lesson: 6, module: 'Modul 2', pageOrTrack: 'Track 2.6', context: 'Junge Menschen suchen abwechslungsreiche Aufgaben.' }
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 2', pageOrTrack: 'S. 72', context: 'eine abwechslungsreiche Tätigkeit im Eventmanagement' }
     ],
     pronunciation: '[ˈapvɛkslʊŋsˌʁaɪ̯ç]',
     comparative: 'abwechslungsreicher',
     superlative: 'am abwechslungsreichsten',
     opposite: 'monoton / eintönig',
-    example: 'Die Aufgaben eines Tauchlehrers sind spannend und überaus abwechslungsreich.',
-    exampleTranslation: 'وظایف یک مربی غواصی مهیج و فوق‌العاده متنوع است.',
+    example: 'Die Aufgaben im Journalismus sind überaus spannend und abwechslungsreich.',
+    exampleTranslation: 'وظایف شغلی در روزنامه‌نگاری فوق‌العاده جذّاب و متنوع است.',
     level: 'B1+',
-    tags: ['شغل', 'رضایت']
+    tags: ['تنوع', 'رضایت']
   },
-  // --- Redewendungen ---
+  {
+    id: 'k6-adj2',
+    german: 'verhandlungssicher',
+    persian: 'مسلط در حد مذاکرات رسمی و تخصصی شغلی (زبان خارجی)',
+    category: 'Adjektive',
+    lesson: 6,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 1', pageOrTrack: 'S. 70', context: 'Verhandlungssichere Englischkenntnisse in Wort und Schrift' }
+    ],
+    pronunciation: '[fɛɐ̯ˈhandlʊŋsˌzɪçɐ]',
+    comparative: 'verhandlungssicherer',
+    superlative: 'am verhandlungssichersten',
+    opposite: 'Grundkenntnisse',
+    example: 'Für die internationale Vertriebsstelle werden verhandlungssichere Englischkenntnisse vorausgesetzt.',
+    exampleTranslation: 'برای موقعیت فروش بین‌المللی، تسلط کامل زبان انگلیسی در حد مذاکره الزامی است.',
+    level: 'B1+',
+    tags: ['زبان', 'رزومه']
+  },
+  {
+    id: 'k6-adj3',
+    german: 'befristet',
+    persian: 'قرارداد موقت و دارای تاریخ انقضا',
+    category: 'Adjektive',
+    lesson: 6,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 2', pageOrTrack: 'S. 73', context: 'einen befristeten Arbeitsvertrag über zwei Jahre erhalten' }
+    ],
+    pronunciation: '[bəˈfʁɪstət]',
+    comparative: '—',
+    superlative: '—',
+    opposite: 'unbefristet / unbefristeter Vertrag',
+    example: 'Ihre Stelle an der Universität ist zunächst auf zwei Jahre befristet.',
+    exampleTranslation: 'موقعیت شغلی او در دانشگاه در ابتدا به مدت دو سال موقت است.',
+    level: 'B1+',
+    tags: ['قرارداد', 'امنیت شغلی']
+  },
+  {
+    id: 'k6-adj4',
+    german: 'belastbar',
+    persian: 'دارای مقاومت بالا در برابر استرس و فشار کاری',
+    category: 'Adjektive',
+    lesson: 6,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 1', pageOrTrack: 'S. 70', context: 'Wir suchen stressresistente und belastbare Mitarbeiter.' }
+    ],
+    pronunciation: '[bəˈlastbaːɐ̯]',
+    comparative: 'belastbarer',
+    superlative: 'am belastbarsten',
+    opposite: 'stressempfindlich',
+    example: 'In der Notaufnahme müssen Ärztinnen extrem belastbar und ruhig bleiben.',
+    exampleTranslation: 'در بخش اورژانس، پزشکان زن باید فوق‌العاده مقاوم در برابر استرس و آرام بمانند.',
+    level: 'B1+',
+    tags: ['شخصیت', 'استرس']
+  },
+  {
+    id: 'k6-adj5',
+    german: 'festangestellt',
+    persian: 'استخدام رسمی و دائم (دارای بیمه و قرارداد ثابت)',
+    category: 'Adjektive',
+    lesson: 6,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 2', pageOrTrack: 'S. 72', context: 'als festangestellter Ingenieur arbeiten' }
+    ],
+    pronunciation: '[ˈfɛstʔanɡəˌʃtɛlt]',
+    comparative: '—',
+    superlative: '—',
+    opposite: 'freiberuflich / freischaffend',
+    example: 'Nach dem Praktikum wurde er von der Firma als festangestellter Entwickler übernommen.',
+    exampleTranslation: 'پس از دوره کارآموزی، او توسط شرکت به عنوان توسعه‌دهنده رسمی استخدام شد.',
+    level: 'B1+',
+    tags: ['استخدام', 'امنیت']
+  },
+
+  // --- Redewendungen & Ausdrücke (اصطلاحات کاربردی) ---
   {
     id: 'k6-red1',
     german: 'die Ärmel hochkrempeln',
-    persian: 'آستین‌ها را بالا زدن، با جدیت و پشتکار شروع به کار کردن',
+    persian: 'آستین‌ها را بالا زدن، با جدیت و پشتکار شروع به کار سخت کردن',
+    category: 'Redewendungen',
+    lesson: 6,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 1', pageOrTrack: 'S. 70', context: 'Jetzt heißt es: Die Ärmel hochkrempeln und das Projekt retten!' }
+    ],
+    pronunciation: '[diː ˈɛʁml̩ ˈhoːxˌkʁɛmpl̩n]',
+    explanation: 'آمادگی عملی برای کار فشرده و حل مشکلات بدون اتلاف وقت.',
+    literalMeaning: 'آستین‌ها را بالا پیچیدن',
+    example: 'Vor der wichtigen Deadline müssen wir alle die Ärmel hochkrempeln und zusammenhalten.',
+    exampleTranslation: 'قبل از موعد مهم تحویل، همه ما باید آستین‌ها را بالا بزنیم و همکاری کنیم.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'انگیزه']
+  },
+  {
+    id: 'k6-red2',
+    german: 'Karriere machen',
+    persian: 'پیشرفت شغلی کردن، ارتقا یافتن و به درجات عالی رسیدن',
+    category: 'Redewendungen',
+    lesson: 6,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 2', pageOrTrack: 'S. 72', context: 'In einem Großkonzern rasch Karriere machen' }
+    ],
+    pronunciation: '[kaˈʁiːʁə ˈmaxn̩]',
+    explanation: 'رسیدن به پست‌های مدیریتی و موفقیت بالای مالی و شغلی.',
+    literalMeaning: 'کاریر ساختن',
+    example: 'Durch viel Fleiß und Fleiß konnte sie im Unternehmen schnell Karriere machen.',
+    exampleTranslation: 'با تلاش زیاد و پشتکار، او توانست در شرکت سریعاً پیشرفت شغلی کند.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'موفقیت']
+  },
+  {
+    id: 'k6-red3',
+    german: 'etwas unter einen Hut bringen',
+    persian: 'چند مسئولیت گوناگون (مانند کار و خانواده) را همزمان هماهنگ ساختن',
+    category: 'Redewendungen',
+    lesson: 6,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 3', pageOrTrack: 'S. 74', context: 'Beruf und Kinderbetreuung unter einen Hut bringen' }
+    ],
+    pronunciation: '[ˈɛtvas ˈʊntɐ ˈaɪ̯nən huːt ˈbʁɪŋən]',
+    explanation: 'مدیریت و توازن همزمان دو یا چند تعهد سخت.',
+    literalMeaning: 'چیزی را زیر یک کلاه آوردن',
+    example: 'Es ist nicht immer leicht, Vollzeitarbeit und Familie unter einen Hut zu bringen.',
+    exampleTranslation: 'همیشه آسان نیست که کار تمام‌وقت و خانواده را زیر یک سقف هماهنگ کرد.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'توازن']
+  },
+  {
+    id: 'k6-red4',
+    german: 'Überstunden schieben / machen',
+    persian: 'اضافه‌کاری فشرده انجام دادن',
     category: 'Redewendungen',
     lesson: 6,
     sources: ['Lehrbuch'],
     sourceDetails: [
-      { source: 'Lehrbuch', lesson: 6, module: 'Modul 1', pageOrTrack: 'S. 70', context: 'Jetzt heißt es: Ärmel hochkrempeln und anpacken!' }
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 3', pageOrTrack: 'S. 74', context: 'In der Hauptsaison regelmäßig Überstunden schieben' }
     ],
-    explanation: 'آمادگی عملی برای کار سخت و حل مشکلات بدون اتلاف وقت.',
-    example: 'Vor der Deadline müssen wir alle die Ärmel hochkrempeln und zusammenhalten.',
-    exampleTranslation: 'قبل از پایان موعد تحویل پروژه، همه ما باید آستین‌ها را بالا بزنیم و همکاری کنیم.',
+    pronunciation: '[ˈyːbɐˌʃtʊndən ˈʃiːbn̩]',
+    explanation: 'انجام ساعات کاری مداوم بیش از تعهد قرارداد.',
+    literalMeaning: 'اضافه‌کاری هل دادن',
+    example: 'Um das Projekt rechtzeitig fertigzustellen, mussten die Architekten Wochen lang Überstunden schieben.',
+    exampleTranslation: 'برای تمام کردن پروژه به موقع، معمارهای شرکت مجبور بودند هفته‌ها اضافه‌کاری فشرده کنند.',
     level: 'B1+',
-    tags: ['اصطلاح', 'انگیزه']
+    tags: ['اصطلاح', 'کار']
+  },
+  {
+    id: 'k6-red5',
+    german: 'sich ins Zeug legen',
+    persian: 'مایه گذاشتن، نهایت تلاش و انگیزه خود را به کار بستن',
+    category: 'Redewendungen',
+    lesson: 6,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Hörtexte', lesson: 6, module: 'Modul 1', pageOrTrack: 'Track 2.3', context: 'Wer die Stelle haben will, muss sich ins Zeug legen.' }
+    ],
+    pronunciation: '[zɪch ɪns t͡sɔɪ̯k ˈleːɡn̩]',
+    explanation: 'تلاش ملموس و انرژی فراوان صرف کردن برای رسیدن به هدف.',
+    literalMeaning: 'خود را در مهار قرار دادن',
+    example: 'Wenn wir die Präsentation gewinnen wollen, müssen wir uns jetzt richtig ins Zeug legen.',
+    exampleTranslation: 'اگر می‌خواهیم در این ارائه‌ برنده شویم، الان باید واقعاً مایه بگذاریم.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'تلاش']
+  },
+  {
+    id: 'k6-red6',
+    german: 'auf eigenen Füßen stehen',
+    persian: 'استقلال مالی و شغلی کامل داشتن',
+    category: 'Redewendungen',
+    lesson: 6,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 6, module: 'Modul 2', pageOrTrack: 'S. 72', context: 'Mit dem ersten Gehalt endlich auf eigenen Füßen stehen' }
+    ],
+    pronunciation: '[ʔaʊ̯f ˈʔaɪ̯ɡnən ˈfyːsn̩ ˈʃteːən]',
+    explanation: 'عدم وابستگی به کمک مالی والدین یا دولت.',
+    literalMeaning: 'روی پاهای خود ایستادن',
+    example: 'Mit seinem neuen Job als Softwareentwickler kann er endlich finanziell auf eigenen Füßen stehen.',
+    exampleTranslation: 'با شغل جدیدش به عنوان توسعه‌دهنده نرم‌افزار، او بالاخره می‌تواند از نظر مالی روی پاهای خود بایستد.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'استقلال']
   },
 
   // =========================================================================
-  // KAPITEL 7: Für immer und ewig (عشق، ازدواج و روابط خانوادگی)
+  // KAPITEL 7: Für immer und ewig (عشق، ازدواج، روابط خانوادگی و طلاق)
   // =========================================================================
-  // --- Verben ---
+  // --- Verben (افعال با تمام زمان‌های Präsens / Präteritum / Perfekt و حروف اضافه) ---
   {
     id: 'k7-v1',
     german: 'sich scheiden lassen',
@@ -4912,7 +5941,8 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     lesson: 7,
     sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Hörtexte', lesson: 7, module: 'Modul 1', pageOrTrack: 'Track 2.14', context: 'Jedes dritte Ehepaar lässt sich heutzutage scheiden.' }
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 2', pageOrTrack: 'S. 84', context: 'Sich nach langer Ehe im Einvernehmen scheiden lassen' },
+      { source: 'Hörtexte', lesson: 7, module: 'Modul 1', pageOrTrack: 'Track 2.14', context: 'Statistiken zeigen: Jedes dritte Ehepaar lässt sich scheiden.' }
     ],
     pronunciation: '[zɪç ˈʃaɪ̯dn̩ ˈlasn̩]',
     infinitive: 'sich scheiden lassen',
@@ -4921,20 +5951,21 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     perfect: 'hat sich scheiden lassen',
     auxiliary: 'haben',
     reflexive: true,
-    example: 'Nach zehn Jahren Ehe haben sie sich im gegenseitigen Einvernehmen scheiden lassen.',
-    exampleTranslation: 'پس از ده سال زندگی مشترک، آن‌ها با توافق دوطرفه از هم طلاق گرفتند.',
+    example: 'Nach zehn Jahren Ehe entschieden sich die beiden, sich friedlich scheiden zu lassen.',
+    exampleTranslation: 'پس از ده سال زندگی مشترک، آن دو تصمیم گرفتند مسالمت‌آمیز از هم طلاق بگیرند.',
     level: 'B1+',
-    tags: ['خانواده', 'حقوق']
+    tags: ['خانواده', 'طلاق']
   },
   {
     id: 'k7-v2',
     german: 'streiten über',
-    persian: 'مشاجره و بحث کردن درباره',
+    persian: 'مشاجره و بحث کردن درباره (مسائل مالی، تربیتی یا خانوادگی)',
     category: 'Verben',
     lesson: 7,
     sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Lehrbuch', lesson: 7, module: 'Modul 2', pageOrTrack: 'S. 84', context: 'oft über alltägliche Finanzen streiten' }
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 2', pageOrTrack: 'S. 84', context: 'oft über alltägliche Kleinigkeiten und Finanzen streiten' },
+      { source: 'Hörtexte', lesson: 7, module: 'Modul 2', pageOrTrack: 'Track 2.15', context: 'Warum streiten Paare in Beziehungen?' }
     ],
     pronunciation: '[ˈʃtʁaɪ̯tn̩ ˈyːbɐ]',
     infinitive: 'streiten über (+ Akk.)',
@@ -4943,30 +5974,210 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     perfect: 'hat gestritten',
     auxiliary: 'haben',
     prepositionCase: 'über + Akkusativ',
-    example: 'Paare streiten in Beziehungen am häufigsten über Geld und Hausarbeit.',
-    exampleTranslation: 'زوج‌ها در روابط بیش از هر چیز بر سر پول و کارهای خانه بحث می‌کنند.',
+    example: 'Viele Paare streiten in der Partnerschaft am häufigsten über Geld und Haushalt.',
+    exampleTranslation: 'بسیاری از زوج‌ها در رابطه بیش از هر چیز بر سر پول و کارهای خانه مشاجره می‌کنند.',
     level: 'B1+',
     tags: ['اختلاف', 'رابطه']
   },
-  // --- Nomen ---
+  {
+    id: 'k7-v3',
+    german: 'sich verlieben in',
+    persian: 'عاشقِ چیزی یا کسی شدن',
+    category: 'Verben',
+    lesson: 7,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 1', pageOrTrack: 'S. 82', context: 'sich auf den ersten Blick in jemanden verlieben' }
+    ],
+    pronunciation: '[zɪç fɛɐ̯ˈliːbn̩ ɪn]',
+    infinitive: 'sich verlieben in (+ Akk.)',
+    present: 'verliebt sich',
+    preterite: 'verliebte sich',
+    perfect: 'hat sich verliebt',
+    auxiliary: 'haben',
+    reflexive: true,
+    prepositionCase: 'in + Akkusativ',
+    example: 'Er verliebte sich während des Studiums auf den ersten Blick in seine spätere Ehefrau.',
+    exampleTranslation: 'او در دوران تحصیل در اولین نگاه عاشق همسر آینده‌اش شد.',
+    level: 'B1+',
+    tags: ['عشق', 'احساس']
+  },
+  {
+    id: 'k7-v4',
+    german: 'sich trennen von',
+    persian: 'جدا شدن از (همسر یا شریک زندگی)',
+    category: 'Verben',
+    lesson: 7,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 2', pageOrTrack: 'S. 85', context: 'sich nach jahrelangem Streit vom Partner trennen' }
+    ],
+    pronunciation: '[zɪç ˈtʁɛnən fɔn]',
+    infinitive: 'sich trennen von (+ Dat.)',
+    present: 'trennt sich',
+    preterite: 'trennte sich',
+    perfect: 'hat sich getrennt',
+    auxiliary: 'haben',
+    reflexive: true,
+    prepositionCase: 'von + Dativ',
+    example: 'Nach langem Überlegen hat sie sich schweren Herzens von ihrem Freund getrennt.',
+    exampleTranslation: 'پس از اندیشه فراوان، او با دلی سنگین از دوستش جدا شد.',
+    level: 'B1+',
+    tags: ['جدایی', 'رابطه']
+  },
+  {
+    id: 'k7-v5',
+    german: 'zusammenziehen mit',
+    persian: 'با هم هم‌خانه شدن، زیر یک سقف رفتن با',
+    category: 'Verben',
+    lesson: 7,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 1', pageOrTrack: 'S. 82', context: 'nach zwei Jahren Beziehung mit dem Partner zusammenziehen' }
+    ],
+    pronunciation: '[tsuˈzamənˌt͡siːən]',
+    infinitive: 'zusammenziehen mit (+ Dat.)',
+    present: 'zieht zusammen',
+    preterite: 'zog zusammen',
+    perfect: 'ist zusammengezogen',
+    auxiliary: 'sein',
+    separable: true,
+    prepositionCase: 'mit + Dativ',
+    example: 'Im Sommer ziehen die beiden Verlobten in eine gemeinsame Wohnung zusammen.',
+    exampleTranslation: 'در تابستان، آن دو نامزد با هم به یک آپارتمان مشترک اسباب‌کشی می‌کنند.',
+    level: 'B1+',
+    tags: ['مسکن', 'رابطه']
+  },
+  {
+    id: 'k7-v6',
+    german: 'eingehen',
+    persian: 'پیمان بستن و وارد شدن به (یک پیوند زناشویی یا تعهد رسمی)',
+    category: 'Verben',
+    lesson: 7,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 1', pageOrTrack: 'S. 83', context: 'eine feste Partnerschaft oder Ehe eingehen' }
+    ],
+    pronunciation: '[ˈaɪ̯nˌɡeːən]',
+    infinitive: 'eingehen (+ Akk. z.B. eine Ehe)',
+    present: 'geht ein',
+    preterite: 'ging ein',
+    perfect: 'ist eingegangen',
+    auxiliary: 'sein',
+    separable: true,
+    example: 'Immer mehr junge Menschen zögern, bevor sie eine lebenslange Bindung eingehen.',
+    exampleTranslation: 'تعداد بیشتری از جوانان قبل از وارد شدن به یک تعهد مادام‌العمر مردد هستند.',
+    level: 'B1+',
+    tags: ['تعهد', 'ازدواج']
+  },
+  {
+    id: 'k7-v7',
+    german: 'sich verneinen / missverstehen',
+    persian: 'سوءتفاهم پیدا کردن، حرف یکدیگر را بد متوجه شدن',
+    category: 'Verben',
+    lesson: 7,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 2', pageOrTrack: 'S. 84', context: 'mangelnde Kommunikation führt dazu, sich oft zu missverstehen' }
+    ],
+    pronunciation: '[ˈmɪsfɛɐ̯ˌʃteːən]',
+    infinitive: 'missverstehen (+ Akk.)',
+    present: 'missversteht',
+    preterite: 'missverstand',
+    perfect: 'hat missverstanden',
+    auxiliary: 'haben',
+    example: 'Durch fehlende Gespräche missverstehen sich Paare im Alltag häufig.',
+    exampleTranslation: 'به دلیل عدم گفتگو، زوج‌ها در زندگی روزمره بارها دچار سوءتفاهم می‌شوند.',
+    level: 'B1+',
+    tags: ['ارتباط', 'سوءتفاهم']
+  },
+  {
+    id: 'k7-v8',
+    german: 'verzeihen',
+    persian: 'بخشیدن، از خطای دیگری گذشت کردن',
+    category: 'Verben',
+    lesson: 7,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 2', pageOrTrack: 'S. 85', context: 'dem Partner einen Fehler aufrichtig verzeihen' }
+    ],
+    pronunciation: '[fɛɐ̯ˈt͡saɪ̯ən]',
+    infinitive: 'verzeihen (+ Dat. + Akk.)',
+    present: 'verzeiht',
+    preterite: 'verzieh',
+    perfect: 'hat verziehen',
+    auxiliary: 'haben',
+    example: 'In einer echten Partnerschaft muss man lernen, einander Fehler zu verzeihen.',
+    exampleTranslation: 'در یک رابطه واقعی فرد باید بیاموزد که خطاهای یکدیگر را ببخشد.',
+    level: 'B1+',
+    tags: ['بخشش', 'اخلاق']
+  },
+  {
+    id: 'k7-v9',
+    german: 'aufwachsen',
+    persian: 'بزرگ شدن و رشد یافتن (در یک محیط خانوادگی یا شهر)',
+    category: 'Verben',
+    lesson: 7,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 3', pageOrTrack: 'S. 86', context: 'in einer geborgenen Patchworkfamilie aufwachsen' }
+    ],
+    pronunciation: '[ˈaʊ̯fˌvaksn̩]',
+    infinitive: 'aufwachsen',
+    present: 'wächst auf',
+    preterite: 'wuchs auf',
+    perfect: 'ist aufgewachsen',
+    auxiliary: 'sein',
+    separable: true,
+    example: 'Die Kinder sind in einem ländlichen Umfeld behütet aufgewachsen.',
+    exampleTranslation: 'فرزندان در یک محیط روستایی با مراقبت و آرامش بزرگ شدند.',
+    level: 'B1+',
+    tags: ['رشد', 'خانواده']
+  },
+  {
+    id: 'k7-v10',
+    german: 'sich verlassen auf',
+    persian: 'اعتماد کامل داشتن و دل بستن به پشتیبانی کسی',
+    category: 'Verben',
+    lesson: 7,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 1', pageOrTrack: 'S. 82', context: 'sich in schweren Zeiten auf den Ehepartner verlassen können' }
+    ],
+    pronunciation: '[zɪç fɛɐ̯ˈlasn̩ ʔaʊ̯f]',
+    infinitive: 'sich verlassen auf (+ Akk.)',
+    present: 'verlässt sich',
+    preterite: 'verließ sich',
+    perfect: 'hat sich verlassen',
+    auxiliary: 'haben',
+    reflexive: true,
+    prepositionCase: 'auf + Akkusativ',
+    example: 'In einer guten Ehe kann man sich in jeder Lebenslage blind auf den Partner verlassen.',
+    exampleTranslation: 'در یک ازدواج خوب، فرد می‌تواند در هر شرایطی کورکورانه به همسرش اعتماد کند.',
+    level: 'B1+',
+    tags: ['اعتماد', 'تعهد']
+  },
+
+  // --- Nomen (اسامی همراه آرتیکل، جمع، تلفظ و جنسیت) ---
   {
     id: 'k7-n1',
     german: 'die Patchworkfamilie',
-    persian: 'خانواده ناتنی / ترکیبی (حاصل از ازدواج‌های قبلی)',
+    persian: 'خانواده ترکیبی / ناتنی (حاصل از ازدواج‌های قبلی والدین)',
     category: 'Nomen',
     lesson: 7,
     sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Lehrbuch', lesson: 7, module: 'Modul 3', pageOrTrack: 'S. 86', context: 'Herausforderungen in einer Patchworkfamilie meistern' }
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 3', pageOrTrack: 'S. 86', context: 'Herausforderungen und Chancen in einer Patchworkfamilie' },
+      { source: 'Hörtexte', lesson: 7, module: 'Modul 3', pageOrTrack: 'Track 2.17', context: 'Leben in einer großen Patchworkfamilie mit fünf Kindern' }
     ],
     pronunciation: '[ˈpɛtʃvœʁkfaˌmiːli̯ə]',
     article: 'die',
     plural: 'die Patchworkfamilien',
     genderPersian: 'مونث (die)',
-    example: 'Das Zusammenleben in einer Patchworkfamilie erfordert viel Geduld und Toleranz.',
-    exampleTranslation: 'زندگی در یک خانواده ترکیبی مستلزم صبر و مدارای فراوان است.',
+    example: 'Das Zusammenleben in einer Patchworkfamilie erfordert viel Einfühlungsvermögen.',
+    exampleTranslation: 'زندگی مشترک در یک خانواده ترکیبی نیازمند درک متقابل فراوان است.',
     level: 'B1+',
-    tags: ['خانواده مدرن']
+    tags: ['خانواده مدرن', 'جامعه']
   },
   {
     id: 'k7-n2',
@@ -4976,25 +6187,159 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     lesson: 7,
     sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Hörtexte', lesson: 7, module: 'Modul 1', pageOrTrack: 'Track 2.14', context: 'Entwicklung der Scheidungsrate in Großstädten' }
+      { source: 'Hörtexte', lesson: 7, module: 'Modul 1', pageOrTrack: 'Track 2.14', context: 'Vergleich der Scheidungsrate in Stadt und Land' }
     ],
     pronunciation: '[ˈʃaɪ̯dʊŋsˌʁaːtə]',
     article: 'die',
     plural: 'die Scheidungsraten',
     genderPersian: 'مونث (die)',
-    example: 'In vielen europäischen Ländern ist die Scheidungsrate in den letzten Jahrzehnten gestiegen.',
-    exampleTranslation: 'در بسیاری از کشورهای اروپایی نرخ طلاق در دهه‌های اخیر افزایش یافته است.',
+    example: 'Soziologen analysieren die Gründe für das Ansteigen der Scheidungsrate.',
+    exampleTranslation: 'جامعه‌شناسان علل افزایش نرخ طلاق را تحلیل می‌کنند.',
     level: 'B1+',
     tags: ['آمار', 'جامعه']
   },
-  // --- Adjektive & Adverbien ---
+  {
+    id: 'k7-n3',
+    german: 'die Partnerschaft',
+    persian: 'رابطه زناشویی، شراکتی و عاشقانه',
+    category: 'Nomen',
+    lesson: 7,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 1', pageOrTrack: 'S. 82', context: 'Eine gleichberechtigte Partnerschaft führen' }
+    ],
+    pronunciation: '[ˈpaʁtnɐʃaft]',
+    article: 'die',
+    plural: 'die Partnerschaften',
+    genderPersian: 'مونث (die)',
+    example: 'Eine funktionierende Partnerschaft basiert auf gegenseitigem Vertrauen und Kommunikation.',
+    exampleTranslation: 'یک رابطه موفق بر پایه اعتماد متقابل و گفتگو بنا نهاده شده است.',
+    level: 'B1+',
+    tags: ['رابطه', 'همراهی']
+  },
+  {
+    id: 'k7-n4',
+    german: 'der Trauschein',
+    persian: 'سند رسمی ازدواج و عقدنامه',
+    category: 'Nomen',
+    lesson: 7,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 1', pageOrTrack: 'S. 83', context: 'Zusammenleben auch ohne Trauschein genießen' }
+    ],
+    pronunciation: '[ˈtʁaʊ̯ˌʃaɪ̯n]',
+    article: 'der',
+    plural: 'die Trauscheine',
+    genderPersian: 'مذکر (der)',
+    example: 'Viele junge Paare leben heute jahrelang glücklich ohne Trauschein zusammen.',
+    exampleTranslation: 'امروزه بسیاری از زوج‌های جوان سال‌ها بدون سند رسمی عقدنامه به خوشی با هم زندگی می‌کنند.',
+    level: 'B1+',
+    tags: ['ازدواج', 'سند']
+  },
+  {
+    id: 'k7-n5',
+    german: 'die Eifersucht',
+    persian: 'حسادت عاشقانه و بدگمانی نسبت به شریک زندگی',
+    category: 'Nomen',
+    lesson: 7,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 2', pageOrTrack: 'S. 84', context: 'Krankhafte Eifersucht zerstört viele Beziehungen.' }
+    ],
+    pronunciation: '[ˈaɪ̯fɐˌzʊxt]',
+    article: 'die',
+    plural: 'die Eifersucht (بدون جمع)',
+    genderPersian: 'مونث (die)',
+    example: 'Übertriebene Eifersucht führt häufig zu schweren Streitigkeiten in der Ehe.',
+    exampleTranslation: 'حسادت بیش از حد اغلب منجر به مشاجرات شدید در ازدواج می‌شود.',
+    level: 'B1+',
+    tags: ['احساس', 'اختلاف']
+  },
+  {
+    id: 'k7-n6',
+    german: 'der Alleinerziehende',
+    persian: 'سرپرست تک‌والدی (پدر یا مادری که فرزندش را به تنهایی بزرگ می‌کند)',
+    category: 'Nomen',
+    lesson: 7,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 3', pageOrTrack: 'S. 86', context: 'Staatliche Unterstützung für Alleinerziehende' }
+    ],
+    pronunciation: '[ˈalaɪ̯nʔɛɐ̯ˌtsiːəndə]',
+    article: 'der',
+    plural: 'die Alleinerziehenden',
+    genderPersian: 'مذکر (der)',
+    example: 'Alleinerziehende Mütter stehen im Alltag vor großen finanziellen Herausforderungen.',
+    exampleTranslation: 'مادران تک‌والدی در زندگی روزمره با چالش‌های مالی بزرگی روبرو هستند.',
+    level: 'B1+',
+    tags: ['خانواده', 'جامعه']
+  },
+  {
+    id: 'k7-n7',
+    german: 'das Missverständnis',
+    persian: 'سوءتفاهم و برداشت اشتباه در گفتگو',
+    category: 'Nomen',
+    lesson: 7,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 2', pageOrTrack: 'S. 84', context: 'Kleine Missverständnisse durch ein ruhiges Gespräch ausräumen' }
+    ],
+    pronunciation: '[ˈmɪsfɛɐ̯ˌʃtɛntnɪs]',
+    article: 'das',
+    plural: 'die Missverständnisse',
+    genderPersian: 'خنثی (das)',
+    example: 'Ein klärendes Gespräch verhinderte, dass ein kleines Missverständnis zum Streit wurde.',
+    exampleTranslation: 'یک گفتگوی شفاف‌کننده مانع از آن شد که یک سوءتفاهم کوچک به مشاجره تبدیل شود.',
+    level: 'B1+',
+    tags: ['ارتباط', 'گفتگو']
+  },
+  {
+    id: 'k7-n8',
+    german: 'die Geborgenheit',
+    persian: 'حس امنیت، گرما و آرامش داشتن در آغوش خانواده یا همسر',
+    category: 'Nomen',
+    lesson: 7,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 1', pageOrTrack: 'S. 82', context: 'Geborgenheit und Schutz in der Familie finden' }
+    ],
+    pronunciation: '[ɡəˈbɔʁɡn̩haɪ̯t]',
+    article: 'die',
+    plural: 'die Geborgenheit (بدون جمع)',
+    genderPersian: 'مونث (die)',
+    example: 'Kinder brauchen Liebe und das Gefühl von absoluter Geborgenheit im Elternhaus.',
+    exampleTranslation: 'کودکان نیازمند عشق و احساس امنیت مطلق در خانه والدین هستند.',
+    level: 'B1+',
+    tags: ['امنیت', 'خانواده']
+  },
+  {
+    id: 'k7-n9',
+    german: 'der Generationenkonflikt',
+    persian: 'تضاد و اختلاف نظر بین نسل‌ها (والدین و فرزندان)',
+    category: 'Nomen',
+    lesson: 7,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 4', pageOrTrack: 'S. 88', context: 'Der Generationenkonflikt zwischen Jugendlichen und Eltern' }
+    ],
+    pronunciation: '[ɡenəʁaˈt͡si̯oːnənkɔnˌflɪkt]',
+    article: 'der',
+    plural: 'die Generationenkonflikte',
+    genderPersian: 'مذکر (der)',
+    example: 'Unterschiedliche Wertvorstellungen führen oft zum klassischen Generationenkonflikt.',
+    exampleTranslation: 'ارزش‌های متفاوت اغلب منجر به تضاد کلاسیک بین نسلی می‌شود.',
+    level: 'B1+',
+    tags: ['نسل‌ها', 'اختلاف']
+  },
+
+  // --- Adjektive & Adverbien (صفات همراه حالات مقایسه‌ای و متضاد) ---
   {
     id: 'k7-adj1',
     german: 'harmonisch',
-    persian: 'هماهنگ، سازگار و سرشار از آرامش',
+    persian: 'هماهنگ، سازگار و سرشار از آرامش و صمیمیت',
     category: 'Adjektive',
     lesson: 7,
-    sources: ['Lehrbuch'],
+    sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
       { source: 'Lehrbuch', lesson: 7, module: 'Modul 1', pageOrTrack: 'S. 82', context: 'eine harmonische Partnerschaft führen' }
     ],
@@ -5002,27 +6347,196 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     comparative: 'harmonischer',
     superlative: 'am harmonischsten',
     opposite: 'zerstritten / konfliktreich',
-    example: 'Gegenseitiger Respekt ist die Basis für ein harmonisches Familienleben.',
-    exampleTranslation: 'احترام متقابل پایه و اساس یک زندگی خانوادگی هماهنگ و آرام است.',
+    example: 'Gegenseitiger Respekt ist die wichtigste Voraussetzung für ein harmonisches Zusammenleben.',
+    exampleTranslation: 'احترام متقابل مهم‌ترین شرط برای یک زندگی مشترک هماهنگ و آرام است.',
     level: 'B1+',
     tags: ['رابطه', 'آرامش']
   },
-  // --- Redewendungen ---
+  {
+    id: 'k7-adj2',
+    german: 'eifersüchtig',
+    persian: 'حسود (در رابطه عاشقانه)، دارای بدگمانی',
+    category: 'Adjektive',
+    lesson: 7,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 2', pageOrTrack: 'S. 84', context: 'eifersüchtig auf die Freunde des Partners reagieren' }
+    ],
+    pronunciation: '[ˈaɪ̯fɐˌzʏxtɪç]',
+    comparative: 'eifersüchtiger',
+    superlative: 'am eifersüchtigsten',
+    opposite: 'vertrauensvoll / gelassen',
+    example: 'Er reagierte eifersüchtig, wenn seine Freundin sich mit ihren Arbeitskollegen traf.',
+    exampleTranslation: 'او وقتی دوستش با همکاران کاری‌اش دیدار می‌کرد، واکنشی همراه با حسادت نشان می‌داد.',
+    level: 'B1+',
+    tags: ['احساس', 'رابطه']
+  },
+  {
+    id: 'k7-adj3',
+    german: 'alleinerziehend',
+    persian: 'تک‌والد (مادری یا پدری که تنهایی فرزند تربیت می‌کند)',
+    category: 'Adjektive',
+    lesson: 7,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 3', pageOrTrack: 'S. 86', context: 'alleinerziehende Väter in Deutschland' }
+    ],
+    pronunciation: '[ˈalaɪ̯nʔɛɐ̯ˌtsiːənd]',
+    comparative: '—',
+    superlative: '—',
+    opposite: 'verheiratet / zusammenlebend',
+    example: 'Alleinerziehende Eltern leisten im Alltag enorme Arbeit.',
+    exampleTranslation: 'والدین تک‌والد در زندگی روزمره زحمت فوق‌العاده‌ای می‌کشند.',
+    level: 'B1+',
+    tags: ['خانواده', 'سبک زندگی']
+  },
+  {
+    id: 'k7-adj4',
+    german: 'verständnisvoll',
+    persian: 'دلسوز، با درک و فهم بالا نسبت به دیگری',
+    category: 'Adjektive',
+    lesson: 7,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 1', pageOrTrack: 'S. 82', context: 'ein verständnisvoller Partner hört aufmerksam zu' }
+    ],
+    pronunciation: '[fɛɐ̯ˈʃtɛntnɪsˌfɔl]',
+    comparative: 'verständnisvoller',
+    superlative: 'am verständnisvollsten',
+    opposite: 'intolerant / egoistisch',
+    example: 'In schwierigen Phasen reagierte sie stets sehr verständnisvoll und geduldig.',
+    exampleTranslation: 'در مراحل سخت زندگی، او همواره بسیار با درک و صبورانه رفتار می‌کرد.',
+    level: 'B1+',
+    tags: ['اخلاق', 'رابطه']
+  },
+  {
+    id: 'k7-adj5',
+    german: 'innig',
+    persian: 'عمیق، صمیمانه و قلبی (عشق یا ارتباط)',
+    category: 'Adjektive',
+    lesson: 7,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 1', pageOrTrack: 'S. 82', context: 'eine innige Liebe verbindet die beiden seit Jahrzehnten' }
+    ],
+    pronunciation: '[ˈɪnɪç]',
+    comparative: 'inniger',
+    superlative: 'am innigsten',
+    opposite: 'oberflächlich / distanziert',
+    example: 'Zwischen den Großeltern herrscht eine innige Zuneigung, die man sofort spürt.',
+    exampleTranslation: 'میان پدربزرگ و مادربزرگ علاقه‌ای عمیق و قلبی حاکم است که فرد بلافاصله آن را حس می‌کند.',
+    level: 'B1+',
+    tags: ['احساس', 'صمیمیت']
+  },
+
+  // --- Redewendungen & Ausdrücke (اصطلاحات کاربردی) ---
   {
     id: 'k7-red1',
     german: 'auf Wolke sieben schweben',
     persian: 'در اوج شور و نشاط عاشقی بودن، غرق در شادی بودن',
     category: 'Redewendungen',
     lesson: 7,
-    sources: ['Lehrbuch'],
+    sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Lehrbuch', lesson: 7, module: 'Modul 1', pageOrTrack: 'S. 82', context: 'Frisch Verliebte schweben auf Wolke sieben.' }
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 1', pageOrTrack: 'S. 82', context: 'Frisch Verliebte schweben in den ersten Monaten auf Wolke sieben.' }
     ],
-    explanation: 'حالت سرخوشی شدید در آغاز یک رابطه عاشقانه.',
+    pronunciation: '[ʔaʊ̯f ˈvɔlkə ˈziːbn̩ ˈʃveːbn̩]',
+    explanation: 'حالت سرخوشی شدید و احساس بی‌وزنی در آغاز یک رابطه عاشقانه.',
+    literalMeaning: 'بر روی ابر هفتم معلق بودن',
     example: 'Seit ihrer Verlobung schweben die beiden überglücklich auf Wolke sieben.',
     exampleTranslation: 'از زمان نامزدی‌شان، آن دو غرق در شور و شادی عاشقانه هستند.',
     level: 'B1+',
     tags: ['اصطلاح', 'عشق']
+  },
+  {
+    id: 'k7-red2',
+    german: 'durch dick und dünn gehen',
+    persian: 'در تمام خوشی‌ها و سختی‌های زندگی همراه و وفادار یکدیگر بودن',
+    category: 'Redewendungen',
+    lesson: 7,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 1', pageOrTrack: 'S. 82', context: 'Ein wahres Ehepaar geht gemeinsam durch dick und dünn.' }
+    ],
+    pronunciation: '[dʊʁç dɪk ʊnt dʏn ˈɡeːən]',
+    explanation: 'پایداری و وفاداری در شرایط خوب و بد زندگی مشترک.',
+    literalMeaning: 'از میان ضخیم و باریک گذشتن',
+    example: 'Seit fünfzig Jahren sind sie verheiratet und immer gemeinsam durch dick und dünn gegangen.',
+    exampleTranslation: 'پنجاه سال است که آن‌ها ازدواج کرده‌اند و همواره در خوشی و سختی کنار هم بوده‌اند.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'وفاداری']
+  },
+  {
+    id: 'k7-red3',
+    german: 'Schmetterlinge im Bauch haben',
+    persian: 'حس پروانه‌ای در شکم داشتن (احساس شور، هیجان و دلهره شیرین عاشقی)',
+    category: 'Redewendungen',
+    lesson: 7,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Hörtexte', lesson: 7, module: 'Modul 1', pageOrTrack: 'Track 2.13', context: 'Wenn man verliebt ist, hat man Schmetterlinge im Bauch.' }
+    ],
+    pronunciation: '[ˈʃmɛtɐlɪŋə ɪm baʊ̯x ˈhaːbn̩]',
+    explanation: 'احساس هیجان و ضربان قلب شیرین هنگام دیدار معشوق.',
+    literalMeaning: 'پروانه‌ها در شکم داشتن',
+    example: 'Jedes Mal, wenn er sie sieht, hat er immer noch Schmetterlinge im Bauch.',
+    exampleTranslation: 'هر بار که او را می‌بیند، هنوز هم حس هیجان شیرین عاشقی در او بیدار می‌شود.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'احساس']
+  },
+  {
+    id: 'k7-red4',
+    german: 'jemandem das Herz brechen',
+    persian: 'قلب کسی را شکستن، با جدایی یا خیانت او را عمیقاً آزردن',
+    category: 'Redewendungen',
+    lesson: 7,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 2', pageOrTrack: 'S. 85', context: 'Die unerwartete Trennung hat ihr das Herz gebrochen.' }
+    ],
+    pronunciation: '[ˈjeːmandn̩ das hɛʁt͡s ˈbʁɛxn̩]',
+    explanation: 'ایجاد غم و اندوه شدید روحی در اثر شکست عشقی.',
+    literalMeaning: 'قلب کسی را شکستن',
+    example: 'Als er ohne Wort wegging, hat er ihr das Herz gebrochen.',
+    exampleTranslation: 'وقتی او بدون کلامی رفت، قلب او را شکست.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'شکست']
+  },
+  {
+    id: 'k7-red5',
+    german: 'Liebe auf den ersten Blick',
+    persian: 'عشق در نگاه اول',
+    category: 'Redewendungen',
+    lesson: 7,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 1', pageOrTrack: 'S. 82', context: 'Glauben Sie an die Liebe auf den ersten Blick?' }
+    ],
+    pronunciation: '[ˈliːbə ʔaʊ̯f deːn ˈeːɐ̯stn̩ blɪk]',
+    explanation: 'احساس دلباختگی آنی در اولین دیدار.',
+    literalMeaning: 'عشق در اولین نگاه',
+    example: 'Als sich ihre Blicke trafen, war es Liebe auf den ersten Blick.',
+    exampleTranslation: 'وقتی نگاهمان به هم گره خورد، عشق در نگاه اول بود.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'عشق']
+  },
+  {
+    id: 'k7-red6',
+    german: 'eine Ehe schließen',
+    persian: 'پیوند زناشویی بستن، رسمیت دادن به ازدواج',
+    category: 'Redewendungen',
+    lesson: 7,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 7, module: 'Modul 1', pageOrTrack: 'S. 83', context: 'Im Standesamt eine Ehe schließen' }
+    ],
+    pronunciation: '[ˈaɪ̯nə ˈeːə ˈʃliːsn̩]',
+    explanation: 'ثبت قانونی و رسمی عقد زناشویی در محضر.',
+    literalMeaning: 'یک ازدواج را بستن',
+    example: 'Das Brautpaar hat gestern im historischen Rathaus die Ehe geschlossen.',
+    exampleTranslation: 'عروس و داماد دیروز در تالار تاریخی شهرداری عقد زناشویی بستند.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'ازدواج']
   },
 
   // =========================================================================

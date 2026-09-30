@@ -71,7 +71,7 @@ function AppContent() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex flex-col font-sans text-slate-800 dark:text-slate-100 antialiased selection:bg-amber-200 selection:text-amber-900 transition-colors duration-200">
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-slate-50 dark:bg-slate-950 flex flex-col font-sans text-slate-800 dark:text-slate-100 antialiased selection:bg-amber-200 selection:text-amber-900 transition-colors duration-200">
       
       {/* Navigation Header */}
       <Header
@@ -87,7 +87,7 @@ function AppContent() {
       />
 
       {/* Main Content Area */}
-      <main className="flex-1">
+      <main className="flex-1 w-full max-w-full overflow-x-hidden">
         {currentView === 'dashboard' && (
           <Dashboard
             onSelectLesson={handleSelectLesson}
