@@ -48,8 +48,8 @@ interface VocabularyContextType {
   };
 }
 
-const STORAGE_KEY_VOCAB = 'aspekte_b1plus_vocab_v1';
-const STORAGE_KEY_PROGRESS = 'aspekte_b1plus_progress_v1';
+const STORAGE_KEY_VOCAB = 'aspekte_b1plus_vocab_v2';
+const STORAGE_KEY_PROGRESS = 'aspekte_b1plus_progress_v2';
 
 const defaultProgress: UserProgressState = {
   words: {},
@@ -67,7 +67,9 @@ export const VocabularyProvider: React.FC<{ children: ReactNode }> = ({ children
       const stored = localStorage.getItem(STORAGE_KEY_VOCAB);
       if (stored) {
         const parsed = JSON.parse(stored);
-        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        if (Array.isArray(parsed) && parsed.length >= INITIAL_VOCABULARY.length) {
+          return parsed;
+        }
       }
     } catch (e) {
       console.warn('Failed to load vocabulary from localStorage', e);

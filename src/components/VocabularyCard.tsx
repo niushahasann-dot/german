@@ -52,17 +52,17 @@ export const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, onPractice
   const getCategoryColor = (cat: CategoryType) => {
     switch (cat) {
       case 'Nomen':
-        return 'bg-blue-50 text-blue-700 border-blue-200';
+        return 'bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800/60';
       case 'Verben':
-        return 'bg-emerald-50 text-emerald-700 border-emerald-200';
+        return 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800/60';
       case 'Adjektive':
-        return 'bg-amber-50 text-amber-700 border-amber-200';
+        return 'bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-800/60';
       case 'Adverbien':
-        return 'bg-purple-50 text-purple-700 border-purple-200';
+        return 'bg-purple-50 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800/60';
       case 'Redewendungen':
-        return 'bg-orange-50 text-orange-700 border-orange-200';
+        return 'bg-orange-50 dark:bg-orange-950/60 text-orange-700 dark:text-orange-300 border-orange-200 dark:border-orange-800/60';
       default:
-        return 'bg-slate-50 text-slate-700 border-slate-200';
+        return 'bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700';
     }
   };
 
@@ -86,13 +86,13 @@ export const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, onPractice
   const getArticleColor = (article?: string) => {
     switch (article) {
       case 'der':
-        return 'text-blue-600 bg-blue-50 border-blue-200';
+        return 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/80 border-blue-200 dark:border-blue-800';
       case 'die':
-        return 'text-rose-600 bg-rose-50 border-rose-200';
+        return 'text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/80 border-rose-200 dark:border-rose-800';
       case 'das':
-        return 'text-emerald-600 bg-emerald-50 border-emerald-200';
+        return 'text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/80 border-emerald-200 dark:border-emerald-800';
       default:
-        return 'text-slate-600 bg-slate-50 border-slate-200';
+        return 'text-slate-600 dark:text-slate-400 bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700';
     }
   };
 
@@ -102,15 +102,15 @@ export const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, onPractice
 
   return (
     <div
-      className={`group relative rounded-2xl bg-white border transition-all duration-200 hover:shadow-md ${
+      className={`group relative rounded-2xl bg-white dark:bg-slate-900 border transition-all duration-200 hover:shadow-md ${
         isLearned
-          ? 'border-emerald-200/80 bg-emerald-50/10'
+          ? 'border-emerald-300 dark:border-emerald-800 bg-emerald-50/15 dark:bg-emerald-950/20'
           : isReview
-          ? 'border-amber-300 bg-amber-50/20'
-          : 'border-slate-200 hover:border-slate-300'
+          ? 'border-amber-300 dark:border-amber-700 bg-amber-50/20 dark:bg-amber-950/20'
+          : 'border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700'
       }`}
     >
-      <div className="p-5 sm:p-6 space-y-4">
+      <div className="p-4 sm:p-5 space-y-3.5">
         
         {/* Top Badges Header */}
         <div className="flex items-center justify-between gap-2 flex-wrap">
@@ -118,7 +118,7 @@ export const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, onPractice
           <div className="flex items-center gap-1.5 flex-wrap">
             {/* Category Badge */}
             <span
-              className={`text-xs font-semibold px-2.5 py-0.5 rounded-lg border ${getCategoryColor(
+              className={`text-xs font-bold px-2.5 py-0.5 rounded-lg border ${getCategoryColor(
                 item.category
               )}`}
             >
@@ -131,8 +131,8 @@ export const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, onPractice
                 key={src}
                 className={`inline-flex items-center gap-1 text-[11px] font-medium px-2 py-0.5 rounded-md border ${
                   src === 'Lehrbuch'
-                    ? 'bg-sky-50 text-sky-700 border-sky-200'
-                    : 'bg-purple-50 text-purple-700 border-purple-200'
+                    ? 'bg-sky-50 dark:bg-sky-950/70 text-sky-700 dark:text-sky-300 border-sky-200 dark:border-sky-800/60'
+                    : 'bg-purple-50 dark:bg-purple-950/70 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800/60'
                 }`}
                 title={item.sourceDetails
                   .filter((s) => s.source === src)
@@ -149,7 +149,7 @@ export const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, onPractice
             ))}
 
             {/* Lesson indicator */}
-            <span className="text-[11px] text-slate-400 font-de font-medium">
+            <span className="text-[11px] text-slate-400 dark:text-slate-500 font-de font-medium">
               L{item.lesson}
             </span>
           </div>
@@ -158,10 +158,10 @@ export const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, onPractice
           <div className="flex items-center gap-1.5">
             <button
               onClick={() => toggleStarWord(item.id)}
-              className={`p-1.5 rounded-lg transition-all ${
+              className={`p-1.5 rounded-lg transition-all cursor-pointer ${
                 isStarred
-                  ? 'text-amber-500 bg-amber-50 hover:bg-amber-100'
-                  : 'text-slate-300 hover:text-amber-400 hover:bg-slate-100'
+                  ? 'text-amber-500 bg-amber-50 dark:bg-amber-950/60 hover:bg-amber-100 dark:hover:bg-amber-900/60'
+                  : 'text-slate-300 dark:text-slate-600 hover:text-amber-400 hover:bg-slate-100 dark:hover:bg-slate-800'
               }`}
               title={isStarred ? 'حذف از نشان‌شده‌ها' : 'نشان کردن این کلمه'}
             >
@@ -171,10 +171,10 @@ export const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, onPractice
             <button
               onClick={playAudio}
               disabled={isPlayingAudio}
-              className={`p-2 rounded-xl transition-all ${
+              className={`p-2 rounded-xl transition-all cursor-pointer ${
                 isPlayingAudio
                   ? 'bg-amber-500 text-white shadow-md scale-105 animate-pulse'
-                  : 'bg-slate-100 text-slate-700 hover:bg-indigo-50 hover:text-indigo-600'
+                  : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-indigo-950/70 hover:text-indigo-600 dark:hover:text-indigo-400'
               }`}
               title="پخش تلفظ آلمانی"
             >
@@ -188,7 +188,7 @@ export const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, onPractice
           <div className="flex items-baseline gap-2 flex-wrap">
             {item.category === 'Nomen' && item.article && (
               <span
-                className={`text-sm font-extrabold px-2 py-0.5 rounded-md border font-de ${getArticleColor(
+                className={`text-xs font-black px-2 py-0.5 rounded-md border font-de ${getArticleColor(
                   item.article
                 )}`}
               >
@@ -196,30 +196,30 @@ export const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, onPractice
               </span>
             )}
 
-            <h3 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight font-de">
+            <h3 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight font-de">
               {item.german}
             </h3>
 
             {item.pronunciation && (
-              <span className="text-xs text-slate-400 font-mono font-de">
+              <span className="text-xs text-slate-400 dark:text-slate-500 font-mono font-de">
                 {item.pronunciation}
               </span>
             )}
           </div>
 
           {/* Persian Meaning */}
-          <p className="text-base sm:text-lg font-semibold text-slate-800 leading-relaxed pt-1">
+          <p className="text-base sm:text-lg font-bold text-slate-800 dark:text-slate-200 leading-relaxed pt-0.5">
             {item.persian}
           </p>
         </div>
 
         {/* Category Specific Grammar Information Box */}
         {item.category === 'Nomen' && item.plural && (
-          <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-100 flex items-center gap-3 text-xs">
-            <span className="text-slate-400 font-medium">جمع (Plural):</span>
-            <span className="font-bold text-slate-800 font-de">{item.plural}</span>
+          <div className="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-100 dark:border-slate-800 flex items-center gap-3 text-xs">
+            <span className="text-slate-400 dark:text-slate-500 font-medium">جمع (Plural):</span>
+            <span className="font-bold text-slate-800 dark:text-slate-200 font-de">{item.plural}</span>
             {item.genderPersian && (
-              <span className="text-slate-500 mr-auto text-[11px] bg-white px-2 py-0.5 rounded-md border border-slate-200">
+              <span className="text-slate-500 dark:text-slate-400 mr-auto text-[11px] bg-white dark:bg-slate-800 px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-700">
                 جنسیت: {item.genderPersian}
               </span>
             )}
@@ -227,47 +227,47 @@ export const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, onPractice
         )}
 
         {item.category === 'Verben' && (
-          <div className="p-3 rounded-xl bg-slate-50/80 border border-slate-100 space-y-2 text-xs">
+          <div className="p-3 rounded-xl bg-slate-50/80 dark:bg-slate-850/80 border border-slate-100 dark:border-slate-800 space-y-2 text-xs">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <div>
-                <span className="text-slate-400 block text-[11px]">حال (Präsens 3.P):</span>
-                <span className="font-semibold text-slate-800 font-de">
+              <div className="bg-white/70 dark:bg-slate-800/70 p-1.5 rounded-lg border border-slate-200/50 dark:border-slate-700/50">
+                <span className="text-slate-400 dark:text-slate-500 block text-[10px]">حال (Präsens 3.P):</span>
+                <span className="font-bold text-slate-800 dark:text-slate-200 font-de text-xs">
                   {item.present || '—'}
                 </span>
               </div>
-              <div>
-                <span className="text-slate-400 block text-[11px]">گذشته ساده (Präteritum):</span>
-                <span className="font-semibold text-slate-800 font-de">
+              <div className="bg-white/70 dark:bg-slate-800/70 p-1.5 rounded-lg border border-slate-200/50 dark:border-slate-700/50">
+                <span className="text-slate-400 dark:text-slate-500 block text-[10px]">گذشته ساده (Präteritum):</span>
+                <span className="font-bold text-slate-800 dark:text-slate-200 font-de text-xs">
                   {item.preterite || '—'}
                 </span>
               </div>
-              <div>
-                <span className="text-slate-400 block text-[11px]">گذشته کامل (Perfekt):</span>
-                <span className="font-semibold text-indigo-700 font-de">
+              <div className="bg-indigo-50/70 dark:bg-indigo-950/60 p-1.5 rounded-lg border border-indigo-100 dark:border-indigo-900/50">
+                <span className="text-indigo-400 dark:text-indigo-400 block text-[10px]">گذشته کامل (Perfekt):</span>
+                <span className="font-bold text-indigo-700 dark:text-indigo-300 font-de text-xs">
                   {item.perfect || '—'}
                 </span>
               </div>
             </div>
 
-            {(item.auxiliary || item.prepositionCase || item.separable) && (
-              <div className="flex items-center gap-2 pt-1 border-t border-slate-200/60 flex-wrap text-[11px]">
+            {(item.auxiliary || item.prepositionCase || item.separable || item.reflexive) && (
+              <div className="flex items-center gap-1.5 pt-1 border-t border-slate-200/60 dark:border-slate-800 flex-wrap text-[11px]">
                 {item.auxiliary && (
-                  <span className="bg-white px-2 py-0.5 rounded-md border border-slate-200 text-slate-600">
-                    کمکی: <b className="font-de text-slate-800">{item.auxiliary}</b>
+                  <span className="bg-white dark:bg-slate-800 px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300">
+                    کمکی: <b className="font-de text-slate-800 dark:text-white">{item.auxiliary}</b>
                   </span>
                 )}
                 {item.prepositionCase && (
-                  <span className="bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded-md border border-indigo-100 font-de font-medium">
+                  <span className="bg-indigo-50 dark:bg-indigo-950/70 text-indigo-700 dark:text-indigo-300 px-2 py-0.5 rounded-md border border-indigo-100 dark:border-indigo-800/60 font-de font-bold">
                     حرف اضافه: {item.prepositionCase}
                   </span>
                 )}
                 {item.separable && (
-                  <span className="bg-amber-50 text-amber-700 px-2 py-0.5 rounded-md border border-amber-100">
+                  <span className="bg-amber-50 dark:bg-amber-950/70 text-amber-700 dark:text-amber-300 px-2 py-0.5 rounded-md border border-amber-100 dark:border-amber-800/60 font-semibold">
                     جداشدنی (trennbar)
                   </span>
                 )}
                 {item.reflexive && (
-                  <span className="bg-rose-50 text-rose-700 px-2 py-0.5 rounded-md border border-rose-100">
+                  <span className="bg-rose-50 dark:bg-rose-950/70 text-rose-700 dark:text-rose-300 px-2 py-0.5 rounded-md border border-rose-100 dark:border-rose-800/60 font-semibold">
                     انعکاسی (reflexiv)
                   </span>
                 )}
@@ -277,34 +277,34 @@ export const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, onPractice
         )}
 
         {item.category === 'Adjektive' && (item.comparative || item.opposite) && (
-          <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-100 flex items-center gap-3 text-xs flex-wrap">
+          <div className="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-100 dark:border-slate-800 flex items-center gap-3 text-xs flex-wrap">
             {item.comparative && (
               <div>
-                <span className="text-slate-400 ml-1">تفضیل/عالی:</span>
-                <span className="font-semibold text-slate-800 font-de">
+                <span className="text-slate-400 dark:text-slate-500 ml-1">تفضیل/عالی:</span>
+                <span className="font-bold text-slate-800 dark:text-slate-200 font-de">
                   {item.comparative} / {item.superlative}
                 </span>
               </div>
             )}
             {item.opposite && (
               <div className="mr-auto">
-                <span className="text-slate-400 ml-1">متضاد:</span>
-                <span className="font-semibold text-rose-600 font-de">{item.opposite}</span>
+                <span className="text-slate-400 dark:text-slate-500 ml-1">متضاد:</span>
+                <span className="font-bold text-rose-600 dark:text-rose-400 font-de">{item.opposite}</span>
               </div>
             )}
           </div>
         )}
 
         {item.category === 'Redewendungen' && (item.explanation || item.literalMeaning) && (
-          <div className="p-2.5 rounded-xl bg-amber-50/50 border border-amber-200/60 text-xs space-y-1">
+          <div className="p-2.5 rounded-xl bg-amber-50/50 dark:bg-amber-950/30 border border-amber-200/60 dark:border-amber-800/50 text-xs space-y-1">
             {item.explanation && (
-              <p className="text-slate-700">
-                <span className="font-bold text-amber-900 ml-1">توضیح کاربرد:</span>
+              <p className="text-slate-700 dark:text-slate-300">
+                <span className="font-bold text-amber-900 dark:text-amber-400 ml-1">توضیح کاربرد:</span>
                 {item.explanation}
               </p>
             )}
             {item.literalMeaning && (
-              <p className="text-slate-500 text-[11px]">
+              <p className="text-slate-500 dark:text-slate-400 text-[11px]">
                 <span className="font-semibold ml-1">معنی تحت‌اللفظی:</span>
                 {item.literalMeaning}
               </p>
@@ -314,44 +314,44 @@ export const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, onPractice
 
         {/* Example Sentence Section */}
         {item.example && (
-          <div className="space-y-1.5 bg-slate-50/60 p-3 rounded-xl border border-slate-100">
+          <div className="space-y-1.5 bg-slate-50/60 dark:bg-slate-850/60 p-3 rounded-xl border border-slate-100 dark:border-slate-800">
             <div className="flex items-start justify-between gap-2">
-              <div className="text-xs sm:text-sm font-medium text-slate-800 font-de leading-relaxed">
+              <div className="text-xs sm:text-sm font-medium text-slate-800 dark:text-slate-200 font-de leading-relaxed">
                 „{item.example}“
               </div>
               <button
                 onClick={() => speechService.speak(item.example!)}
-                className="text-slate-400 hover:text-indigo-600 p-1 rounded-md transition-colors"
+                className="text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 p-1 rounded-md transition-colors cursor-pointer shrink-0"
                 title="پخش صوتی مثال"
               >
                 <Volume2 className="w-3.5 h-3.5" />
               </button>
             </div>
             {item.exampleTranslation && (
-              <div className="text-xs text-slate-600 leading-relaxed">
+              <div className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                 {item.exampleTranslation}
               </div>
             )}
           </div>
         )}
 
-        {/* Source Details Accordion (if multiple sources or deep tracks) */}
+        {/* Source Details Accordion */}
         {item.sourceDetails && item.sourceDetails.length > 0 && (
           <div>
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="text-[11px] text-slate-500 hover:text-slate-800 flex items-center gap-1 transition-colors"
+              className="text-[11px] text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 flex items-center gap-1 transition-colors cursor-pointer"
             >
               <span>مشاهده جزئیات منبع و موقعیت در کتاب / فایل صوتی</span>
               {isExpanded ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
             </button>
 
             {isExpanded && (
-              <div className="mt-2 p-3 bg-slate-100/80 rounded-xl space-y-2 text-xs border border-slate-200">
-                <div className="font-semibold text-slate-700 mb-1">منابع ثبت‌شده در کتاب:</div>
+              <div className="mt-2 p-3 bg-slate-100/80 dark:bg-slate-800/80 rounded-xl space-y-2 text-xs border border-slate-200 dark:border-slate-700">
+                <div className="font-semibold text-slate-700 dark:text-slate-300 mb-1">منابع ثبت‌شده در کتاب:</div>
                 {item.sourceDetails.map((src, idx) => (
-                  <div key={idx} className="flex items-start gap-2 text-slate-600 border-b border-slate-200/60 pb-1.5 last:border-0 last:pb-0">
-                    <span className="font-bold text-slate-800 font-de">
+                  <div key={idx} className="flex items-start gap-2 text-slate-600 dark:text-slate-300 border-b border-slate-200/60 dark:border-slate-700/60 pb-1.5 last:border-0 last:pb-0">
+                    <span className="font-bold text-slate-800 dark:text-white font-de">
                       {src.source === 'Lehrbuch' ? '📘 Lehrbuch' : '🎧 Hörtexte'}
                     </span>
                     <span>•</span>
@@ -359,7 +359,7 @@ export const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, onPractice
                       {src.module || `Lektion ${src.lesson}`} {src.pageOrTrack ? `(${src.pageOrTrack})` : ''}
                     </span>
                     {src.context && (
-                      <span className="text-[11px] text-slate-500 mr-auto font-de italic truncate max-w-[200px]">
+                      <span className="text-[11px] text-slate-500 dark:text-slate-400 mr-auto font-de italic truncate max-w-[200px]">
                         "{src.context}"
                       </span>
                     )}
@@ -371,16 +371,16 @@ export const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, onPractice
         )}
 
         {/* Bottom Actions: Learning Status Buttons */}
-        <div className="flex items-center justify-between pt-3 border-t border-slate-100 gap-2">
+        <div className="flex items-center justify-between pt-2.5 border-t border-slate-100 dark:border-slate-800 gap-2">
           
           <div className="flex items-center gap-1.5">
             {/* Mark as Learned Button */}
             <button
               onClick={() => setWordStatus(item.id, isLearned ? 'unseen' : 'learned')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium transition-all ${
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium transition-all cursor-pointer ${
                 isLearned
                   ? 'bg-emerald-600 text-white shadow-xs'
-                  : 'bg-slate-100 text-slate-600 hover:bg-emerald-50 hover:text-emerald-700'
+                  : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-emerald-50 dark:hover:bg-emerald-950/60 hover:text-emerald-700 dark:hover:text-emerald-300'
               }`}
             >
               <Check className="w-3.5 h-3.5" />
@@ -390,10 +390,10 @@ export const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, onPractice
             {/* Needs Review Button */}
             <button
               onClick={() => setWordStatus(item.id, isReview ? 'unseen' : 'review')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium transition-all ${
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium transition-all cursor-pointer ${
                 isReview
                   ? 'bg-amber-500 text-white shadow-xs'
-                  : 'bg-slate-100 text-slate-600 hover:bg-amber-50 hover:text-amber-700'
+                  : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-amber-50 dark:hover:bg-amber-950/60 hover:text-amber-700 dark:hover:text-amber-300'
               }`}
             >
               <RotateCcw className="w-3.5 h-3.5" />
@@ -404,7 +404,7 @@ export const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, onPractice
           {onPracticeSingle && (
             <button
               onClick={() => onPracticeSingle(item)}
-              className="text-slate-400 hover:text-indigo-600 p-1.5 rounded-lg hover:bg-indigo-50 transition-colors"
+              className="text-slate-400 dark:text-slate-500 hover:text-indigo-600 dark:hover:text-indigo-400 p-1.5 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-950/50 transition-colors cursor-pointer"
               title="تمرین فلش‌کارت تک‌کلمه"
             >
               <Layers className="w-4 h-4" />
