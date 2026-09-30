@@ -4,7 +4,621 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
   // =========================================================================
   // KAPITEL 1: Leute heute (مردم امروز)
   // =========================================================================
-  // --- Verben ---
+  // --- Nomen (اسامی با آرتیکل، جمع و جنسیت) ---
+  {
+    id: 'k1-n1',
+    german: 'die Freundschaft',
+    persian: 'دوستی، پیوند رفاقت',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 10', context: 'Über Freundschaft und Beziehungen sprechen' },
+      { source: 'Hörtexte', lesson: 1, module: 'Modul 2 Aufgabe 2a', pageOrTrack: 'Track 1.2', context: 'Was bedeutet echte Freundschaft heute?' }
+    ],
+    pronunciation: '[ˈfʁɔɪ̯ntʃaft]',
+    article: 'die',
+    plural: 'die Freundschaften',
+    genderPersian: 'مونث (die)',
+    example: 'Eine tiefe Freundschaft hält oft ein ganzes Leben lang.',
+    exampleTranslation: 'یک دوستی عمیق اغلب در تمام طول زندگی پایدار می‌ماند.',
+    level: 'B1+',
+    tags: ['دوستی', 'روابط']
+  },
+  {
+    id: 'k1-n2',
+    german: 'der Freundeskreis',
+    persian: 'حلقه و جمع دوستان صمیمی',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 10', context: 'einen festen Freundeskreis aufbauen' }
+    ],
+    pronunciation: '[ˈfʁɔɪ̯ndəsˌkʁaɪ̯s]',
+    article: 'der',
+    plural: 'die Freundeskreise',
+    genderPersian: 'مذکر (der)',
+    example: 'Mein Freundeskreis besteht aus Menschen, die ich seit vielen Jahren kenne.',
+    exampleTranslation: 'حلقه دوستان من متشکل از افرادی است که سال‌هاست آن‌ها را می‌شناسم.',
+    level: 'B1+',
+    tags: ['دوستی', 'اجتماع']
+  },
+  {
+    id: 'k1-n3',
+    german: 'der Bekanntenkreis',
+    persian: 'دایره آشنایان و اطرافیان',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Hörtexte', lesson: 1, module: 'Modul 2', pageOrTrack: 'Track 1.2', context: 'Ich habe einen großen Bekanntenkreis, aber nur zwei enge Freunde.' }
+    ],
+    pronunciation: '[bəˈkantn̩ˌkʁaɪ̯s]',
+    article: 'der',
+    plural: 'die Bekanntenkreise',
+    genderPersian: 'مذکر (der)',
+    example: 'In meinem Bekanntenkreis gibt es viele interessante Leute aus aller Welt.',
+    exampleTranslation: 'در دایره آشنایان من افراد جالب بسیاری از سراسر جهان وجود دارند.',
+    level: 'B1+',
+    tags: ['جامعه', 'روابط']
+  },
+  {
+    id: 'k1-n4',
+    german: 'die Bekanntschaft',
+    persian: 'آشنایی، رابطه غیرصمیمی',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 11', context: 'eine flüchtige Bekanntschaft machen' }
+    ],
+    pronunciation: '[bəˈkantʃaft]',
+    article: 'die',
+    plural: 'die Bekanntschaften',
+    genderPersian: 'مونث (die)',
+    example: 'Aus einer zufälligen Bekanntschaft im Urlaub wurde eine langjährige Freundschaft.',
+    exampleTranslation: 'از یک آشنایی اتفاقی در تعطیلات، یک دوستی چندین‌ساله شکل گرفت.',
+    level: 'B1+',
+    tags: ['روابط', 'ارتباط']
+  },
+  {
+    id: 'k1-n5',
+    german: 'der Sandkastenfreund',
+    persian: 'دوست دوران کودکی / بچگی',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 10', context: 'mit dem Sandkastenfreund aufwachsen' }
+    ],
+    pronunciation: '[ˈzantˌkastn̩ˌfʁɔɪ̯nt]',
+    article: 'der',
+    plural: 'die Sandkastenfreunde',
+    genderPersian: 'مذکر (der)',
+    example: 'Mit meinem Sandkastenfreund habe ich schon als Dreijähriger im Park gespielt.',
+    exampleTranslation: 'من از سه سالگی با دوست دوران بچگی‌ام در پارک بازی می‌کردم.',
+    level: 'B1+',
+    tags: ['خاطرات', 'دوستی']
+  },
+  {
+    id: 'k1-n6',
+    german: 'der Lebensabschnittsgefährte',
+    persian: 'همراه و رفیق یک برهه از زندگی',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 10', context: 'Freunde als Lebensabschnittsgefährten' }
+    ],
+    pronunciation: '[ˈleːbn̩sˌʔapʃnɪtsɡəˌfɛːɐ̯tə]',
+    article: 'der',
+    plural: 'die Lebensabschnittsgefährten',
+    genderPersian: 'مذکر (der)',
+    example: 'Manche Freunde begleiten uns nur für eine bestimmte Zeit als Lebensabschnittsgefährten.',
+    exampleTranslation: 'برخی از دوستان فقط برای دوره‌ای مشخص به عنوان همراه یک برهه از زندگی کنار ما هستند.',
+    level: 'B1+',
+    tags: ['جامعه‌شناسی', 'روابط']
+  },
+  {
+    id: 'k1-n7',
+    german: 'die Seelenverwandtschaft',
+    persian: 'قرابت روحی، هم‌دلی و تفاهم عمیق باطنی',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 10', context: 'eine Seelenverwandtschaft zwischen zwei Menschen spüren' }
+    ],
+    pronunciation: '[ˈzeːlənfɛɐ̯ˌvantʃaft]',
+    article: 'die',
+    plural: 'die Seelenverwandtschaften',
+    genderPersian: 'مونث (die)',
+    example: 'Zwischen den beiden besten Freundinnen herrscht eine echte Seelenverwandtschaft.',
+    exampleTranslation: 'میان آن دو دوست صمیمی یک قرابت و هم‌دلی روحی واقعی برقرار است.',
+    level: 'B1+',
+    tags: ['احساسات', 'دوستی']
+  },
+  {
+    id: 'k1-n8',
+    german: 'das Vertrauen',
+    persian: 'اعتماد، اطمینان قلبی',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 10', context: 'gegenseitiges Vertrauen aufbauen' },
+      { source: 'Hörtexte', lesson: 1, module: 'Modul 2', pageOrTrack: 'Track 1.4', context: 'Ohne Vertrauen funktioniert keine Beziehung.' }
+    ],
+    pronunciation: '[fɛɐ̯ˈtʁaʊ̯ən]',
+    article: 'das',
+    plural: 'das Vertrauen (بدون جمع)',
+    genderPersian: 'خنثی (das)',
+    example: 'Gegenseitiges Vertrauen ist das wichtigste Fundament jeder engen Partnerschaft.',
+    exampleTranslation: 'اعتماد متقابل مهم‌ترین شالوده و پایه هر رابطه نزدیک است.',
+    level: 'B1+',
+    tags: ['اخلاق', 'اعتماد']
+  },
+  {
+    id: 'k1-n9',
+    german: 'das Geheimnis',
+    persian: 'راز، سر نهان',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 10', context: 'Geheimnisse für sich behalten' }
+    ],
+    pronunciation: '[ɡəˈhaɪ̯mnɪs]',
+    article: 'das',
+    plural: 'die Geheimnisse',
+    genderPersian: 'خنثی (das)',
+    example: 'Ich kann ihr jedes Geheimnis anvertrauen, denn sie behält alles für sich.',
+    exampleTranslation: 'من می‌توانم هر رازی را به او بگویم، چون او همه چیز را پیش خودش نگه می‌دارد.',
+    level: 'B1+',
+    tags: ['رازداری', 'ارتباط']
+  },
+  {
+    id: 'k1-n10',
+    german: 'die Zuverlässigkeit',
+    persian: 'قابلیت اطمینان، خوش‌قولی و تعهد',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 12', context: 'Zuverlässigkeit als Kernwert' }
+    ],
+    pronunciation: '[ˈtsuːfɛɐ̯ˌlɛsɪçkaɪ̯t]',
+    article: 'die',
+    plural: 'die Zuverlässigkeit (بدون جمع)',
+    genderPersian: 'مونث (die)',
+    example: 'In schwierigen Lebenslagen erkennt man die Zuverlässigkeit eines wahren Freundes.',
+    exampleTranslation: 'در شرایط سخت زندگی، قابلیت اعتماد و خوش‌قولی یک دوست واقعی شناخته می‌شود.',
+    level: 'B1+',
+    tags: ['شخصیت', 'اخلاق']
+  },
+  {
+    id: 'k1-n11',
+    german: 'die Ehrlichkeit',
+    persian: 'صداقت، راستگویی',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 12', context: 'Ehrlichkeit in guten wie in schlechten Zeiten' }
+    ],
+    pronunciation: '[ˈeːɐ̯lɪçkaɪ̯t]',
+    article: 'die',
+    plural: 'die Ehrlichkeit (بدون جمع)',
+    genderPersian: 'مونث (die)',
+    example: 'Ehrlichkeit bedeutet auch, unangenehme Wahrheiten offen auszusprechen.',
+    exampleTranslation: 'صداقت همچنین به این معناست که حقیقت‌های ناخوشایند را بی‌پرده بیان کنیم.',
+    level: 'B1+',
+    tags: ['اخلاق', 'شخصیت']
+  },
+  {
+    id: 'k1-n12',
+    german: 'die Verschwiegenheit',
+    persian: 'رازداری، توداری',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 12', context: 'absolute Verschwiegenheit garantieren' }
+    ],
+    pronunciation: '[fɛɐ̯ˈʃviːɡn̩haɪ̯t]',
+    article: 'die',
+    plural: 'die Verschwiegenheit (بدون جمع)',
+    genderPersian: 'مونث (die)',
+    example: 'Ihre Verschwiegenheit macht sie zu einer unschätzbaren Vertrauensperson.',
+    exampleTranslation: 'رازداری او باعث شده تا به یک فرد معتمد و بی‌نهایت ارزشمند تبدیل شود.',
+    level: 'B1+',
+    tags: ['اخلاق', 'رازداری']
+  },
+  {
+    id: 'k1-n13',
+    german: 'das Verständnis',
+    persian: 'درک متقابل، تفاهم',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Hörtexte', lesson: 1, module: 'Modul 2', pageOrTrack: 'Track 1.3', context: 'Verständnis für die Situation des anderen aufbringen' }
+    ],
+    pronunciation: '[fɛɐ̯ˈʃtɛntnɪs]',
+    article: 'das',
+    plural: 'das Verständnis (بدون جمع)',
+    genderPersian: 'خنثی (das)',
+    example: 'Er zeigte großes Verständnis für meine schwierige berufliche Lage.',
+    exampleTranslation: 'او درک بالایی نسبت به وضعیت کاری دشوار من نشان داد.',
+    level: 'B1+',
+    tags: ['همدلی', 'روابط']
+  },
+  {
+    id: 'k1-n14',
+    german: 'die Zuneigung',
+    persian: 'مهر و محبت، علاقه و گرایش قلبی',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 10', context: 'Zuneigung und Sympathie empfinden' }
+    ],
+    pronunciation: '[ˈtsuːˌnaɪ̯ɡʊŋ]',
+    article: 'die',
+    plural: 'die Zuneigungen',
+    genderPersian: 'مونث (die)',
+    example: 'Eine herzliche Zuneigung verband die beiden Freunde seit ihrer Jugendzeit.',
+    exampleTranslation: 'علاقه‌ای صمیمانه و قلبی آن دو دوست را از دوران جوانی به هم پیوند داده بود.',
+    level: 'B1+',
+    tags: ['عاطفه', 'احساسات']
+  },
+  {
+    id: 'k1-n15',
+    german: 'der Zusammenhalt',
+    persian: 'همبستگی، انسجام گروهی',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 11', context: 'der enge Zusammenhalt in der Gruppe' }
+    ],
+    pronunciation: '[tsuˈzamənˌhalt]',
+    article: 'der',
+    plural: 'der Zusammenhalt (بدون جمع)',
+    genderPersian: 'مذکر (der)',
+    example: 'Der starke Zusammenhalt im Team half uns, alle Herausforderungen zu meistern.',
+    exampleTranslation: 'همبستگی قوی در تیم به ما کمک کرد تا از پس تمام چالش‌ها برآییم.',
+    level: 'B1+',
+    tags: ['گروه', 'همبستگی']
+  },
+  {
+    id: 'k1-n16',
+    german: 'die Hilfsbereitschaft',
+    persian: 'آمادگی برای کمک، یاری‌رسانی',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 3', pageOrTrack: 'S. 14', context: 'die Hilfsbereitschaft der Alltagshelden' }
+    ],
+    pronunciation: '[ˈhɪlfsbəˌʁaɪ̯tʃaft]',
+    article: 'die',
+    plural: 'die Hilfsbereitschaft (بدون جمع)',
+    genderPersian: 'مونث (die)',
+    example: 'Seine Hilfsbereitschaft gegenüber Fremden ist wirklich vorbildlich.',
+    exampleTranslation: 'آمادگی او برای کمک به غریبه‌ها واقعاً نمونه و آموزنده است.',
+    level: 'B1+',
+    tags: ['اخلاق', 'فداکاری']
+  },
+  {
+    id: 'k1-n17',
+    german: 'der Lebensabschnitt',
+    persian: 'مقطع زندگی، برهه و دوره زمانی',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 4', pageOrTrack: 'S. 16', context: 'einen neuen Lebensabschnitt beginnen' }
+    ],
+    pronunciation: '[ˈleːbn̩sˌʔapʃnɪt]',
+    article: 'der',
+    plural: 'die Lebensabschnitte',
+    genderPersian: 'مذکر (der)',
+    example: 'Der Beginn des Studiums markiert für viele junge Menschen einen neuen Lebensabschnitt.',
+    exampleTranslation: 'آغاز دوران دانشگاه برای بسیاری از جوانان نماد یک مقطع جدید در زندگی است.',
+    level: 'B1+',
+    tags: ['زندگی', 'رشد']
+  },
+  {
+    id: 'k1-n18',
+    german: 'der Wendepunkt',
+    persian: 'نقطه عطف (در زندگی یا سرنوشت)',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 4', pageOrTrack: 'S. 16', context: 'ein entscheidender Wendepunkt im Leben' }
+    ],
+    pronunciation: '[ˈvɛndəˌpʊŋkt]',
+    article: 'der',
+    plural: 'die Wendepunkte',
+    genderPersian: 'مذکر (der)',
+    example: 'Der Umzug nach Berlin war der wichtigste Wendepunkt in ihrer künstlerischen Laufbahn.',
+    exampleTranslation: 'مهاجرت به برلین مهم‌ترین نقطه عطف در مسیر حرفه‌ای هنری او بود.',
+    level: 'B1+',
+    tags: ['سرنوشت', 'تغییر']
+  },
+  {
+    id: 'k1-n19',
+    german: 'das Schicksal',
+    persian: 'سرنوشت، تقدیر',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 4', pageOrTrack: 'S. 17', context: 'sein Schicksal selbst in die Hand nehmen' }
+    ],
+    pronunciation: '[ˈʃɪkzaːl]',
+    article: 'das',
+    plural: 'die Schicksale',
+    genderPersian: 'خنثی (das)',
+    example: 'Sie ließ sich vom schweren Schicksal nicht entmutigen und kämpfte weiter.',
+    exampleTranslation: 'او اجازه نداد سرنوشت سخت دلسردش کند و به مبارزه ادامه داد.',
+    level: 'B1+',
+    tags: ['سرنوشت', 'زندگی']
+  },
+  {
+    id: 'k1-n20',
+    german: 'die Herausforderung',
+    persian: 'چالش، وظیفه و آزمون دشوار',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 4', pageOrTrack: 'S. 16', context: 'neue Herausforderungen annehmen' },
+      { source: 'Hörtexte', lesson: 1, module: 'Modul 4', pageOrTrack: 'Track 1.8', context: 'Das Leben im Ausland ist eine große Herausforderung.' }
+    ],
+    pronunciation: '[hɛˈʁaʊ̯sˌfɔʁdəʁʊŋ]',
+    article: 'die',
+    plural: 'die Herausforderungen',
+    genderPersian: 'مونث (die)',
+    example: 'Das Erlernen einer neuen Sprache ist eine spannende Herausforderung.',
+    exampleTranslation: 'یادگیری یک زبان جدید یک چالش هیجان‌انگیز است.',
+    level: 'B1+',
+    tags: ['موفقیت', 'چالش']
+  },
+  {
+    id: 'k1-n21',
+    german: 'der Werdegang',
+    persian: 'سیر تکامل، پیشینه و روند رشد شخصی/کاری',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 4', pageOrTrack: 'S. 16', context: 'über den beruflichen Werdegang berichten' }
+    ],
+    pronunciation: '[ˈveːɐ̯dəˌɡaŋ]',
+    article: 'der',
+    plural: 'die Werdegänge',
+    genderPersian: 'مذکر (der)',
+    example: 'Ihr beeindruckender Werdegang zeigt, dass sich Fleiß und Ausdauer auszahlen.',
+    exampleTranslation: 'سیر پیشرفت چشمگیر او نشان می‌دهد که پشتکار و تلاش نتیجه‌بخش است.',
+    level: 'B1+',
+    tags: ['شغل', 'زندگی‌نامه']
+  },
+  {
+    id: 'k1-n22',
+    german: 'die Zivilcourage',
+    persian: 'شجاعت اخلاقی و مدنی (دفاع از دیگران در جامعه)',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 3', pageOrTrack: 'S. 14', context: 'Zivilcourage im öffentlichen Raum beweisen' },
+      { source: 'Hörtexte', lesson: 1, module: 'Modul 3', pageOrTrack: 'Track 1.6', context: 'Zivilcourage heißt nicht, sich selbst in Gefahr zu bringen.' }
+    ],
+    pronunciation: '[tsiˈviːlkuˌʁaːʒə]',
+    article: 'die',
+    plural: 'die Zivilcourage (بدون جمع)',
+    genderPersian: 'مونث (die)',
+    example: 'Der junge Mann bewies Zivilcourage, als er die Passantin vor dem Angreifer schützte.',
+    exampleTranslation: 'مرد جوان شجاعت مدنی نشان داد هنگامی که از عابر پیاده در برابر مهاجم محافظت کرد.',
+    level: 'B1+',
+    tags: ['شجاعت', 'جامعه']
+  },
+  {
+    id: 'k1-n23',
+    german: 'der Alltagsheld',
+    persian: 'قهرمان روزمره، فرد فداکار گمنام در جامعه',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 3', pageOrTrack: 'S. 14', context: 'Helden des Alltags ehren' }
+    ],
+    pronunciation: '[ˈalˌtaːksˌhɛlt]',
+    article: 'der',
+    plural: 'die Alltagshelden',
+    genderPersian: 'مذکر (der)',
+    example: 'Menschen, die ehrenamtlich älteren Nachbarn helfen, sind echte Alltagshelden.',
+    exampleTranslation: 'افرادی که داوطلبانه به همسایگان سالمند کمک می‌کنند، قهرمانان واقعی روزمره هستند.',
+    level: 'B1+',
+    tags: ['قهرمانی', 'جامعه']
+  },
+  {
+    id: 'k1-n24',
+    german: 'die Heldentat',
+    persian: 'اقدام قهرمانانه، کار شجاعانه',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 3', pageOrTrack: 'S. 14', context: 'für eine mutige Heldentat geehrt werden' }
+    ],
+    pronunciation: '[ˈhɛldn̩ˌtaːt]',
+    article: 'die',
+    plural: 'die Heldentaten',
+    genderPersian: 'مونث (die)',
+    example: 'Für seine mutige Heldentat bei dem Brand erhielt der Feuerwehrmann eine Medaille.',
+    exampleTranslation: 'برای اقدام شجاعانه‌اش در آتش‌سوزی، آتش‌نشان مدال افتخار دریافت کرد.',
+    level: 'B1+',
+    tags: ['قهرمانی', 'شجاعت']
+  },
+  {
+    id: 'k1-n25',
+    german: 'der Retter',
+    persian: 'نجات‌دهنده، منجی',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Hörtexte', lesson: 1, module: 'Modul 3', pageOrTrack: 'Track 1.6', context: 'Der mutige Retter zog das Kind aus dem Wasser.' }
+    ],
+    pronunciation: '[ˈʁɛtɐ]',
+    article: 'der',
+    plural: 'die Retter',
+    genderPersian: 'مذکر (der)',
+    example: 'Die Retter trafen glücklicherweise wenige Minuten nach dem Notruf am Unfallort ein.',
+    exampleTranslation: 'خوشبختانه نجات‌دهندگان چند دقیقه پس از تماس اضطراری در محل حادثه حاضر شدند.',
+    level: 'B1+',
+    tags: ['امداد', 'نجات']
+  },
+  {
+    id: 'k1-n26',
+    german: 'die Lebensgefahr',
+    persian: 'خطر مرگ، خطر جانی',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 3', pageOrTrack: 'S. 14', context: 'sich in Lebensgefahr begeben' }
+    ],
+    pronunciation: '[ˈleːbn̩sɡəˌfaːɐ̯]',
+    article: 'die',
+    plural: 'die Lebensgefahren',
+    genderPersian: 'مونث (die)',
+    example: 'Der Ersthelfer rettete den Verletzten unter Einsatz des eigenen Lebens aus höchster Lebensgefahr.',
+    exampleTranslation: 'امدادگر اولیه فرد مجروح را با به خطر انداختن جان خود از بالاترین خطر جانی نجات داد.',
+    level: 'B1+',
+    tags: ['خطر', 'حادثه']
+  },
+  {
+    id: 'k1-n27',
+    german: 'der Notruf',
+    persian: 'تماس اضطراری، شماره امداد (۱۱۲)',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 3', pageOrTrack: 'S. 15', context: 'sofort den Notruf wählen' }
+    ],
+    pronunciation: '[ˈnoːtˌʁuːf]',
+    article: 'der',
+    plural: 'die Notrufe',
+    genderPersian: 'مذکر (der)',
+    example: 'Bei einem schweren Verkehrsunfall muss man unverzüglich den Notruf wählen.',
+    exampleTranslation: 'در یک تصادف شدید رانندگی باید بلافاصله با شماره اضطراری تماس گرفت.',
+    level: 'B1+',
+    tags: ['امداد', 'تماس']
+  },
+  {
+    id: 'k1-n28',
+    german: 'das Vorbild',
+    persian: 'الگو، سرمشق اخلاقی یا رفتاری',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 3', pageOrTrack: 'S. 14', context: 'Vorbilder in Sport, Kultur und Familie' }
+    ],
+    pronunciation: '[ˈfoːɐ̯ˌbɪlt]',
+    article: 'das',
+    plural: 'die Vorbilder',
+    genderPersian: 'خنثی (das)',
+    example: 'Eltern sind für ihre heranwachsenden Kinder das unmittelbarste Vorbild.',
+    exampleTranslation: 'والدین برای فرزندان در حال رشد خود مستقیم‌ترین الگو هستند.',
+    level: 'B1+',
+    tags: ['الگو', 'شخصیت']
+  },
+  {
+    id: 'k1-n29',
+    german: 'die Anerkennung',
+    persian: 'قدردانی، به رسمیت شناختن، تمجید',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 3', pageOrTrack: 'S. 15', context: 'gesellschaftliche Anerkennung für Freiwilligenarbeit' }
+    ],
+    pronunciation: '[ˈanʔɛɐ̯ˌkɛnʊŋ]',
+    article: 'die',
+    plural: 'die Anerkennungen',
+    genderPersian: 'مونث (die)',
+    example: 'Freiwillige Helfer verdienen für ihren täglichen Einsatz höchste Anerkennung.',
+    exampleTranslation: 'امدادگران داوطلب برای تلاش روزمره‌شان شایسته بالاترین قدردانی هستند.',
+    level: 'B1+',
+    tags: ['احترام', 'جامعه']
+  },
+  {
+    id: 'k1-n30',
+    german: 'der Einfluss',
+    persian: 'تأثیر، نفوذ',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 3', pageOrTrack: 'S. 14', context: 'einen großen Einfluss auf jemanden ausüben' }
+    ],
+    pronunciation: '[ˈaɪ̯nˌflʊs]',
+    article: 'der',
+    plural: 'die Einflüsse',
+    genderPersian: 'مذکر (der)',
+    example: 'Gute Freunde haben oft einen positiven Einfluss auf unsere Entscheidungen.',
+    exampleTranslation: 'دوستان خوب اغلب تأثیر مثبتی بر تصمیم‌گیری‌های ما دارند.',
+    level: 'B1+',
+    tags: ['تأثیر', 'روانشناسی']
+  },
+  {
+    id: 'k1-n31',
+    german: 'die Eigenschaft',
+    persian: 'ویژگی، خصلت اخلاقی یا فردی',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 12', context: 'positive Charaktereigenschaften beschreiben' }
+    ],
+    pronunciation: '[ˈaɪ̯ɡn̩ʃaft]',
+    article: 'die',
+    plural: 'die Eigenschaften',
+    genderPersian: 'مونث (die)',
+    example: 'Hilfsbereitschaft und Ehrlichkeit sind unverzichtbare Eigenschaften eines Freundes.',
+    exampleTranslation: 'آمادگی برای کمک و صداقت ویژگی‌های جدانشدنی یک دوست هستند.',
+    level: 'B1+',
+    tags: ['شخصیت', 'ویژگی']
+  },
+  {
+    id: 'k1-n32',
+    german: 'der Konflikt',
+    persian: 'تعارض، درگیری و اختلاف نظر',
+    category: 'Nomen',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 11', context: 'Konflikte konstruktiv lösen' }
+    ],
+    pronunciation: '[kɔnˈflɪkt]',
+    article: 'der',
+    plural: 'die Konflikte',
+    genderPersian: 'مذکر (der)',
+    example: 'In einer gesunden Freundschaft spricht man offen über Konflikte und findet Lösungen.',
+    exampleTranslation: 'در یک دوستی سالم، افراد بی‌پرده درباره اختلافات صحبت کرده و راه‌حل می‌یابند.',
+    level: 'B1+',
+    tags: ['روابط', 'ارتباط']
+  },
+
+  // --- Verben (افعال با صرف کامل Präsens, Präteritum, Perfekt و حروف اضافه) ---
   {
     id: 'k1-v1',
     german: 'teilnehmen',
@@ -14,7 +628,7 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
       { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 10', context: 'an einem Workshop über Freundschaft teilnehmen' },
-      { source: 'Hörtexte', lesson: 1, module: 'Modul 2 Aufgabe 2c', pageOrTrack: 'Track 1.3', context: 'Wir wollten eure Meinung wissen und haben Anrufe gesammelt.' }
+      { source: 'Hörtexte', lesson: 1, module: 'Modul 2', pageOrTrack: 'Track 1.3', context: 'an der Umfrage aktiv teilnehmen' }
     ],
     pronunciation: '[ˈtaɪ̯lˌneːmən]',
     infinitive: 'teilnehmen an (+ Dat.)',
@@ -32,7 +646,7 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
   {
     id: 'k1-v2',
     german: 'sich verabreden',
-    persian: 'قرار گذاشتن، قرار ملاقات تنظیم کردن',
+    persian: 'قرار ملاقات گذاشتن، وعده دیدار تنظیم کردن',
     category: 'Verben',
     lesson: 1,
     sources: ['Lehrbuch', 'Hörtexte'],
@@ -41,7 +655,7 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
       { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 12', context: 'sich mit Freunden verabreden' }
     ],
     pronunciation: '[zɪç fɛɐ̯ˈʔapˌʁeːdn̩]',
-    infinitive: 'sich verabreden mit (+ Dat.)',
+    infinitive: 'sich verabreden mit (+ Dat.) / auf (+ Akk.)',
     present: 'verabredet sich',
     preterite: 'verabredete sich',
     perfect: 'hat sich verabredet',
@@ -62,7 +676,7 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
       { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 10', context: 'einem guten Freund Geheimnisse anvertrauen' },
-      { source: 'Hörtexte', lesson: 1, module: 'Modul 2 Aufgabe 2c', pageOrTrack: 'Track 1.4', context: 'Einem echten Freund kann man alles anvertrauen.' }
+      { source: 'Hörtexte', lesson: 1, module: 'Modul 2', pageOrTrack: 'Track 1.4', context: 'Einem echten Freund kann man alles anvertrauen.' }
     ],
     pronunciation: '[ˈanfɛɐ̯ˌtʁaʊ̯ən]',
     infinitive: 'anvertrauen (+ Dat. + Akk.)',
@@ -71,15 +685,15 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     perfect: 'hat anvertraut',
     auxiliary: 'haben',
     separable: true,
-    example: 'Einem wahren Freund kann man seine tiefsten Geheimnisse anvertrauen.',
-    exampleTranslation: 'به یک دوست واقعی می‌توان عمیق‌ترین رازهای خود را در میان گذاشت.',
+    example: 'Einem wahren Freund kann man seine tiefsten Sorgen anvertrauen.',
+    exampleTranslation: 'به یک دوست واقعی می‌توان عمیق‌ترین نگرانی‌های خود را در میان گذاشت.',
     level: 'B1+',
     tags: ['اعتماد', 'روابط']
   },
   {
     id: 'k1-v4',
     german: 'beistehen',
-    persian: 'یاری رساندن، در شرایط سخت کنار کسی ایستادن',
+    persian: 'یاری رساندن، در شرایط بحرانی کنار کسی بودن',
     category: 'Verben',
     lesson: 1,
     sources: ['Lehrbuch'],
@@ -100,6 +714,51 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
   },
   {
     id: 'k1-v5',
+    german: 'zusammenhalten',
+    persian: 'همبستگی داشتن، پشت هم بودن و پیوند را حفظ کردن',
+    category: 'Verben',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 11', context: 'in der Not fest zusammenhalten' }
+    ],
+    pronunciation: '[tsuˈzamənˌhaltn̩]',
+    infinitive: 'zusammenhalten',
+    present: 'hält zusammen',
+    preterite: 'hielt zusammen',
+    perfect: 'hat zusammengehalten',
+    auxiliary: 'haben',
+    separable: true,
+    example: 'Egal was passiert, unsere Clique hält immer fest zusammen.',
+    exampleTranslation: 'مهم نیست چه اتفاقی بیفتد، اکیپ ما همیشه محکم پشت هم می‌ایستد.',
+    level: 'B1+',
+    tags: ['همبستگی', 'دوستی']
+  },
+  {
+    id: 'k1-v6',
+    german: 'sich verlassen auf',
+    persian: 'اتکا کردن به، حساب باز کردن روی کسی',
+    category: 'Verben',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 12', context: 'sich hundertprozentig auf jemanden verlassen können' }
+    ],
+    pronunciation: '[zɪç fɛɐ̯ˈlasn̩ ʔaʊ̯f]',
+    infinitive: 'sich verlassen auf (+ Akk.)',
+    present: 'verlässt sich',
+    preterite: 'verließ sich',
+    perfect: 'hat sich verlassen',
+    auxiliary: 'haben',
+    reflexive: true,
+    prepositionCase: 'auf + Akkusativ',
+    example: 'Auf meine beste Freundin kann ich mich zu jeder Tages- und Nachtzeit verlassen.',
+    exampleTranslation: 'روی بهترین دوستم در هر ساعت از شبانه‌روز می‌توانم حساب کنم.',
+    level: 'B1+',
+    tags: ['اعتماد', 'روابط']
+  },
+  {
+    id: 'k1-v7',
     german: 'sich einsetzen für',
     persian: 'تلاش و فداکاری کردن برای، دفاع کردن از',
     category: 'Verben',
@@ -122,130 +781,532 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
     level: 'B1+',
     tags: ['اخلاق', 'فداکاری']
   },
-  // --- Nomen ---
   {
-    id: 'k1-n1',
-    german: 'die Freundschaft',
-    persian: 'دوستی، پیوند رفاقت',
-    category: 'Nomen',
-    lesson: 1,
-    sources: ['Lehrbuch', 'Hörtexte'],
-    sourceDetails: [
-      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 10', context: 'Über Freundschaft und Beziehungen sprechen' }
-    ],
-    pronunciation: '[ˈfʁɔɪ̯ntʃaft]',
-    article: 'die',
-    plural: 'die Freundschaften',
-    genderPersian: 'مونث (die)',
-    example: 'Eine tiefe Freundschaft hält oft ein ganzes Leben lang.',
-    exampleTranslation: 'یک دوستی عمیق اغلب در تمام طول زندگی پایدار می‌ماند.',
-    level: 'B1+',
-    tags: ['روابط', 'عاطفه']
-  },
-  {
-    id: 'k1-n2',
-    german: 'der Bekanntenkreis',
-    persian: 'دایره آشنایان و اطرافیان',
-    category: 'Nomen',
-    lesson: 1,
-    sources: ['Lehrbuch', 'Hörtexte'],
-    sourceDetails: [
-      { source: 'Hörtexte', lesson: 1, module: 'Modul 2', pageOrTrack: 'Track 1.2', context: 'Ich habe einen großen Bekanntenkreis, aber nur zwei enge Freunde.' }
-    ],
-    pronunciation: '[bəˈkantn̩ˌkʁaɪ̯s]',
-    article: 'der',
-    plural: 'die Bekanntenkreise',
-    genderPersian: 'مذکر (der)',
-    example: 'In meinem Bekanntenkreis gibt es viele interessante Leute aus aller Welt.',
-    exampleTranslation: 'در دایره آشنایان من افراد جالب بسیاری از سراسر جهان وجود دارند.',
-    level: 'B1+',
-    tags: ['جامعه', 'روابط']
-  },
-  {
-    id: 'k1-n3',
-    german: 'das Vorbild',
-    persian: 'الگو، سرمشق',
-    category: 'Nomen',
+    id: 'k1-v8',
+    german: 'sich auseinandersetzen mit',
+    persian: 'دست و پنجه نرم کردن با، عمیقاً به بررسی پرداختن',
+    category: 'Verben',
     lesson: 1,
     sources: ['Lehrbuch'],
     sourceDetails: [
-      { source: 'Lehrbuch', lesson: 1, module: 'Modul 3', pageOrTrack: 'S. 14', context: 'Vorbilder und Helden im Alltag' }
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 13', context: 'sich mit verschiedenen Standpunkten auseinandersetzen' }
     ],
-    pronunciation: '[ˈfoːɐ̯ˌbɪlt]',
-    article: 'das',
-    plural: 'die Vorbilder',
-    genderPersian: 'خنثی (das)',
-    example: 'Meine Großmutter ist für mich ein großes persönliches Vorbild.',
-    exampleTranslation: 'مادربزرگ من برای من یک الگوی بزرگ شخصی است.',
+    pronunciation: '[zɪç ʔaʊ̯sʔaɪ̯ˈnandɐˌzɛtsn̩]',
+    infinitive: 'sich auseinandersetzen mit (+ Dat.)',
+    present: 'setzt sich auseinander',
+    preterite: 'setzte sich auseinander',
+    perfect: 'hat sich auseinandergesetzt',
+    auxiliary: 'haben',
+    reflexive: true,
+    separable: true,
+    prepositionCase: 'mit + Dativ',
+    example: 'In der Diskussion müssen wir uns intensiv mit den Ursachen des Problems auseinandersetzen.',
+    exampleTranslation: 'در بحث باید به صورت فشرده با علل و ریشه‌های مسئله دست و پنجه نرم کنیم و به آن بپردازیم.',
     level: 'B1+',
-    tags: ['شخصیت', 'الهام‌بخش']
+    tags: ['تفکر', 'تحلیل']
   },
   {
-    id: 'k1-n4',
-    german: 'die Zuverlässigkeit',
-    persian: 'قابلیت اطمینان، خوش‌قولی و تعهد',
-    category: 'Nomen',
+    id: 'k1-v9',
+    german: 'aus den Augen verlieren',
+    persian: 'از دید هم خارج شدن، ارتباط و تماس را گم کردن',
+    category: 'Verben',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 10', context: 'Schulfreunde mit der Zeit aus den Augen verlieren' }
+    ],
+    pronunciation: '[ʔaʊ̯s deːn ˈʔaʊ̯ɡŋ̍ fɛɐ̯ˈliːʁən]',
+    infinitive: 'aus den Augen verlieren (+ Akk.)',
+    present: 'verliert aus den Augen',
+    preterite: 'verlor aus den Augen',
+    perfect: 'hat aus den Augen verloren',
+    auxiliary: 'haben',
+    example: 'Nach dem Schulabschluss haben sich viele Klassenkameraden leider aus den Augen verloren.',
+    exampleTranslation: 'پس از فارغ‌التحصیلی، متأسفانه بسیاری از همکلاسی‌ها ارتباطشان با یکدیگر قطع شد.',
+    level: 'B1+',
+    tags: ['روابط', 'فاصله']
+  },
+  {
+    id: 'k1-v10',
+    german: 'retten',
+    persian: 'نجات دادن، رهایی بخشیدن',
+    category: 'Verben',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 3', pageOrTrack: 'S. 14', context: 'Menschen vor dem Ertrinken retten' },
+      { source: 'Hörtexte', lesson: 1, module: 'Modul 3', pageOrTrack: 'Track 1.6', context: 'Der Zeuge rettete das Unfallopfer.' }
+    ],
+    pronunciation: '[ˈʁɛtn̩]',
+    infinitive: 'retten vor (+ Dat.)',
+    present: 'rettet',
+    preterite: 'rettete',
+    perfect: 'hat gerettet',
+    auxiliary: 'haben',
+    prepositionCase: 'vor + Dativ',
+    example: 'Die Feuerwehrleute retteten die Bewohner rechtzeitig vor den Flammen.',
+    exampleTranslation: 'آتش‌نشانان ساکنان را به موقع از شعله‌های آتش نجات دادند.',
+    level: 'B1+',
+    tags: ['امداد', 'نجات']
+  },
+  {
+    id: 'k1-v11',
+    german: 'eingreifen',
+    persian: 'مداخله کردن (برای پیشگیری یا کمک)',
+    category: 'Verben',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 3', pageOrTrack: 'S. 15', context: 'beherzt in eine brenzlige Situation eingreifen' }
+    ],
+    pronunciation: '[ˈaɪ̯nˌɡʁaɪ̯fn̩]',
+    infinitive: 'eingreifen in (+ Akk.)',
+    present: 'greift ein',
+    preterite: 'griff ein',
+    perfect: 'hat eingegriffen',
+    auxiliary: 'haben',
+    separable: true,
+    prepositionCase: 'in + Akkusativ',
+    example: 'Ein couragierter Passant griff sofort ein und beendete den Streit.',
+    exampleTranslation: 'یک عابر شجاع بلافاصله مداخله کرد و به درگیری خاتمه داد.',
+    level: 'B1+',
+    tags: ['شجاعت', 'جامعه']
+  },
+  {
+    id: 'k1-v12',
+    german: 'überwinden',
+    persian: 'غلبه کردن بر، پشت سر گذاشتن موانع/ترس',
+    category: 'Verben',
     lesson: 1,
     sources: ['Lehrbuch'],
     sourceDetails: [
-      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 12', context: 'Zuverlässigkeit ist eine wichtige Eigenschaft.' }
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 3', pageOrTrack: 'S. 14', context: 'die eigene Angst überwinden' }
     ],
-    pronunciation: '[ˈtsuːfɛɐ̯ˌlɛsɪçkaɪ̯t]',
-    article: 'die',
-    plural: 'die Zuverlässigkeit (بدون جمع)',
-    genderPersian: 'مونث (die)',
-    example: 'In der Arbeitswelt und in der Freundschaft ist Zuverlässigkeit unverzichtbar.',
-    exampleTranslation: 'در محیط کار و در دوستی، خوش‌قولی و تعهد غیرقابل چشم‌پوشی است.',
+    pronunciation: '[yːbɐˈvɪndn̩]',
+    infinitive: 'überwinden (+ Akk.)',
+    present: 'überwindet',
+    preterite: 'überwand',
+    perfect: 'hat überwunden',
+    auxiliary: 'haben',
+    example: 'Um anderen zu helfen, musste er seine eigene Furcht überwinden.',
+    exampleTranslation: 'برای کمک به دیگران، او مجبور بود بر ترس درونی‌اش غلبه کند.',
     level: 'B1+',
-    tags: ['ویژگی‌های اخلاقی']
+    tags: ['موفقیت', 'شجاعت']
   },
-  // --- Adjektive & Adverbien ---
+  {
+    id: 'k1-v13',
+    german: 'beeinflussen',
+    persian: 'تحت تأثیر قرار دادن، هدایت کردن',
+    category: 'Verben',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 3', pageOrTrack: 'S. 14', context: 'andere Menschen nachhaltig beeinflussen' }
+    ],
+    pronunciation: '[bəˈʔaɪ̯nflʊsn̩]',
+    infinitive: 'beeinflussen (+ Akk.)',
+    present: 'beeinflusst',
+    preterite: 'beeinflusste',
+    perfect: 'hat beeinflusst',
+    auxiliary: 'haben',
+    example: 'Vorbilder beeinflussen unsere Werte und unser Handeln im Alltag.',
+    exampleTranslation: 'الگوها ارزش‌ها و رفتار ما در زندگی روزمره را تحت تأثیر قرار می‌دهند.',
+    level: 'B1+',
+    tags: ['تأثیر', 'روانشناسی']
+  },
+  {
+    id: 'k1-v14',
+    german: 'aufwachsen',
+    persian: 'بزرگ شدن، رشد و نمو یافتن',
+    category: 'Verben',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 4', pageOrTrack: 'S. 16', context: 'in einer Großstadt behütet aufwachsen' }
+    ],
+    pronunciation: '[ˈaʊ̯fˌvaksn̩]',
+    infinitive: 'aufwachsen in (+ Dat.)',
+    present: 'wächst auf',
+    preterite: 'wuchs auf',
+    perfect: 'ist aufgewachsen',
+    auxiliary: 'sein',
+    separable: true,
+    example: 'Sie ist zweisprachig in Hamburg und Wien aufgewachsen.',
+    exampleTranslation: 'او به صورت دو زبانه در هامبورگ و وین بزرگ شده است.',
+    level: 'B1+',
+    tags: ['زندگی', 'رشد']
+  },
+  {
+    id: 'k1-v15',
+    german: 'auswandern',
+    persian: 'مهاجرت کردن به خارج از کشور',
+    category: 'Verben',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 4', pageOrTrack: 'S. 16', context: 'nach Kanada auswandern' }
+    ],
+    pronunciation: '[ˈaʊ̯sˌvandɐn]',
+    infinitive: 'auswandern nach (+ Dat.) / in (+ Akk.)',
+    present: 'wandert aus',
+    preterite: 'wanderte aus',
+    perfect: 'ist ausgewandert',
+    auxiliary: 'sein',
+    separable: true,
+    example: 'Vor zehn Jahren ist die Familie nach Südamerika ausgewandert.',
+    exampleTranslation: 'ده سال پیش این خانواده به آمریکای جنوبی مهاجرت کردند.',
+    level: 'B1+',
+    tags: ['مهاجرت', 'زندگی']
+  },
+  {
+    id: 'k1-v16',
+    german: 'sich einleben',
+    persian: 'خو گرفتن، جا افتادن در محیط یا شهر جدید',
+    category: 'Verben',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 4', pageOrTrack: 'S. 17', context: 'sich schnell in der neuen Heimat einleben' }
+    ],
+    pronunciation: '[zɪç ˈaɪ̯nˌleːbn̩]',
+    infinitive: 'sich einleben in (+ Dat. / Akk.)',
+    present: 'lebt sich ein',
+    preterite: 'lebte sich ein',
+    perfect: 'hat sich eingelebt',
+    auxiliary: 'haben',
+    reflexive: true,
+    separable: true,
+    example: 'Trotz Sprachbarrieren hat er sich sehr schnell in Deutschland eingelebt.',
+    exampleTranslation: 'با وجود موانع زبانی، او خیلی سریع در آلمان جا افتاد و خو گرفت.',
+    level: 'B1+',
+    tags: ['مهاجرت', 'جامعه']
+  },
+  {
+    id: 'k1-v17',
+    german: 'zurückblicken auf',
+    persian: 'نگاه به گذشته انداختن، مرور رویدادهای پیشین',
+    category: 'Verben',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 4', pageOrTrack: 'S. 17', context: 'auf ein erfülltes Leben zurückblicken' }
+    ],
+    pronunciation: '[tsuˈʁʏkˌblɪkn̩]',
+    infinitive: 'zurückblicken auf (+ Akk.)',
+    present: 'blickt zurück',
+    preterite: 'blickte zurück',
+    perfect: 'hat zurückgeblickt',
+    auxiliary: 'haben',
+    separable: true,
+    prepositionCase: 'auf + Akkusativ',
+    example: 'Im Alter blickt die Künstlerin mit Stolz auf ihr Lebenswerk zurück.',
+    exampleTranslation: 'در سنین کهنسالی، این هنرمند با افتخار به کارنامه زندگی‌اش نگاه می‌کند.',
+    level: 'B1+',
+    tags: ['خاطرات', 'زندگی']
+  },
+  {
+    id: 'k1-v18',
+    german: 'meistern',
+    persian: 'با موفقیت از پس کاری برآمدن، مدیریت کردن چالش‌ها',
+    category: 'Verben',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 4', pageOrTrack: 'S. 16', context: 'schwere Lebenskrisen meistern' }
+    ],
+    pronunciation: '[ˈmaɪ̯stɐn]',
+    infinitive: 'meistern (+ Akk.)',
+    present: 'meistert',
+    preterite: 'meisterte',
+    perfect: 'hat gemeistert',
+    auxiliary: 'haben',
+    example: 'Mit gegenseitiger Unterstützung meisterten sie jede schwierige Hürde.',
+    exampleTranslation: 'با حمایت متقابل، آن‌ها از پس هر مانع دشواری برآمدند.',
+    level: 'B1+',
+    tags: ['موفقیت', 'اراده']
+  },
+  {
+    id: 'k1-v19',
+    german: 'schätzen',
+    persian: 'ارزش قائل شدن، قدر دانستن',
+    category: 'Verben',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 12', context: 'die Ehrlichkeit eines Freundes schätzen' }
+    ],
+    pronunciation: '[ˈʃɛtsn̩]',
+    infinitive: 'schätzen an (+ Dat.)',
+    present: 'schätzt',
+    preterite: 'schätzte',
+    perfect: 'hat geschätzt',
+    auxiliary: 'haben',
+    example: 'Ich schätze an ihm besonders seine absolute Verlässlichkeit.',
+    exampleTranslation: 'من در او به ویژه قابلیت اعتماد و تعهد مطلقش را ارج می‌نهم.',
+    level: 'B1+',
+    tags: ['روابط', 'احترام']
+  },
+  {
+    id: 'k1-v20',
+    german: 'plaudern',
+    persian: 'گپ زدن، صحبت دوستانه و خودمانی کردن',
+    category: 'Verben',
+    lesson: 1,
+    sources: ['Hörtexte'],
+    sourceDetails: [
+      { source: 'Hörtexte', lesson: 1, module: 'Modul 2', pageOrTrack: 'Track 1.2', context: 'über alltägliche Dinge gemütlich plaudern' }
+    ],
+    pronunciation: '[ˈplaʊ̯dɐn]',
+    infinitive: 'plaudern über (+ Akk.) / mit (+ Dat.)',
+    present: 'plaudert',
+    preterite: 'plauderte',
+    perfect: 'hat geplaudert',
+    auxiliary: 'haben',
+    prepositionCase: 'über + Akkusativ',
+    example: 'Wir saßen im Café und plauderten stundenlang über alte Zeiten.',
+    exampleTranslation: 'ما در کافه نشستیم و ساعت‌ها درباره دوران گذشته گپ زدیم.',
+    level: 'B1+',
+    tags: ['مکالمه', 'دوستی']
+  },
+
+  // --- Adjektive & Adverbien (صفات و قیدها با فرم تفضیلی و متضاد) ---
   {
     id: 'k1-adj1',
-    german: 'oberflächlich',
-    persian: 'سطحی، کم‌عمق (در روابط یا شناخت)',
+    german: 'zuverlässig',
+    persian: 'قابل اعتماد، خوش‌قول و متعهد',
     category: 'Adjektive',
     lesson: 1,
     sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Hörtexte', lesson: 1, module: 'Modul 2', pageOrTrack: 'Track 1.3', context: 'Manche Online-Freundschaften bleiben leider sehr oberflächlich.' }
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 12', context: 'ein zuverlässiger Partner in allen Lebenslagen' }
+    ],
+    pronunciation: '[ˈtsuːfɛɐ̯ˌlɛsɪç]',
+    comparative: 'zuverlässiger',
+    superlative: 'am zuverlässigsten',
+    opposite: 'unzuverlässig',
+    example: 'Auf zuverlässige Freunde kann man in jeder Situation zählen.',
+    exampleTranslation: 'روی دوستان قابل اعتماد می‌توان در هر موقعیتی حساب کرد.',
+    level: 'B1+',
+    tags: ['شخصیت', 'اخلاق']
+  },
+  {
+    id: 'k1-adj2',
+    german: 'oberflächlich',
+    persian: 'سطحی، کم‌عمق (در روابط یا تفکر)',
+    category: 'Adjektive',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Hörtexte', lesson: 1, module: 'Modul 2', pageOrTrack: 'Track 1.3', context: 'Manche Online-Kontakte bleiben sehr oberflächlich.' }
     ],
     pronunciation: '[ˈoːbɐˌflɛçlɪç]',
     comparative: 'oberflächlicher',
     superlative: 'am oberflächlichsten',
-    opposite: 'gründlich / tiefgründig',
-    example: 'Viele Kontakte in den sozialen Medien sind eher oberflächlich.',
-    exampleTranslation: 'بسیاری از ارتباطات در شبکه‌های اجتماعی نسبتاً سطحی هستند.',
+    opposite: 'tiefgründig / gründlich',
+    example: 'Viele Kontakte in den sozialen Netzwerken sind leider sehr oberflächlich.',
+    exampleTranslation: 'بسیاری از ارتباطات در شبکه‌های اجتماعی متأسفانه بسیار سطحی هستند.',
     level: 'B1+',
     tags: ['روابط', 'ارزیابی']
   },
   {
-    id: 'k1-adj2',
+    id: 'k1-adj3',
+    german: 'tiefgründig',
+    persian: 'عمیق، پرمعنا، متفکرانه',
+    category: 'Adjektive',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 11', context: 'tiefgründige Gespräche führen' }
+    ],
+    pronunciation: '[ˈtiːfˌɡʁʏndɪç]',
+    comparative: 'tiefgründiger',
+    superlative: 'am tiefgründigsten',
+    opposite: 'oberflächlich',
+    example: 'Sie schätzt tiefgründige Gespräche mehr als oberflächlichen Smalltalk.',
+    exampleTranslation: 'او گفتگوهای عمیق و پرمحتوا را بیشتر از صحبت‌های سطحی روزمره ارج می‌نهد.',
+    level: 'B1+',
+    tags: ['شخصیت', 'تفکر']
+  },
+  {
+    id: 'k1-adj4',
+    german: 'ehrlich',
+    persian: 'صادق، راستگو، روراست',
+    category: 'Adjektive',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 12', context: 'eine ehrliche Meinung sagen' }
+    ],
+    pronunciation: '[ˈeːɐ̯lɪç]',
+    comparative: 'ehrlicher',
+    superlative: 'am ehrlichsten',
+    opposite: 'unehrlich / verlogen',
+    example: 'Ein echter Freund ist immer ehrlich zu dir, auch wenn es weh tut.',
+    exampleTranslation: 'یک دوست واقعی همیشه با تو روراست است، حتی اگر دردناک باشد.',
+    level: 'B1+',
+    tags: ['اخلاق', 'صداقت']
+  },
+  {
+    id: 'k1-adj5',
+    german: 'loyal',
+    persian: 'وفادار، پایبند به رفاقت و عهد',
+    category: 'Adjektive',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 12', context: 'ein loyaler Begleiter sein' }
+    ],
+    pronunciation: '[loˈjaːl]',
+    comparative: 'loyaler',
+    superlative: 'am loyalsten',
+    opposite: 'illoyal / untreu',
+    example: 'Loyale Freunde verteidigen einen auch dann, wenn man nicht im Raum ist.',
+    exampleTranslation: 'دوستان باوفا حتی زمانی که در جمع حضور نداری از تو دفاع می‌کنند.',
+    level: 'B1+',
+    tags: ['وفاداری', 'دوستی']
+  },
+  {
+    id: 'k1-adj6',
+    german: 'hilfsbereit',
+    persian: 'یاری‌رسان، اهل کمک به دیگران',
+    category: 'Adjektive',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 3', pageOrTrack: 'S. 14', context: 'hilfsbereite Menschen im Alltag' }
+    ],
+    pronunciation: '[ˈhɪlfsbəˌʁaɪ̯t]',
+    comparative: 'hilfsbereiter',
+    superlative: 'am hilfsbereitesten',
+    opposite: 'egoistisch / unkooperativ',
+    example: 'Unsere Nachbarn sind ausgesprochen hilfsbereit und freundlich.',
+    exampleTranslation: 'همسایگان ما فوق‌العاده اهل کمک و مهربان هستند.',
+    level: 'B1+',
+    tags: ['اخلاق', 'جامعه']
+  },
+  {
+    id: 'k1-adj7',
     german: 'selbstlos',
     persian: 'فداکارانه، بدون چشم‌داشت شخصی',
     category: 'Adjektive',
     lesson: 1,
     sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
-      { source: 'Lehrbuch', lesson: 1, module: 'Modul 3', pageOrTrack: 'S. 15', context: 'selbstloses Engagement für die Mitmenschen' }
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 3', pageOrTrack: 'S. 15', context: 'selbstloses Engagement für Notleidende' }
     ],
     pronunciation: '[ˈzɛlpstˌloːs]',
     comparative: 'selbstloser',
     superlative: 'am selbstlosesten',
-    opposite: 'egoistisch',
-    example: 'Er half den Flutopfern mit vollkommen selbstlosem Einsatz.',
-    exampleTranslation: 'او با تلاشی کاملاً فداکارانه به آسیب‌دیدگان سیل کمک کرد.',
+    opposite: 'egoistisch / eigennützig',
+    example: 'Er half den Betroffenen mit vollem, selbstlosem Einsatz.',
+    exampleTranslation: 'او با تلاشی تمام‌عیار و فداکارانه به آسیب‌دیدگان یاری رساند.',
     level: 'B1+',
     tags: ['اخلاق', 'فداکاری']
   },
-  // --- Redewendungen ---
+  {
+    id: 'k1-adj8',
+    german: 'verschwiegen',
+    persian: 'رازدار، کم‌گو و امین',
+    category: 'Adjektive',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 12', context: 'ein absolut verschwiegener Mensch' }
+    ],
+    pronunciation: '[fɛɐ̯ˈʃviːɡn̩]',
+    comparative: 'verschwiegener',
+    superlative: 'am verschwiegensten',
+    opposite: 'geschwätzig',
+    example: 'Wenn du ihr ein Geheimnis verrätst, ist sie absolut verschwiegen.',
+    exampleTranslation: 'اگر رازی را به او بگویی، او کاملاً رازدار و امین است.',
+    level: 'B1+',
+    tags: ['شخصیت', 'رازداری']
+  },
+  {
+    id: 'k1-adj9',
+    german: 'kontaktfreudig',
+    persian: 'معاشرتی، خونگرم و خوش‌مشرب',
+    category: 'Adjektive',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Hörtexte', lesson: 1, module: 'Modul 2', pageOrTrack: 'Track 1.2', context: 'Kontaktfreudige Menschen knüpfen schneller Freundschaften.' }
+    ],
+    pronunciation: '[kɔnˈtaktˌfʁɔɪ̯dɪç]',
+    comparative: 'kontaktfreudiger',
+    superlative: 'am kontaktfreudigsten',
+    opposite: 'zurückhaltend / schüchtern',
+    example: 'Aufgrund seiner kontaktfreudigen Art fand er in der neuen Stadt sofort Anschluss.',
+    exampleTranslation: 'به دلیل روحیه خونگرم و معاشرتی‌اش، او در شهر جدید فوراً دوست پیدا کرد.',
+    level: 'B1+',
+    tags: ['شخصیت', 'ارتباط']
+  },
+  {
+    id: 'k1-adj10',
+    german: 'aufgeschlossen',
+    persian: 'گشاده‌رو، باز و پذیرای تجربیات و افراد نو',
+    category: 'Adjektive',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 12', context: 'aufgeschlossen gegenüber neuen Kulturen sein' }
+    ],
+    pronunciation: '[ˈaʊ̯fɡəˌʃlɔsn̩]',
+    comparative: 'aufgeschlossener',
+    superlative: 'am aufgeschlossensten',
+    opposite: 'verschlossen / engstirnig',
+    example: 'Sie begegnet allen Mitmenschen mit einer offenen und aufgeschlossenen Haltung.',
+    exampleTranslation: 'او با رویکردی باز و گشاده‌رو با تمام همنوعان روبرو می‌شود.',
+    level: 'B1+',
+    tags: ['دیدگاه', 'جامعه']
+  },
+  {
+    id: 'k1-adj11',
+    german: 'couragiert',
+    persian: 'با دل و جرأت، شجاع از نظر اخلاقی',
+    category: 'Adjektive',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 3', pageOrTrack: 'S. 14', context: 'couragiertes Handeln in Notsituationen' }
+    ],
+    pronunciation: '[kuʁaˈʒiːɐ̯t]',
+    comparative: 'couragierter',
+    superlative: 'am couragiertesten',
+    opposite: 'feige / ängstlich',
+    example: 'Durch ihr couragiertes Eingreifen verhinderte sie Schlimmeres.',
+    exampleTranslation: 'او با اقدام شجاعانه‌اش از وقوع حوادث ناگوارتر جلوگیری کرد.',
+    level: 'B1+',
+    tags: ['شجاعت', 'اخلاق']
+  },
+  {
+    id: 'k1-adj12',
+    german: 'vorbildlich',
+    persian: 'نمونه، الگو، شایسته ستایش',
+    category: 'Adjektive',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 3', pageOrTrack: 'S. 14', context: 'ein vorbildliches Verhalten an den Tag legen' }
+    ],
+    pronunciation: '[ˈfoːɐ̯ˌbɪltlɪç]',
+    comparative: 'vorbildlicher',
+    superlative: 'am vorbildlichsten',
+    opposite: 'tadelnswert',
+    example: 'Sein ehrenamtlicher Einsatz für Obdachlose ist in jeder Hinsicht vorbildlich.',
+    exampleTranslation: 'تلاش داوطلبانه او برای بی‌خانمان‌ها از هر نظر نمونه و شایسته ستایش است.',
+    level: 'B1+',
+    tags: ['الگو', 'فضیلت']
+  },
+
+  // --- Redewendungen (اصطلاحات و عبارات کنایی) ---
   {
     id: 'k1-red1',
     german: 'durch dick und dünn gehen',
     persian: 'در تمام خوشی‌ها و سختی‌ها همراه و وفادار ماندن',
     category: 'Redewendungen',
     lesson: 1,
-    sources: ['Lehrbuch'],
+    sources: ['Lehrbuch', 'Hörtexte'],
     sourceDetails: [
       { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 11', context: 'Mit besten Freunden geht man durch dick und dünn.' }
     ],
@@ -259,19 +1320,141 @@ export const INITIAL_VOCABULARY: VocabularyItem[] = [
   },
   {
     id: 'k1-red2',
-    german: 'ein offenes Ohr haben für',
-    persian: 'با جان و دل به درد دل کسی گوش دادن',
+    german: 'wie Pech und Schwefel zusammenhalten',
+    persian: 'مثل کوه پشت هم بودن، جدانشدنی و بی‌نهایت وفادار بودن',
+    category: 'Redewendungen',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 11', context: 'Die beiden Schwestern halten wie Pech und Schwefel zusammen.' }
+    ],
+    pronunciation: '[viː pɛç ʊnt ˈʃveːfl̩ tsuˈzamənˌhaltn̩]',
+    explanation: 'کنایه از اتحاد و پیوند ناگسستنی بین دو یا چند نفر در هر شرایطی.',
+    literalMeaning: 'مانند قیر و گوگرد به هم چسبیدن',
+    example: 'Seit ihrer Kindheit halten die beiden Brüder wie Pech und Schwefel zusammen.',
+    exampleTranslation: 'از دوران کودکی، این دو برادر مثل کوه پشت هم هستند و جدایی‌ناپذیرند.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'همبستگی']
+  },
+  {
+    id: 'k1-red3',
+    german: 'jemanden im Stich lassen',
+    persian: 'کسی را در سختی تنها گذاشتن و رها کردن',
+    category: 'Redewendungen',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 11', context: 'einen Freund niemals im Stich lassen' }
+    ],
+    pronunciation: '[ˈjeːmandn̩ ʔɪm ʃtɪç ˈlasn̩]',
+    explanation: 'تنها گذاشتن فرد نیازمند به کمک در لحظات بحرانی و عمل نکردن به تعهد دوستی.',
+    literalMeaning: 'کسی را در زخم/نیش رها کردن',
+    example: 'Ein wahrer Freund würde dich in einer Notlage niemals im Stich lassen.',
+    exampleTranslation: 'یک دوست واقعی هرگز تو را در وضعیت اضطراری تنها نخواهد گذاشت.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'دوستی']
+  },
+  {
+    id: 'k1-red4',
+    german: 'ein offenes Ohr für jemanden haben',
+    persian: 'با جان و دل به درد دل و سخنان کسی گوش دادن',
     category: 'Redewendungen',
     lesson: 1,
     sources: ['Lehrbuch'],
     sourceDetails: [
       { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 11', context: 'immer ein offenes Ohr für die Sorgen anderer haben' }
     ],
-    explanation: 'همدلی و آمادگی کامل برای شنیدن مشکلات و حرف‌های اطرافیان.',
+    explanation: 'همدلی و آمادگی کامل برای شنیدن مشکلات و حرف‌های اطرافیان با صبوری.',
+    literalMeaning: 'گوشی باز برای کسی داشتن',
     example: 'Meine beste Freundin hat in jeder Lebenslage ein offenes Ohr für mich.',
     exampleTranslation: 'بهترین دوستم در هر شرایطی از زندگی با جان و دل به حرف‌هایم گوش می‌دهد.',
     level: 'B1+',
     tags: ['اصطلاح', 'همدلی']
+  },
+  {
+    id: 'k1-red5',
+    german: 'die Hand ins Feuer legen für jemanden',
+    persian: 'به کسی اطمینان صددرصد داشتن و برایش ضمانت دادن',
+    category: 'Redewendungen',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 11', context: 'für seine Ehrlichkeit die Hand ins Feuer legen' }
+    ],
+    explanation: 'تأکید بر اعتماد کامل و بی قید و شرط به صداقت و درستی یک فرد.',
+    literalMeaning: 'دست را در آتش گذاشتن برای کسی',
+    example: 'Für seine Ehrlichkeit würde ich jederzeit meine Hand ins Feuer legen.',
+    exampleTranslation: 'برای صداقت او من در هر لحظه حاضرم دستم را در آتش بگذارم (ضمانت قطعی بدهم).',
+    level: 'B1+',
+    tags: ['اصطلاح', 'اعتماد']
+  },
+  {
+    id: 'k1-red6',
+    german: 'Pferde stehlen können mit jemandem',
+    persian: 'به کسی آنقدر اعتماد داشتن که بشود هر کار جسورانه یا غیرمنتظره‌ای با او انجام داد',
+    category: 'Redewendungen',
+    lesson: 1,
+    sources: ['Lehrbuch'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 1', pageOrTrack: 'S. 11', context: 'mit wahren Freunden kann man Pferde stehlen' }
+    ],
+    explanation: 'نشان‌دهنده رابطه بسیار صمیمی، سرگرم‌کننده و قابل اعتمادی که در آن هر ماجراجویی ممکن است.',
+    literalMeaning: 'با کسی اسب دزدیدن',
+    example: 'Mit Sarah kann man wirklich Pferde stehlen; sie macht jeden Spaß mit.',
+    exampleTranslation: 'با سارا واقعاً می‌شود هر ماجراجویی دیوانه‌واری را تجربه کرد؛ او پایه همه چیز است.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'دوستی']
+  },
+  {
+    id: 'k1-red7',
+    german: 'auf derselben Wellenlänge sein',
+    persian: 'روی یک طول موج بودن، طرز فکر و احساس کاملاً مشترک داشتن',
+    category: 'Redewendungen',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Hörtexte', lesson: 1, module: 'Modul 2', pageOrTrack: 'Track 1.4', context: 'Wir haben sofort gemerkt, dass wir auf derselben Wellenlänge sind.' }
+    ],
+    explanation: 'درک متقابل فوری و توافق نظر عمیق در نگاه به زندگی و موضوعات مختلف.',
+    literalMeaning: 'روی همان طول موج قرار داشتن',
+    example: 'Schon beim ersten Treffen spürten wir, dass wir auf derselben Wellenlänge liegen.',
+    exampleTranslation: 'از همان اولین دیدار متوجه شدیم که روی یک طول موج فکری مشترک قرار داریم.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'تفاهم']
+  },
+  {
+    id: 'k1-red8',
+    german: 'sein Leben aufs Spiel setzen',
+    persian: 'جان خود را به خطر انداختن، ریسک مرگبار کردن برای نجات دیگران',
+    category: 'Redewendungen',
+    lesson: 1,
+    sources: ['Lehrbuch', 'Hörtexte'],
+    sourceDetails: [
+      { source: 'Lehrbuch', lesson: 1, module: 'Modul 3', pageOrTrack: 'S. 14', context: 'sein eigenes Leben aufs Spiel setzen' }
+    ],
+    explanation: 'پذیرفتن خطر جانی بزرگ برای انجام یک کار شجاعانه یا نجات دیگران.',
+    literalMeaning: 'زندگی خود را در بازی گذاشتن',
+    example: 'Der Ersthelfer setzte sein Leben aufs Spiel, um die Ertrinkenden zu retten.',
+    exampleTranslation: 'امدادگر برای نجات افراد در حال غرق‌شدن، جان خود را به خطر انداخت.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'شجاعت']
+  },
+  {
+    id: 'k1-red9',
+    german: 'über Gott und die Welt reden',
+    persian: 'درباره زمین و زمان و همه چیز گپ زدن',
+    category: 'Redewendungen',
+    lesson: 1,
+    sources: ['Hörtexte'],
+    sourceDetails: [
+      { source: 'Hörtexte', lesson: 1, module: 'Modul 2', pageOrTrack: 'Track 1.2', context: 'stundenlang über Gott und die Welt plaudern' }
+    ],
+    explanation: 'گفتگوی طولانی، آزاد و لذت‌بخش درباره تمام موضوعات روزمره و زندگی.',
+    literalMeaning: 'درباره خدا و جهان صحبت کردن',
+    example: 'Wir trafen uns im Park und redeten stundenlang über Gott und die Welt.',
+    exampleTranslation: 'ما در پارک همدیگر را دیدیم و ساعت‌ها درباره زمین و زمان با هم حرف زدیم.',
+    level: 'B1+',
+    tags: ['اصطلاح', 'مکالمه']
   },
 
   // =========================================================================
