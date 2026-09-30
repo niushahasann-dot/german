@@ -225,15 +225,15 @@ export const LessonView: React.FC<LessonViewProps> = ({
                 <span className="text-slate-300 font-normal">میزان تسلط و پیشرفت</span>
               </div>
               
-              <div className="flex items-center gap-4 text-xs">
-                <span className="bg-white/10 px-2.5 py-1 rounded-lg">
+              <div className="flex items-center gap-2 sm:gap-4 text-[11px] sm:text-xs flex-wrap">
+                <span className="bg-white/10 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg">
                   کل واژگان: <b className="font-de font-bold text-white">{stats.total}</b>
                 </span>
-                <span className="bg-emerald-500/20 text-emerald-300 px-2.5 py-1 rounded-lg border border-emerald-400/20">
+                <span className="bg-emerald-500/20 text-emerald-300 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg border border-emerald-400/20">
                   {stats.learned} یادگرفته‌شده
                 </span>
-                <span className="bg-amber-500/20 text-amber-300 px-2.5 py-1 rounded-lg border border-amber-400/20">
-                  {stats.review} نیازمند مرور
+                <span className="bg-amber-500/20 text-amber-300 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg border border-amber-400/20">
+                  {stats.review} نیاز به مرور
                 </span>
               </div>
             </div>

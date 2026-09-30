@@ -262,24 +262,24 @@ export const Header: React.FC<HeaderProps> = ({
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-3 pb-6 space-y-3 shadow-2xl">
-          <div className="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-xl text-xs">
+        <div className="lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-3 sm:px-4 pt-3 pb-6 space-y-3 shadow-2xl animate-in slide-in-from-top-2 duration-200">
+          <div className="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800/90 rounded-2xl text-xs border border-slate-200/60 dark:border-slate-700/60">
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
               <span className="text-slate-700 dark:text-slate-300 font-medium">میزان یادگیری کل:</span>
             </div>
             <span className="font-bold text-slate-900 dark:text-white font-de">{stats.completionPercentage}% ({stats.learnedWords}/{stats.totalWords})</span>
           </div>
 
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-2 gap-2 text-xs">
             <button
               onClick={() => {
                 setCurrentView('dashboard');
                 setMobileMenuOpen(false);
               }}
-              className="flex items-center gap-2 p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-sm font-medium"
+              className="flex items-center gap-2 p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold active:scale-98 transition-all"
             >
-              <BookMarked className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+              <BookMarked className="w-4 h-4 text-indigo-600 dark:text-indigo-400 shrink-0" />
               <span>داشبورد درس‌ها</span>
             </button>
 
@@ -289,9 +289,9 @@ export const Header: React.FC<HeaderProps> = ({
                   onOpenHoertexte();
                   setMobileMenuOpen(false);
                 }}
-                className="flex items-center gap-2 p-3 rounded-xl bg-purple-50 dark:bg-purple-950/60 text-purple-800 dark:text-purple-300 text-sm font-medium border border-purple-200/60 dark:border-purple-800"
+                className="flex items-center gap-2 p-3 rounded-xl bg-purple-50 dark:bg-purple-950/60 text-purple-800 dark:text-purple-300 font-bold border border-purple-200/60 dark:border-purple-800 active:scale-98 transition-all"
               >
-                <Headphones className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+                <Headphones className="w-4 h-4 text-purple-600 dark:text-purple-400 shrink-0" />
                 <span>متن‌های شنیداری</span>
               </button>
             )}
@@ -301,9 +301,9 @@ export const Header: React.FC<HeaderProps> = ({
                 onOpenFlashcards();
                 setMobileMenuOpen(false);
               }}
-              className="flex items-center gap-2 p-3 rounded-xl bg-amber-50 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 text-sm font-medium"
+              className="flex items-center gap-2 p-3 rounded-xl bg-amber-50 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 font-bold border border-amber-200/60 dark:border-amber-800/60 active:scale-98 transition-all"
             >
-              <Layers className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+              <Layers className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
               <span>فلش‌کارت‌ها</span>
             </button>
 
@@ -312,9 +312,9 @@ export const Header: React.FC<HeaderProps> = ({
                 onOpenQuiz();
                 setMobileMenuOpen(false);
               }}
-              className="flex items-center gap-2 p-3 rounded-xl bg-rose-50 dark:bg-rose-950/60 text-rose-800 dark:text-rose-300 text-sm font-medium"
+              className="flex items-center gap-2 p-3 rounded-xl bg-rose-50 dark:bg-rose-950/60 text-rose-800 dark:text-rose-300 font-bold border border-rose-200/60 dark:border-rose-800/60 active:scale-98 transition-all"
             >
-              <Sparkles className="w-4 h-4 text-rose-600 dark:text-rose-400" />
+              <Sparkles className="w-4 h-4 text-rose-600 dark:text-rose-400 shrink-0" />
               <span>آزمون تستی</span>
             </button>
 
@@ -323,10 +323,10 @@ export const Header: React.FC<HeaderProps> = ({
                 onOpenDatabase();
                 setMobileMenuOpen(false);
               }}
-              className="col-span-2 flex items-center justify-center gap-2 p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 text-sm font-medium"
+              className="col-span-2 flex items-center justify-center gap-2 p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 font-bold border border-emerald-200/60 dark:border-emerald-800/60 active:scale-98 transition-all"
             >
-              <Database className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-              <span>دیتابیس و مدیریت PDF</span>
+              <Database className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+              <span>پایگاه داده و مدیریت PDF</span>
             </button>
           </div>
 
@@ -341,10 +341,10 @@ export const Header: React.FC<HeaderProps> = ({
                     setCurrentView('lesson');
                     setMobileMenuOpen(false);
                   }}
-                  className={`p-2 rounded-xl text-center font-de text-xs font-bold transition-all ${
+                  className={`py-2 px-1 rounded-xl text-center font-de text-xs font-bold transition-all active:scale-95 ${
                     selectedLesson === l.number && currentView === 'lesson'
                       ? 'bg-indigo-600 text-white shadow-sm'
-                      : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
+                      : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200/50 dark:border-slate-700/50'
                   }`}
                 >
                   L{l.number}

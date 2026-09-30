@@ -227,23 +227,23 @@ export const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, onPractice
         )}
 
         {item.category === 'Verben' && (
-          <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/80 dark:border-slate-700/80 space-y-2 text-xs">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <div className="bg-white dark:bg-slate-900/90 p-2 rounded-xl border border-slate-200 dark:border-slate-700">
-                <span className="text-slate-500 dark:text-slate-400 block text-[10px]">حال (Präsens 3.P):</span>
-                <span className="font-bold text-slate-900 dark:text-slate-100 font-de text-xs">
+          <div className="p-2.5 sm:p-3 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/80 dark:border-slate-700/80 space-y-2 text-xs">
+            <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
+              <div className="bg-white dark:bg-slate-900/90 p-1.5 sm:p-2 rounded-xl border border-slate-200 dark:border-slate-700 text-center">
+                <span className="text-slate-500 dark:text-slate-400 block text-[9px] sm:text-[10px]">حال (Präsens):</span>
+                <span className="font-bold text-slate-900 dark:text-slate-100 font-de text-[11px] sm:text-xs truncate block">
                   {item.present || '—'}
                 </span>
               </div>
-              <div className="bg-white dark:bg-slate-900/90 p-2 rounded-xl border border-slate-200 dark:border-slate-700">
-                <span className="text-slate-500 dark:text-slate-400 block text-[10px]">گذشته ساده (Präteritum):</span>
-                <span className="font-bold text-slate-900 dark:text-slate-100 font-de text-xs">
+              <div className="bg-white dark:bg-slate-900/90 p-1.5 sm:p-2 rounded-xl border border-slate-200 dark:border-slate-700 text-center">
+                <span className="text-slate-500 dark:text-slate-400 block text-[9px] sm:text-[10px]">گذشته (Prät.):</span>
+                <span className="font-bold text-slate-900 dark:text-slate-100 font-de text-[11px] sm:text-xs truncate block">
                   {item.preterite || '—'}
                 </span>
               </div>
-              <div className="bg-indigo-50/80 dark:bg-indigo-950/80 p-2 rounded-xl border border-indigo-200 dark:border-indigo-800/90">
-                <span className="text-indigo-600 dark:text-indigo-400 block text-[10px] font-medium">گذشته کامل (Perfekt):</span>
-                <span className="font-bold text-indigo-700 dark:text-indigo-300 font-de text-xs">
+              <div className="bg-indigo-50/80 dark:bg-indigo-950/80 p-1.5 sm:p-2 rounded-xl border border-indigo-200 dark:border-indigo-800/90 text-center">
+                <span className="text-indigo-600 dark:text-indigo-400 block text-[9px] sm:text-[10px] font-medium">کامل (Perfekt):</span>
+                <span className="font-bold text-indigo-700 dark:text-indigo-300 font-de text-[11px] sm:text-xs truncate block">
                   {item.perfect || '—'}
                 </span>
               </div>
@@ -373,38 +373,38 @@ export const VocabularyCard: React.FC<VocabularyCardProps> = ({ item, onPractice
         {/* Bottom Actions: Learning Status Buttons */}
         <div className="flex items-center justify-between pt-2.5 border-t border-slate-100 dark:border-slate-800 gap-2">
           
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-1.5 flex-1 sm:flex-initial">
             {/* Mark as Learned Button */}
             <button
               onClick={() => setWordStatus(item.id, isLearned ? 'unseen' : 'learned')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer border ${
+              className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer border active:scale-95 ${
                 isLearned
                   ? 'bg-emerald-600 text-white border-emerald-600 shadow-xs'
                   : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 border-slate-200/80 dark:border-slate-700 hover:bg-emerald-50 dark:hover:bg-emerald-950/60 hover:text-emerald-700 dark:hover:text-emerald-300 hover:border-emerald-300'
               }`}
             >
-              <Check className="w-3.5 h-3.5" />
-              <span>{isLearned ? 'یاد گرفته‌ام ✓' : 'یاد گرفتم'}</span>
+              <Check className="w-3.5 h-3.5 shrink-0" />
+              <span>{isLearned ? 'یاد گرفتم ✓' : 'یاد گرفتم'}</span>
             </button>
 
             {/* Needs Review Button */}
             <button
               onClick={() => setWordStatus(item.id, isReview ? 'unseen' : 'review')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer border ${
+              className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer border active:scale-95 ${
                 isReview
                   ? 'bg-amber-500 text-white border-amber-500 shadow-xs'
                   : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 border-slate-200/80 dark:border-slate-700 hover:bg-amber-50 dark:hover:bg-amber-950/60 hover:text-amber-700 dark:hover:text-amber-300 hover:border-amber-300'
               }`}
             >
-              <RotateCcw className="w-3.5 h-3.5" />
-              <span>{isReview ? 'نیازمند مرور 🔄' : 'نیاز به مرور'}</span>
+              <RotateCcw className="w-3.5 h-3.5 shrink-0" />
+              <span>{isReview ? 'مرور 🔄' : 'نیاز به مرور'}</span>
             </button>
           </div>
 
           {onPracticeSingle && (
             <button
               onClick={() => onPracticeSingle(item)}
-              className="text-slate-400 dark:text-slate-500 hover:text-indigo-600 dark:hover:text-indigo-400 p-1.5 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-950/50 transition-colors cursor-pointer"
+              className="text-slate-400 dark:text-slate-500 hover:text-indigo-600 dark:hover:text-indigo-400 p-2 rounded-xl hover:bg-indigo-50 dark:hover:bg-indigo-950/50 transition-colors cursor-pointer shrink-0 border border-transparent hover:border-indigo-200 dark:hover:border-indigo-800"
               title="تمرین فلش‌کارت تک‌کلمه"
             >
               <Layers className="w-4 h-4" />
